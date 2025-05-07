@@ -6,7 +6,7 @@
 2. Install all MCP @ 01_AI-RUN/Template/MCP-Server.json
 3. Just run in cursor / cline / windsurf with this prompt : 
 
---->  Let's get started with '01_AI-RUN/00_Getting_Started.md
+--->  Read the full codebase and let's get started with '01_AI-RUN/00_Getting_Started.md
 
 ## Purpose
 
