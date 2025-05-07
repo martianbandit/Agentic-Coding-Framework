@@ -2,8 +2,11 @@
 
 ## How to Use
 
-1. Fork this repository to create a new project.
-2. Just run : let's get started with '01_AI-RUN/00_Getting_Started.md'
+1. Fork this repository to create a new project. 
+2. Install all MCP @ 01_AI-RUN/Template/MCP-Server.json
+3. Just run in cursor / cline / windsurf with this prompt : 
+
+--->  Let's get started with '01_AI-RUN/00_Getting_Started.md
 
 ## Purpose
 
