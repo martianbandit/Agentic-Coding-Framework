@@ -1,0 +1,153 @@
+# Getting Started: AI-Assisted Development Workflow
+
+## Introduction
+
+Welcome to the AI-Assisted Development Workflow! This document will guide you through the complete process of taking your project from initial idea to implementation using a structured, AI-driven approach.
+
+The workflow consists of seven sequential phases, each with its own prompt file that instructs the AI agent on how to assist you. By following this process, you'll create a comprehensive set of documents that build upon each other, culminating in a detailed implementation plan.
+
+## Complete Workflow Overview
+
+```mermaid
+flowchart TD
+    A0[Getting Started] -->|Initialize workflow| A
+    A[Idea] -->|Human pre-writing, optional AI brainstorming| B
+    B[Market Research] -->|Human analysis, AI assists with rapid research via chat| C
+    C[Concept Definition] -->|Human finalizes, AI proposes UVP, refines Personas| D
+    D[PRD Generation] -->|AI generates and decomposes according to template, Human iteratively validates| E
+    E[Task Manager Initialization] -->|AI instructs MCP taskmaster-ai with PRD features| F
+    F[Task Refinement] -->|MCP taskmaster-ai decomposes complex features into sub-tasks| G
+    G[Builder] -->|AI executes tasks, codes via MCPs, Human reviews/validates code & features| H
+    H[Deployment & Iteration] -->|AI assists deployment, collects feedback, Human decides next cycle| A
+```
+
+## File Naming Conventions
+
+The workflow uses consistent file naming for inputs and outputs. Note that prompt files mentioned here refer to their logical sequence (e.g., `01_Idea.md` is the first conceptual prompt for defining the idea, `05_Specs_Docs.md` handles technical documentation). You will need to ensure your actual prompt filenames in `01_AI-RUN/` are aligned or that `00_AutoPilot.md` correctly references your specific filenames.
+
+| Phase | Logical Prompt File | Primary Output / Location | Nature of Output |
+|-------|-----------------------|---------------------------|------------------|
+| Idea | 01_Idea.md | idea_document.md | Creation |
+| Market Research | 02_Market_Research.md | market_research.md | Creation |
+| Core Concept | 03_Core_Concept.md | core_concept.md | Creation |
+| PRD Generation | 04_PRD_Generation.md | project_prd.md | Creation |
+| Specs & Docs | 05_Specs_Docs.md | `02_AI-DOCS/` (incl. `Documentation/`) & `03_SPECS/` | **Update** of existing template files & Reference/Annotation of Best Practices |
+| Task Manager | 06_Task_Manager.md | `tasks/tasks.json` | Creation |
+| Start Building | 07_Start_Building.md | Implementation code | N/A (code) |
+
+## How to Use This Workflow
+
+### Step 1: Initialize Your Project
+
+1. Review this Getting Started guide
+2. Create a project directory if you haven't already
+3. Ensure all prompt files (logically `01_Idea.md` through `07_Start_Building.md`) are present in your `01_AI-RUN/` directory, correctly named and sequenced for the `00_AutoPilot.md` or manual execution.
+
+### Step 2: Complete Each Phase in Sequence
+
+For each phase of the workflow:
+
+1. Open the corresponding prompt file (e.g., the file serving as `01_Idea.md` for the Idea phase)
+2. Share the prompt with your AI agent
+3. Follow the instructions in the prompt to complete the phase
+4. Save the output in the designated location using the naming convention
+5. Move to the next phase once the current phase is complete
+
+### Step 3: Transition Between Phases
+
+Each prompt file includes a "Next Steps" section at the end that explains:
+- How to save the current phase's output
+- Which prompt file to use next
+- What inputs the next phase requires
+
+## Quick Start Guide
+
+### Option 1: Fully Automated Workflow (Recommended)
+
+1. **Start with AutoPilot**: Open `00_AutoPilot.md` and share it with your AI agent. Ensure `00_AutoPilot.md` correctly references your actual prompt filenames.
+2. **Provide your initial idea**: Give a brief description of your project idea (1-3 sentences)
+3. **Answer clarifying questions**: The AI will ask 5-7 targeted questions to gather essential information
+4. **Minimal intervention**: The AI will guide itself through all phases, only pausing for essential validation
+
+### Option 2: Step-by-Step Workflow
+
+1. **Start with the Idea phase**: Open the prompt file corresponding to `01_Idea.md` and share it with your AI agent
+2. **Fill in the template**: Provide your initial project concept
+3. **Save the output**: Store as `idea_document.md` in your project directory
+4. **Continue to Market Research**: Open the prompt file corresponding to `02_Market_Research.md` and proceed
+5. **Follow through each phase**: Complete all seven phases in sequence
+
+## Troubleshooting
+
+If at any point the AI agent seems confused or lacks context:
+
+1. Ensure you've completed all previous phases
+2. Verify that output files are named correctly and stored in the expected locations
+3. Explicitly reference the relevant output files from previous phases
+4. If needed, provide the AI with links to specific sections of previous outputs
+
+## Workflow Stages and Responsibilities (Logical Sequence)
+
+### 1. Idea (using `01_Idea.md` logic)
+- **Human Role**: Pre-writing, initial concept formulation
+- **AI Role**: Optional brainstorming assistance
+- **Output**: Initial project concept (`idea_document.md`)
+
+### 2. Market Research (using `02_Market_Research.md` logic)
+- **Human Role**: Analysis and evaluation of research findings
+- **AI Role**: Assistance with rapid research via direct interaction/chat
+- **Output**: Market validation, competitor analysis, opportunity assessment (`market_research.md`)
+
+### 3. Concept Definition (using `03_Core_Concept.md` logic)
+- **Human Role**: Finalizing the core concept
+- **AI Role**: Proposing Unique Value Propositions, refining personas
+- **Output**: Clearly defined project concept with target users (`core_concept.md`)
+
+### 4. PRD Generation (using `04_PRD_Generation.md` logic)
+- **Human Role**: Iterative validation of PRD sections
+- **AI Role**: Generating and decomposing PRD according to template
+- **Output**: Comprehensive Product Requirements Document (`project_prd.md`)
+
+### 5. Specs & Docs (using `05_Specs_Docs.md` logic)
+- **Human Role**: Review of generated/updated documentation
+- **AI Role**: Populating and **updating** existing template files in `02_AI-DOCS/` and `03_SPECS/` based on the PRD and gathered technical information.
+- **Output**: Updated technical documentation and specifications within `02_AI-DOCS/` and `03_SPECS/`.
+
+### 6. Task Manager Initialization (using `06_Task_Manager.md` logic)
+- **Human Role**: Review of task structure
+- **AI Role**: Instructing taskmaster-ai with PRD features
+- **Output**: Initial task hierarchy (`tasks/tasks.json`)
+
+### 7. Builder (using `07_Start_Building.md` logic)
+- **Human Role**: Reviewing and validating code and features
+- **AI Role**: Executing tasks, coding, utilizing MCPs
+- **Output**: Functional code implementation
+
+### 8. Deployment & Iteration
+- **Human Role**: Making decisions about the next development cycle
+- **AI Role**: Assisting with deployment, collecting feedback
+- **Output**: Deployed features and iteration plan
+
+## Key Benefits
+
+- **Human-AI Collaboration**: Leverages strengths of both human creativity and AI capabilities
+- **Structured Process**: Clear workflow with defined responsibilities
+- **Efficiency**: Automation of repetitive tasks while maintaining quality
+- **Flexibility**: Adaptable to various project types and scales
+- **Continuous Improvement**: Built-in feedback loops for ongoing refinement
+
+## Best Practices
+
+1. **Complete phases sequentially**: Each phase builds on the outputs of previous phases
+2. **Save all outputs**: Keep all generated documents for reference
+3. **Validate key decisions**: Review and approve important decisions before proceeding
+4. **Provide feedback**: Refine outputs before moving to the next phase
+5. **Track changes**: Maintain version control for all documents
+
+---
+
+You are now ready to start the AI-assisted development workflow!
+
+**Recommended Option**: Open the `00_AutoPilot.md` file and share it with your AI agent for a fully automated experience with minimal intervention. Ensure `00_AutoPilot.md` is configured to use the correct prompt filenames from your `01_AI-RUN/` directory.
+
+Alternatively, you can follow the step-by-step process by starting with opening the prompt file corresponding to `01_Idea.md` and sharing it with your AI agent.
