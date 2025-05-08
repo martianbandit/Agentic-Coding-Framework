@@ -143,7 +143,8 @@ This PRD template is designed for a streamlined workflow where the primary user 
 
 ### 1.8. Guiding Principles for the AI Agent
 *Comment: These are foundational principles for the AI's operation.*
-*   Strict adherence to the Argentic Design System (Section 5.1 & 5.2).
+*   **Excellence en Design et UX/UI :** L'objectif est de produire des interfaces et des expériences utilisateur d'une qualité exceptionnelle, dignes des standards les plus élevés (type "Silicon Valley / Y Combinator"). Cela prime sur la simple fonctionnalité.
+*   Strict adherence to the Argentic Design System (Section 5.1 & 5.2), qui doit refléter cette ambition.
 *   Prioritize code clarity, maintainability, and testability.
 *   Implement security best practices by default.
 *   Optimize for performance as per NFRs (Section 4.1).
@@ -316,9 +317,10 @@ The AI Coding Agent is empowered and expected to:
 
 ### 4.6. Usability and Accessibility (UX/UI & A11Y)
 *AI Proposal:*
-*   Adherence to Argentic Design Principles (Section 5.1).
-*   WCAG 2.1 AA compliance as a minimum target.
-*   Semantic HTML, keyboard navigability, sufficient color contrast.
+*   **Objectif UX/UI Supérieur :** L'application doit offrir une expérience utilisateur exceptionnellement intuitive, fluide et esthétiquement raffinée, visant les standards des meilleures applications "Silicon Valley / Y Combinator".
+*   Adherence to Argentic Design Principles (Section 5.1) qui doivent incarner cet objectif.
+*   WCAG 2.1 AA compliance as a minimum target, avec une attention particulière à une expérience utilisateur accessible et agréable pour tous.
+*   Semantic HTML, keyboard navigability, sufficient color contrast, et attention aux détails d'interaction.
 `[User to Adjust/Confirm AI's Proposed Usability/Accessibility NFRs]`
 
 ### 4.7. Compatibility (Browsers, Devices, OS)
@@ -347,13 +349,13 @@ The AI Coding Agent is empowered and expected to:
 ---
 
 ## 5. Design and Architecture (AI to Propose, User to Validate)
-
+ 
 ### 5.1. Design Philosophy and Principles (Argentic Design - User to Provide Preferences)
-*User Instruction: Please describe your general aesthetic preferences for the project (e.g., "I want a modern and clean look," "Something playful and colorful," "A professional, enterprise-grade feel"). If you have examples of websites or apps whose design you like, please share them. You can also provide **'vibe keywords'** (e.g., 'energetic and bold', 'calm and focused', 'futuristic and high-tech') to further guide the AI's design proposals. If no preference is given, the AI Agent will default to a clean, modern, minimalist style, emphasizing excellent typography, generous spacing, and a limited, intentional color palette, consistent with Argentic Design Principles. The AI will then propose specific design tokens for your review.*
-`[User to provide general aesthetic preferences, examples, or 'vibe keywords']`
-
-*AI Instruction: Based on user input, including any 'vibe keywords', or defaulting to the style described above (clean, modern, minimalist, typography-focused, generous spacing, limited intentional color palette), you will establish the specific Key Design Principles for THIS project, expanding on the general Argentic principles from Section 1.9. These will guide your UI/UX proposals.*
-`[AI to Propose Specific Key Design Principles for User Validation]`
+*User Instruction: L'objectif est un design et une UX/UI de **qualité exceptionnelle, digne des standards "Silicon Valley / Y Combinator"**. Veuillez décrire vos préférences esthétiques générales (ex: "look moderne et épuré", "ludique et coloré", "professionnel et sobre"). Si vous avez des exemples de sites/applications dont le design vous inspire (particulièrement ceux qui incarnent cette excellence), partagez-les. Les **'vibe keywords'** (ex: 'énergique et audacieux', 'calme et concentré', 'futuriste et high-tech') sont également très utiles. En l'absence de préférences, l'IA proposera un style minimaliste, moderne, avec une typographie soignée, des espacements généreux et une palette de couleurs intentionnelle, visant cette haute qualité.*
+`[User to provide general aesthetic preferences, examples (idéalement YC-style), or 'vibe keywords']`
+ 
+*AI Instruction: Basé sur l'input utilisateur (et l'objectif YC-standard), ou en initialisant avec le style par défaut décrit, établissez les Principes Clés de Design pour CE projet. Ces principes doivent explicitement viser l'excellence en UX/UI et guider toutes vos propositions.*
+`[AI to Propose Specific Key Design Principles for User Validation, en insistant sur l'objectif "Y Combinator standard"]`
 
 ### 5.2. Design System & UI Implementation Strategy (AI to Propose based on User Preferences & Defaults)
 *AI Instruction: Based on user's aesthetic preferences (Section 5.1) and the default stack (Tailwind CSS, Shadcn/ui inspiration), propose the initial `[AI to Propose Project Name] Design System` tokens (primary/secondary colors, typography scale, core spacing units) for `tailwind.config.js`. Detail how Shadcn/ui components will be customized to fit this system. All visual design proposals are subject to human review.*
@@ -534,11 +536,11 @@ graph TD
 4.  **`acceptance_criteria_generated_by_ai` (AI-Generated Acceptance Criteria):**
     *   *AI Instruction:* Derive exhaustive acceptance criteria in Gherkin format. Cover nominal, error, and boundary cases.
     *   *AI Resources:* Project business rules, NFRs.
-5.  **`ui_elements_and_styling_plan_by_ai` (UI Elements and Styling Plan):**
-    *   *AI Instruction:* Identify UI elements. Propose `element_type` and `component_base` (Storybook/Shadcn). Identify `tailwind_tokens_to_use` from `tailwind.config.js` (which you will help define/refine based on user's aesthetic input or defaults). Describe layout, responsiveness, interactions. **If user provided no aesthetic preference, propose a clean, modern, minimalist style, emphasizing excellent typography, generous spacing, and a limited, intentional color palette. If the complexity justifies it AND the human explicitly requests it during the validation dialogue (Section 1.11), be prepared to propose 2-3 initial design variations for key UI elements of a feature to facilitate rapid exploration. Clearly label these as 'exploratory design variations'.**
-    *   *AI Resources:* `tailwind.config.js`, Storybook, Argentic Design Principles, user's aesthetic input (if any).
-6.  **`data_and_logic_plan_by_ai` (Data and Logic Plan):**
-    *   `input_data_identified`: List inputs, types, validation rules (client/server), error messages.
+    5.  **`ui_elements_and_styling_plan_by_ai` (UI Elements and Styling Plan - Objectif: Excellence YC Standard):**
+        *   *AI Instruction:* Identifiez les éléments UI. Proposez `element_type` et `component_base` (Storybook/Shadcn). Identifiez les `tailwind_tokens_to_use` de [`tailwind.config.js`](tailwind.config.js:1). Décrivez la mise en page, la responsivité, les interactions. **Vos propositions doivent impérativement viser l'objectif de design "Silicon Valley / Y Combinator" : modernité, élégance, fluidité, et une expérience utilisateur impeccable. Si l'utilisateur n'a pas fourni de préférences esthétiques, proposez un style qui incarne cet idéal (minimaliste, typographie soignée, etc.). Si la complexité le justifie ET que l'humain le demande explicitement (Section 1.11), soyez prêt à proposer 2-3 variations de design initiales pour les éléments UI clés d'une fonctionnalité afin de faciliter l'exploration rapide. Étiquetez clairement ces propositions comme 'variations de design exploratoires'.**
+        *   *AI Resources:* [`tailwind.config.js`](tailwind.config.js:1), Storybook, Principes de Design Argentic (avec l'objectif YC), input esthétique de l'utilisateur.
+    6.  **`data_and_logic_plan_by_ai` (Data and Logic Plan):**
+        *   `input_data_identified`: List inputs, types, validation rules (client/server), error messages.
     *   `backend_interaction_strategy`: Detail interaction with Supabase (DB, Auth, Edge Functions for custom logic). Specify tables, RLS considerations, function signatures, request/response payloads.
     *   `frontend_state_management_approach`: Propose client-side state management.
     *   *AI Resources:* Supabase schema (you will propose this if not user-defined), API docs, state conventions.

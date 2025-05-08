@@ -31,10 +31,23 @@ The workflow uses consistent file naming for inputs and outputs. Note that promp
 | Market Research | 02_Market_Research.md | market_research.md | Creation |
 | Core Concept | 03_Core_Concept.md | core_concept.md | Creation |
 | PRD Generation | 04_PRD_Generation.md | project_prd.md | Creation |
-| Specs & Docs | 05_Specs_Docs.md | `02_AI-DOCS/` (incl. `Documentation/`) & `03_SPECS/` | **Update** of existing template files & Reference/Annotation of Best Practices |
+| Specs & Docs | 05_Specs_Docs.md | `02_AI-DOCS/` & `03_SPECS/` | **Creation** of project-specific files from templates (templates remain untouched) & Reference/Annotation of Best Practices |
 | Task Manager | 06_Task_Manager.md | `tasks/tasks.json` | Creation |
 | Start Building | 07_Start_Building.md | Implementation code | N/A (code) |
-
+ 
+## AI Agent Initial Onboarding (Important!)
+ 
+**AI Agent Directive:** Before starting the workflow (e.g., when processing `00_AutoPilot.md` or the first manual step), you MUST perform the following initial analysis:
+1.  **Analyze File Structure:** Carefully examine the list of files provided in the initial `environment_details`. Understand the purpose of the main directories:
+    *   `01_AI-RUN/`: Contains the prompt files guiding the workflow stages.
+    *   `02_AI-DOCS/`: Contains project documentation templates (architecture, conventions, etc.) and core AI guidance (`Documentation/`). **Crucially, during the 'Specs & Docs' phase, project-specific documents (e.g., `architecture.md`, `coding_conventions.md`) will be CREATED in these subdirectories based on the templates.**
+    *   `03_SPECS/`: Contains specification templates (features, bugs). **Similarly, project-specific specification files (e.g., `features/feature_spec_FEAT-XXX.md`) will be CREATED here during the 'Specs & Docs' phase.**
+    *   `tasks/`: Will contain the generated task breakdown (`tasks.json`).
+2.  **Identify Key Reference Documents:** Recognize that the primary sources of truth for the project, once generated, will be:
+    *   `project_prd.md` (Generated in phase 4)
+    *   The **project-specific documents created** within `02_AI-DOCS/` and `03_SPECS/` (Generated in phase 5).
+3.  **Prioritize Generated Documents:** When performing subsequent tasks (especially Task Management and Building), you MUST prioritize referencing these **generated, project-specific documents** over the original templates. The templates serve only as a starting structure.
+ 
 ## How to Use This Workflow
 
 ### Step 1: Initialize Your Project
@@ -109,10 +122,10 @@ If at any point the AI agent seems confused or lacks context:
 - **Output**: Comprehensive Product Requirements Document (`project_prd.md`)
 
 ### 5. Specs & Docs (using `05_Specs_Docs.md` logic)
-- **Human Role**: Review of generated/updated documentation
-- **AI Role**: Populating and **updating** existing template files in `02_AI-DOCS/` and `03_SPECS/` based on the PRD and gathered technical information.
-- **Output**: Updated technical documentation and specifications within `02_AI-DOCS/` and `03_SPECS/`.
-
+- **Human Role**: Review of generated documentation
+- **AI Role**: **Creating** project-specific files in `02_AI-DOCS/` and `03_SPECS/` by copying and populating templates based on the PRD and gathered technical information.
+- **Output**: **Created** project-specific technical documentation and specifications within `02_AI-DOCS/` and `03_SPECS/`.
+ 
 ### 6. Task Manager Initialization (using `06_Task_Manager.md` logic)
 - **Human Role**: Review of task structure
 - **AI Role**: Instructing taskmaster-ai with PRD features

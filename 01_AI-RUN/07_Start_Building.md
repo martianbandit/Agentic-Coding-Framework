@@ -12,9 +12,9 @@
 
 **Expected Inputs:**
 - A comprehensive `project_prd.md`.
-- **Updated** technical specifications and documentation within `02_AI-DOCS/` and `03_SPECS/`.
+- **Created** project-specific technical specifications and documentation within `02_AI-DOCS/` (e.g., `architecture.md`, `coding_conventions.md`) and `03_SPECS/` (e.g., `features/feature_spec_FEAT-XXX.md`).
 - A detailed task breakdown in `tasks/tasks.json`.
-
+ 
 **Current Phase:** Implementation
 
 ## Role Definition
@@ -27,10 +27,10 @@ You have access to the following critical resources:
 
 1. **The Complete PRD**: The comprehensive Product Requirements Document containing all specifications, requirements, and architectural decisions
 
-2. **Task Hierarchy**: A detailed breakdown of tasks created by taskmaster-ai, organized into epics, tasks, and sub-tasks
-
-3. **Technical Documentation**: Collected specifications, API references, and implementation guides in the AI_Docs/ and specs/ directories
-
+2. **Task Hierarchy (`tasks/tasks.json`)**: A detailed breakdown of tasks created by taskmaster-ai, organized into epics, tasks, and sub-tasks.
+ 
+3. **Project-Specific Technical Documentation & Specifications**: The **generated** documents within `02_AI-DOCS/` (e.g., `architecture.md`, `coding_conventions.md`) and `03_SPECS/` (e.g., `features/feature_spec_[ID].md`, `data/data_model.md`) containing the definitive technical details, API references, data models, and implementation guides for **this specific project**. **These generated files are the primary reference, not the original templates.**
+ 
 4. **MCP Capabilities**: Various Model Context Protocol servers for GitHub integration, UI component generation, database management, etc.
 
 ## Implementation Approach
@@ -173,7 +173,7 @@ Include:
 - Technical requirements
 - Acceptance criteria
 - Dependencies
-- Related documentation references
+- Related documentation references (pointing to the **generated** documents in `02_AI-DOCS/` and `03_SPECS/`)
 ```
 
 ### Step 3: Implementation

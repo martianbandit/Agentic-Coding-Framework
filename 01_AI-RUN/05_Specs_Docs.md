@@ -12,11 +12,11 @@
 - A comprehensive `project_prd.md`
 
 **Expected Outputs:**
-- **Updated** technical documentation within existing files in `02_AI-DOCS/`
-- **Updated** feature specifications within existing files in `03_SPECS/`
-- Creation/Update of `03_SPECS/documentation_index.md`
-
-**Current Phase:** Technical Specifications & Documentation Update
+- **Creation** of project-specific technical documentation files in `02_AI-DOCS/` (e.g., `architecture.md`, `coding_conventions.md`) based on templates.
+- **Creation** of project-specific feature/bugfix specification files in `03_SPECS/` (e.g., `features/feature_spec_FEAT-001.md`) based on templates.
+- Creation/Update of `03_SPECS/documentation_index.md` linking to the **newly created** documents.
+ 
+**Current Phase:** Technical Specifications & Documentation **Creation**
 
 ## Role Definition
 
@@ -86,37 +86,49 @@ You have access to:
 
 ### Phase 3: Knowledge Organization
 
-1. **Targeting Existing Repository Structure**
-   - The AI will **update files within** the existing directory structure in `02_AI-DOCS/` and `03_SPECS/`. The structure is as follows:
+1. **Creating Project-Specific Documents from Templates**
+   - The AI will **create new files** based on the templates found in `02_AI-DOCS/` and `03_SPECS/`. The original templates **MUST NOT** be modified.
+   - **Naming Convention:**
+     - General Docs (in `02_AI-DOCS/` subdirs): Copy `[subdir]/[name]_template.md` to `[subdir]/[name].md` (e.g., `02_AI-DOCS/Architecture/architecture_template.md` becomes `02_AI-DOCS/Architecture/architecture.md`).
+     - Feature/Bugfix Specs (in `03_SPECS/` subdirs): Copy `[subdir]/[type]_spec_template.md` to `[subdir]/[type]_spec_[ID].md` (e.g., `03_SPECS/features/feature_spec_template.md` becomes `03_SPECS/features/feature_spec_FEAT-001.md` for feature FEAT-001).
+     - Other Specs (technical, integration, data, security in `03_SPECS/`): Create new files as needed (e.g., `03_SPECS/data/data_model.md`), potentially using relevant templates if they exist, or structuring logically based on PRD content.
+   - **Structure Overview (Templates & Output):**
      ```
+     # Templates (Source - DO NOT MODIFY)
      02_AI-DOCS/
-     ├── Architecture/architecture_template.md    # System design - TO BE UPDATED
-     ├── Integrations/api_integration_template.md # API documentation - TO BE UPDATED
-     ├── BusinessLogic/business_logic_template.md # Business rules - TO BE UPDATED
-     ├── Conventions/coding_conventions_template.md # Coding standards - TO BE UPDATED
-     ├── Deployment/deployment_guide_template.md  # Deployment info - TO BE UPDATED
-     ├── Documentation/AI_Coding_Agent_Optimization.md # Core AI Dev Best Practices - TO BE REFERENCED/ANNOTATED
-     └── AI-Coder/                                # Reusable AI prompts - (Likely static, review if updates needed)
-         ├── ContextPrime/context_prime_template.md
-         ├── TestGenerators/test_generator_template.md
-         ├── Refactoring/refactoring_template.md
-         └── CommonTasks/api_endpoint_template.md
-     
+     ├── Architecture/architecture_template.md
+     ├── Integrations/api_integration_template.md
+     ├── BusinessLogic/business_logic_template.md
+     ├── Conventions/coding_conventions_template.md
+     ├── Deployment/deployment_guide_template.md
+     └── ...
      03_SPECS/
-     ├── features/feature_spec_template.md        # Feature specs - TO BE UPDATED (or new ones created if structure allows)
-     ├── bugfixes/bugfix_spec_template.md         # Bugfix specs - TO BE UPDATED (or new ones created)
-     ├── technical/       # Detailed technical specifications (Potentially new files here or update existing)
-     ├── integration/     # Integration specifications (Potentially new files here or update existing)
-     ├── data/            # Data models (Potentially new files here or update existing)
-     └── security/        # Security requirements (Potentially new files here or update existing)
-     ```
-   - The files ending with `_template.md` will be read, their content (placeholders and structure) used as a basis, filled with project-specific information from the PRD and research, and then the same file will be overwritten with the new, populated content.
+     ├── features/feature_spec_template.md
+     ├── bugfixes/bugfix_spec_template.md
+     └── ...
 
-2. **Documentation Processing for Update**
-   - For each target file (e.g., `architecture_template.md`):
-     - Read its existing template structure.
+     # Generated Project Docs (Output - AI Creates/Populates These)
+     02_AI-DOCS/
+     ├── Architecture/architecture.md    # Copied & Populated
+     ├── Integrations/api_integration.md # Copied & Populated
+     ├── BusinessLogic/business_logic.md # Copied & Populated
+     ├── Conventions/coding_conventions.md # Copied & Populated
+     ├── Deployment/deployment_guide.md  # Copied & Populated
+     └── ...
+     03_SPECS/
+     ├── features/feature_spec_FEAT-001.md # Copied & Populated for Feature 1
+     ├── features/feature_spec_FEAT-002.md # Copied & Populated for Feature 2
+     ├── bugfixes/bugfix_spec_BUG-001.md   # Copied & Populated for Bug 1
+     ├── data/data_model.md                # Newly created or copied if template exists
+     └── ...
+     ```
+
+2. **Documentation Processing for Creation**
+   - For each required project document (e.g., `architecture.md`, `feature_spec_FEAT-001.md`):
+     - **Copy** the corresponding template file (e.g., `architecture_template.md`) to the new target filename.
+     - Read the structure from the **newly copied file**.
      - Extract relevant information from the PRD and gathered documentation.
-     - Populate the sections of the template structure with this information.
+     - Populate the sections of the structure **within the copied file**.
      - Format consistently in Markdown.
      - Add context and project-specific explanations.
      - Ensure cross-references are logical within the updated document and potentially to other updated documents.
@@ -126,14 +138,12 @@ You have access to:
    - Create or update `03_SPECS/documentation_index.md` to reflect the updated documentation.
 
    ---
-   #### Processing for `AI_Coding_Agent_Optimization.md`
-
-   - **Review and Internalize:** The AI agent must thoroughly review the content of `02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`.
-   - **Contextual Referencing:** When generating other technical documents (e.g., architecture, design specifications, coding conventions for the specific project) or later when generating code, the AI agent must actively reference and adhere to the relevant principles outlined in `AI_Coding_Agent_Optimization.md`.
-   - **Project-Specific Annotations (Optional):** If the current project (`project_prd.md`) presents unique challenges, requires specific interpretations, or highlights particular applications of these best practices, the AI agent can be instructed to:
-       - Add a clearly marked section at the end of `AI_Coding_Agent_Optimization.md` titled "Project-Specific Notes for: [Current Project Name from PRD]" detailing these nuances.
-       - OR, create specific cross-references within other technical documents (e.g., in `02_AI-DOCS/Architecture/architecture_template.md`) pointing to relevant sections of `AI_Coding_Agent_Optimization.md`.
-   - **Indexation:** Ensure `02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md` is correctly listed and linked in the `03_SPECS/documentation_index.md`.
+   #### Processing for `AI_Coding_Agent_Optimization.md` (Reference Only)
+ 
+   - **Review and Internalize:** The AI agent must thoroughly review the content of `02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`. **This file is NOT a template and should NOT be copied or directly modified for project-specific content.**
+   - **Contextual Referencing:** When generating **new** project-specific technical documents (e.g., `architecture.md`, `coding_conventions.md`) or later when generating code, the AI agent must actively reference and adhere to the relevant principles outlined in `AI_Coding_Agent_Optimization.md`.
+   - **Project-Specific Application:** If the current project (`project_prd.md`) requires specific interpretations or highlights particular applications of these best practices, these details should be documented within the **newly created project-specific documents** (e.g., in `02_AI-DOCS/Architecture/architecture.md`), potentially with cross-references pointing back to the relevant sections of `AI_Coding_Agent_Optimization.md`.
+   - **Indexation:** Ensure `02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md` is correctly listed and linked in the `03_SPECS/documentation_index.md` as a foundational reference document.
    ---
 
 
@@ -272,9 +282,10 @@ During the documentation gathering process:
 
 Once this technical documentation update process is complete:
 
-1. Ensure all targeted files in `03_SPECS/` and `02_AI-DOCS/` have been updated with project-specific information.
-2. Ensure the master index file `03_SPECS/documentation_index.md` is created or updated.
-
+1. Ensure all required project-specific documents have been **created** in `03_SPECS/` and `02_AI-DOCS/` based on the templates, and populated with relevant information.
+2. Confirm that the original template files remain unmodified.
+3. Ensure the master index file `03_SPECS/documentation_index.md` is created or updated, linking to the **newly created** project documents.
+ 
 ### Moving to Task Management
 
 To proceed with breaking down the project into implementable tasks:
@@ -299,27 +310,31 @@ This prompt is designed to run completely automatically as part of the AI-assist
 
 1. **Analyze the PRD** - Extract all technical requirements without requiring user intervention.
 
-2. **Update Documentation** - Automatically **update** the necessary existing documentation files in the correct directories by:
-   - Identifying the target file (e.g., `02_AI-DOCS/Architecture/architecture_template.md`).
-   - Reading its existing structure (as a template).
+2. **Create Project Documentation** - Automatically **create** necessary project-specific documentation files based on templates by:
+   - Identifying the required document type (e.g., Architecture, Feature Spec).
+   - Locating the corresponding template file (e.g., `02_AI-DOCS/Architecture/architecture_template.md`).
+   - **Copying** the template to a new project-specific filename (e.g., `02_AI-DOCS/Architecture/architecture.md` or `03_SPECS/features/feature_spec_FEAT-XXX.md`).
+   - Reading the structure from the **newly copied file**.
    - Populating this structure with project-specific information derived from the PRD and gathered research.
-   - Saving the updated content back to the *same file*, effectively overwriting it.
-   - This applies to files such as:
-     - `02_AI-DOCS/Architecture/architecture_template.md`
-     - `02_AI-DOCS/Integrations/api_integration_template.md`
-     - `02_AI-DOCS/BusinessLogic/business_logic_template.md`
-     - `02_AI-DOCS/Conventions/coding_conventions_template.md`
-     - `02_AI-DOCS/Deployment/deployment_guide_template.md`
-     - Files within `03_SPECS/` (e.g., `features/feature_spec_template.md`) following the same update logic.
-   - AI Coder templates in `02_AI-DOCS/AI-Coder/` are likely static and may not need project-specific updates unless specified.
-   - `02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md` (Primarily for reference and adherence; potential for project-specific annotations as per instructions in Phase 3).
-
-3. **Process for Updating Files (Replaces "Create Template Files")**:
-   - For each required document (e.g., `architecture_template.md`):
-     - The AI will treat the existing file itself as the template.
-     - It will parse its structure and placeholders (if any are conventionally used).
-     - It will populate it with project-specific information from the PRD and gathered data.
-     - It will then **overwrite the original file** with this newly populated content.
+   - Saving the populated content into the **new file**.
+   - **The original template files MUST NOT be overwritten.**
+   - This applies to templates such as:
+     - `02_AI-DOCS/Architecture/architecture_template.md` -> `architecture.md`
+     - `02_AI-DOCS/Integrations/api_integration_template.md` -> `api_integration.md`
+     - `02_AI-DOCS/BusinessLogic/business_logic_template.md` -> `business_logic.md`
+     - `02_AI-DOCS/Conventions/coding_conventions_template.md` -> `coding_conventions.md`
+     - `02_AI-DOCS/Deployment/deployment_guide_template.md` -> `deployment_guide.md`
+     - `03_SPECS/features/feature_spec_template.md` -> `features/feature_spec_[ID].md`
+     - `03_SPECS/bugfixes/bugfix_spec_template.md` -> `bugfixes/bugfix_spec_[ID].md`
+   - AI Coder templates in `02_AI-DOCS/AI-Coder/` remain static unless explicitly instructed otherwise.
+   - `02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md` is for reference only and is not copied/modified per project.
+ 
+3. **Process for Creating Files from Templates**:
+   - For each required project document:
+     - **Copy** the relevant template to the new filename.
+     - Parse the structure of the **copied file**.
+     - Populate the **copied file** with project-specific information.
+     - Save the changes to the **copied file**.
      - Ensure all cross-references within the updated documents are logical.
 
 4. **Provide Progress Updates** - The AI will report on documentation progress without requiring user confirmation to continue

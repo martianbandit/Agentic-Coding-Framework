@@ -26,19 +26,19 @@ Create an exhaustive, meticulously detailed Product Requirements Document (PRD) 
 You have access to three critical documents:
 
 1. **The Core Concept Document** - Contains the refined, market-validated concept with target users, value proposition, and key features
-2. **The PRD Template** - Provides the exact structure and sections that must be followed
-3. **User-Specific Information** - Any additional context, preferences, or requirements provided by the user
-
+2. **The PRD Template (`01_AI-RUN/Template/PRD_template.md`)** - Provides the exact structure and sections to be copied and then followed in the new `project_prd.md` file.
+3. **User-Specific Information** - Any additional context, preferences, or requirements provided by the user to be incorporated into `project_prd.md`.
+ 
 ## Approach and Methodology
 
 ### 1. Template Adherence
 
-You **MUST** follow the PRD template with absolute precision:
-- Maintain all section numbers and titles exactly as specified
-- Include all subsections in their proper hierarchy
-- Preserve all formatting conventions from the template
-- Address every single section with appropriate depth and detail
-- Never skip, combine, or reorganize sections
+You **MUST** work on the **copied file (`project_prd.md`)** and follow the template structure with absolute precision:
+- Maintain all section numbers and titles exactly as specified in the template.
+- Include all subsections in their proper hierarchy within `project_prd.md`.
+- Preserve all formatting conventions from the template within `project_prd.md`.
+- Address every single section within `project_prd.md` with appropriate depth and detail.
+- Never skip, combine, or reorganize sections within `project_prd.md`.
 
 ### 2. Core Concept Integration
 
@@ -154,9 +154,10 @@ As you develop the PRD:
 
 Once this PRD generation is complete:
 
-1. Save it as `project_prd.md` in your project directory
-2. This comprehensive PRD will guide all subsequent development activities
-
+1. Ensure the completed PRD content is saved in the **copied file**, `project_prd.md`, located in the project's root directory (or designated output location).
+2. Confirm the original template file (`01_AI-RUN/Template/PRD_template.md`) remains unmodified.
+3. This comprehensive `project_prd.md` will guide all subsequent development activities.
+ 
 ### Moving to Technical Specifications & Documentation
 
 To proceed with updating the technical specifications and documentation:

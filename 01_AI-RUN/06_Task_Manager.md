@@ -60,10 +60,11 @@ Please perform the following operations in sequence:
 - Create logical dependencies between tasks
 - Prioritize tasks based on technical dependencies and user value
 - Tag tasks with appropriate categories (UI, Backend, Database, etc.)
+- **Pour les tâches UI, s'assurer que la description de la tâche et les critères d'acceptation reflètent explicitement les exigences de design et d'UX/UI de haute qualité (standard "Silicon Valley / Y Combinator") définies dans le PRD et les conventions de design.**
 - Include acceptance criteria for each task
-
+ 
 ### Expected Outputs
-
+ 
 1. Complete task hierarchy with IDs
 2. Complexity analysis report
 3. Implementation roadmap with timeline estimates
@@ -124,8 +125,8 @@ After receiving the initial response from taskmaster-ai, follow this workflow:
    Requirements for decomposition:
    - Maximum task size: 4 hours of development work
    - Include technical implementation details
-   - Specify UI components, API endpoints, database changes, etc.
-   - Create clear acceptance criteria for each task
+   - Specify UI components, API endpoints, database changes, etc. **en accord avec les standards de design "Y Combinator" du projet.**
+   - Create clear acceptance criteria for each task, **incluant les aspects design et UX/UI pour les tâches concernées.**
    - Establish dependencies between tasks
    - Tag tasks with appropriate categories
    ```

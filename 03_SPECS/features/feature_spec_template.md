@@ -23,9 +23,17 @@
 - [Measurable outcome 1]
 - [Measurable outcome 2]
 - [Measurable outcome 3]
-
+ 
+## Principes de Design et UX/UI pour cette Fonctionnalité
+ 
+- **Objectif Principal :** Le design et l'expérience utilisateur de cette fonctionnalité doivent activement contribuer à l'objectif global d'une application de qualité "Silicon Valley / Y Combinator". Cela signifie une attention méticuleuse aux détails, à la modernité, à l'intuitivité et à l'esthétique.
+- **Référence :** Se référer aux principes généraux de design et UX/UI définis dans le document de Conventions de Codage ([`02_AI-DOCS/Conventions/coding_conventions_template.md`](02_AI-DOCS/Conventions/coding_conventions_template.md:1)).
+- **Spécificités pour cette fonctionnalité :**
+    - `[Décrire ici comment l'objectif de design "YC standard" s'applique spécifiquement à cette fonctionnalité. Quels aspects du design sont particulièrement critiques ? Y a-t-il un "vibe" spécifique à atteindre ?]`
+    - `[L'IA doit proposer des solutions UI/UX qui incarnent ces principes.]`
+ 
 ## Functional Requirements
-
+ 
 ### Core Functionality
 
 1. [Requirement 1]
@@ -108,12 +116,12 @@
 #### New Screens/Components
 
 **Screen/Component:** `[Name]`
-
+ 
 **Description:**
 [Description of the screen/component]
-
-**Wireframe/Mockup:**
-[Link to wireframe/mockup or description]
+ 
+**Wireframe/Mockup (Objectif YC Standard):**
+[Lien vers wireframe/mockup ou description détaillée. L'IA doit proposer des designs (ou des variations si demandé et justifié) qui visent l'excellence esthétique et fonctionnelle. Les propositions doivent être modernes, épurées et hautement intuitives, en s'inspirant des meilleures pratiques des startups de la Silicon Valley. La justification des choix de design par rapport à cet objectif est attendue.]
 
 #### Modified Screens/Components
 
@@ -184,11 +192,13 @@ Feature: [Feature Name]
 - [Performance consideration 1]
 - [Performance consideration 2]
 
-## Accessibility Requirements
-
-- [Accessibility requirement 1]
-- [Accessibility requirement 2]
-
+## Accessibility Requirements (Partie intégrante d'une UX de qualité)
+ 
+- [Accessibility requirement 1 - ex: Navigation clavier complète et intuitive]
+- [Accessibility requirement 2 - ex: Contrastes élevés et lisibilité optimale]
+- [Accessibility requirement 3 - ex: ARIA-labels clairs et pertinents pour les lecteurs d'écran]
+- *L'accessibilité ne doit pas être une réflexion après coup, mais intégrée dès la conception pour garantir une expérience utilisateur inclusive et de haute qualité pour tous.*
+ 
 ## Internationalization/Localization
 
 - [I18n/L10n requirement 1]
