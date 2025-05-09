@@ -14,7 +14,7 @@
 
 ### Frontend
 
-- **Framework:** [e.g., Next.js, React, Vue]
+- **Framework:** [e.g., Next.js (suggested default), React, Vue, Svelte, Angular, etc. - to be chosen by user]
 - **Key Libraries:** [List important libraries and their purposes]
 - **State Management:** [Approach to state management]
 - **UI Component Structure:** [Brief description of component organization]
@@ -29,7 +29,7 @@
 ### Database
 
 - **Type:** [SQL, NoSQL, etc.]
-- **Technology:** [e.g., PostgreSQL, MongoDB, Supabase]
+- **Technology:** [e.g., PostgreSQL, MongoDB, Supabase (suggested default), Firebase, AWS DynamoDB, etc. - to be chosen by user]
 - **Data Model:** [Brief description or link to data model documentation]
 - **Scaling Strategy:** [How the database will scale]
 

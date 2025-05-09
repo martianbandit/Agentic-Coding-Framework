@@ -11,7 +11,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Audio upload/link input, AI summarization, Action item extraction & display, User accounts.
 *   **Potential Monetization:** Freemium (limited free summaries/month), Subscription tiers based on usage/features (team collaboration).
 *   **Design Style:** Professional, Clean, Efficient.
-*   **Potential Stack/Tech:** Default + AI integration (OpenAI Whisper/GPT or similar), Cloud storage (Supabase Storage).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (OpenAI Whisper/GPT or similar), Cloud storage (e.g., Supabase Storage if chosen).
 
 ---
 
@@ -22,7 +22,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** User profiles (skills offered/needed), Posting requests/offers, Search/filter by skill/location, In-app messaging, Rating system.
 *   **Potential Monetization:** Optional premium features (profile verification, promoted listings), Small commission on optional paid exchanges.
 *   **Design Style:** Friendly, Community-focused, Trustworthy.
-*   **Potential Stack/Tech:** Default, Geolocation API (Mapbox/Google Maps), Real-time notifications (Supabase).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Geolocation API (Mapbox/Google Maps), Real-time notifications (e.g., Supabase if chosen).
 
 ---
 
@@ -33,7 +33,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Skill/Goal input, AI-generated learning path, Resource curation & linking, Progress tracking (manual check-offs).
 *   **Potential Monetization:** Freemium (basic paths free), Subscription for advanced features (progress tracking, quizzes, community access).
 *   **Design Style:** Clean, Structured, Educational.
-*   **Potential Stack/Tech:** Default + AI integration (LLM for curation), Web scraping (Firecrawl MCP) for resource validation.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM for curation), Web scraping (Firecrawl MCP) for resource validation.
 
 ---
 
@@ -44,7 +44,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Subscription box directory (curated), Search/filter, User reviews/ratings, Manual subscription tracking, Basic dashboard.
 *   **Potential Monetization:** Affiliate links to subscription boxes, Premium features (price tracking alerts, advanced management).
 *   **Design Style:** Visually appealing, Organized, Consumer-friendly.
-*   **Potential Stack/Tech:** Default, Web scraping for box info (initially).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Web scraping for box info (initially).
 
 ---
 
@@ -55,7 +55,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Habit creation & tracking, Gamification elements (points, streaks, levels), Basic social groups (shared progress visibility), Progress visualization.
 *   **Potential Monetization:** Freemium (core tracking free), Subscription for advanced gamification, group features, or detailed analytics.
 *   **Design Style:** Playful, Engaging, Motivational.
-*   **Potential Stack/Tech:** Default, Charting library (e.g., Chart.js, Recharts), Real-time updates for groups (Supabase).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Charting library (e.g., Chart.js, Recharts), Real-time updates for groups (e.g., Supabase if chosen).
 
 ---
 
@@ -66,7 +66,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Ingredient input (text list), AI recipe generation, Filtering by diet/cuisine, Saving favorite recipes.
 *   **Potential Monetization:** Free (potentially ad-supported), Premium subscription for advanced features (meal planning, nutritional info, saving more recipes).
 *   **Design Style:** Clean, Appetizing, Simple.
-*   **Potential Stack/Tech:** Default + AI integration (LLM for recipe generation).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM for recipe generation).
 
 ---
 
@@ -77,7 +77,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Simple store setup wizard, Product management (digital/physical), Stripe integration for payments, Basic order management.
 *   **Potential Monetization:** Subscription tiers based on number of products/features, Transaction fees.
 *   **Design Style:** Minimalist, Elegant, Creator-focused.
-*   **Potential Stack/Tech:** Default + Stripe MCP integration.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Stripe MCP integration.
 
 ---
 
@@ -88,7 +88,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Plant database (basic), User plant collection management, Watering/fertilizing reminders, Manual logging of care actions.
 *   **Potential Monetization:** Freemium (limited plants), Subscription for unlimited plants, AI diagnostics, advanced care tips.
 *   **Design Style:** Natural, Calming, Informative.
-*   **Potential Stack/Tech:** Default, Plant identification API (optional), AI image analysis (optional), Notification service.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Plant identification API (optional), AI image analysis (optional), Notification service.
 
 ---
 
@@ -99,7 +99,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Event aggregation & display, Search/filter functionality, Map view, User accounts for saving events.
 *   **Potential Monetization:** Freemium (basic listings), Premium subscription for advanced filters/alerts, Featured event listings for organizers.
 *   **Design Style:** Bright, Cheerful, Easy-to-navigate.
-*   **Potential Stack/Tech:** Default, Web scraping (Firecrawl MCP), Geolocation/Mapping API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Web scraping (Firecrawl MCP), Geolocation/Mapping API.
 
 ---
 
@@ -110,7 +110,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Code input (paste/link), AI analysis based on general best practices, Generation of suggested comments, Categorization of comments (e.g., Nitpick, Suggestion, Bug).
 *   **Potential Monetization:** Freemium (limited analysis), Subscription for advanced features (custom rule sets, integration with GitHub/GitLab, team features).
 *   **Design Style:** Utilitarian, Developer-focused, Clear.
-*   **Potential Stack/Tech:** Default + AI integration (LLM fine-tuned for code analysis), GitHub MCP integration.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM fine-tuned for code analysis), GitHub MCP integration.
 
 ---
 
@@ -121,7 +121,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Itinerary input (destination, dates, interests), Basic itinerary generation, Activity suggestions, Map view.
 *   **Potential Monetization:** Freemium (basic itineraries), Subscription for advanced features (collaboration, budget tracking, offline access, AI customization), Affiliate links for bookings.
 *   **Design Style:** Inspirational, Organized, User-friendly.
-*   **Potential Stack/Tech:** Default, Mapping API, Affiliate APIs (booking sites), AI for personalization (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Mapping API, Affiliate APIs (booking sites), AI for personalization (optional).
 
 ---
 
@@ -132,7 +132,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Project management (basic), Time tracking, Manual invoice creation, Simple income/expense logging, Basic dashboard.
 *   **Potential Monetization:** Freemium (limited projects/clients), Subscription tiers based on features (Stripe integration, advanced reporting, tax estimation).
 *   **Design Style:** Clean, Professional, Organized.
-*   **Potential Stack/Tech:** Default, Stripe MCP integration (optional), Charting library.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Stripe MCP integration (optional), Charting library.
 
 ---
 
@@ -143,7 +143,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Phrase selection (pre-defined), Audio recording input, AI pronunciation analysis & scoring, Basic visual feedback.
 *   **Potential Monetization:** Freemium (limited phrases/languages), Subscription for unlimited access, advanced feedback, different accents.
 *   **Design Style:** Minimalist, Encouraging, Interactive.
-*   **Potential Stack/Tech:** Default + AI Speech-to-Text and potentially phonetic analysis APIs.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI Speech-to-Text and potentially phonetic analysis APIs.
 
 ---
 
@@ -154,7 +154,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Visual database table creation (maps to Supabase), Drag-and-drop form builder, Basic table view component, User roles (Admin, Editor, Viewer).
 *   **Potential Monetization:** Subscription based on number of apps, users, or data storage.
 *   **Design Style:** Utilitarian, Simple, Modular.
-*   **Potential Stack/Tech:** Default (heavy reliance on Supabase features), Drag-and-drop library (e.g., react-beautiful-dnd).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase, with heavy reliance on Supabase features if chosen) or user-chosen stack, Drag-and-drop library (e.g., react-beautiful-dnd).
 
 ---
 
@@ -165,7 +165,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Product search, Display of sustainable alternatives, Basic filtering (category, certification), Curated database (manual initially).
 *   **Potential Monetization:** Affiliate links to sustainable products, Premium features (personalized recommendations, impact tracking).
 *   **Design Style:** Green, Clean, Trustworthy, Informative.
-*   **Potential Stack/Tech:** Default, Web scraping (Firecrawl MCP), Browser extension framework (if applicable).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Web scraping (Firecrawl MCP), Browser extension framework (if applicable).
 
 ---
 ### 16. AI-Powered Content Repurposing Tool
@@ -175,7 +175,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Content input (text/URL), AI analysis & format suggestion, Snippet generation for 2-3 platforms, Basic editing interface.
 *   **Potential Monetization:** Freemium (limited repurposing/formats), Subscription tiers based on usage, number of platforms, AI model quality.
 *   **Design Style:** Modern, Clean, Content-focused.
-*   **Potential Stack/Tech:** Default + AI integration (LLM), potentially Speech-to-Text API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM), potentially Speech-to-Text API.
 
 ---
 
@@ -186,7 +186,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Core modules (budgeting, saving), Interactive quizzes, Simple saving goal tracker, Points/badge system.
 *   **Potential Monetization:** Freemium (basic modules free), One-time purchase or subscription for advanced modules (investing, credit).
 *   **Design Style:** Engaging, Colorful, Youth-friendly.
-*   **Potential Stack/Tech:** Default, Charting library.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Charting library.
 
 ---
 
@@ -197,7 +197,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Library of activities (curated/linked), Filtering by group size/duration/type, Basic scheduling/invitation system (manual links).
 *   **Potential Monetization:** Subscription for access to premium activities/features, Pay-per-event model.
 *   **Design Style:** Fun, Professional, Collaborative.
-*   **Potential Stack/Tech:** Default, potentially integrating with video conferencing APIs later.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, potentially integrating with video conferencing APIs later.
 
 ---
 
@@ -208,7 +208,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** User profile & goal input, AI workout plan generation, Exercise library (links/descriptions), Basic progress logging.
 *   **Potential Monetization:** Freemium (basic plan generation), Subscription for ongoing plan adjustments, nutritional guidance integration, advanced tracking.
 *   **Design Style:** Motivating, Clean, Fitness-focused.
-*   **Potential Stack/Tech:** Default + AI integration (LLM trained/prompted for fitness), Exercise video embedding.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM trained/prompted for fitness), Exercise video embedding.
 
 ---
 
@@ -219,7 +219,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Secure document upload (Supabase Storage with RLS), Shareable link generation, Basic eSignature request/capture, Document status tracking.
 *   **Potential Monetization:** Subscription based on number of documents/signatures per month, number of users.
 *   **Design Style:** Secure, Professional, Simple.
-*   **Potential Stack/Tech:** Default (heavy reliance on Supabase Auth/Storage/RLS), eSignature library or API integration.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase, with heavy reliance on Supabase Auth/Storage/RLS if chosen) or user-chosen stack, eSignature library or API integration.
 
 ---
 
@@ -230,7 +230,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Artisan profiles/storefronts, Product listings, Search/browse functionality, User accounts for purchasing (no direct payment processing initially).
 *   **Potential Monetization:** Listing fees for artisans, Commission on sales (requires payment integration), Featured artisan spots.
 *   **Design Style:** Artisanal, Community-focused, Visually rich.
-*   **Potential Stack/Tech:** Default, Image handling/optimization.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Image handling/optimization.
 
 ---
 
@@ -241,7 +241,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Resume upload (parse text), Job description input, AI cover letter generation, Basic text editor for refinement.
 *   **Potential Monetization:** Freemium (limited generations), Subscription for unlimited use, advanced customization options, different tone suggestions.
 *   **Design Style:** Professional, Clean, Helpful.
-*   **Potential Stack/Tech:** Default + AI integration (LLM), Resume parsing library.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM), Resume parsing library.
 
 ---
 
@@ -252,7 +252,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Daily mood logging (simple scale/emojis), Guided journal prompts, Basic mood history view/calendar.
 *   **Potential Monetization:** One-time purchase for lifetime access, Optional subscription for advanced analytics, more prompt categories, or export features.
 *   **Design Style:** Calming, Minimalist, Private.
-*   **Potential Stack/Tech:** Default, Charting library, Focus on client-side storage or secure Supabase setup.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Charting library, Focus on client-side storage or secure setup with chosen backend (e.g., Supabase).
 
 ---
 
@@ -263,7 +263,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** User profiles, Book listing (manual input or ISBN lookup), Browse/search books, Swap proposal/messaging system.
 *   **Potential Monetization:** Free (community focus), Optional premium features (wishlist alerts, extended profile options).
 *   **Design Style:** Cozy, Bookish, Community-oriented.
-*   **Potential Stack/Tech:** Default, ISBN lookup API (e.g., Open Library API).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, ISBN lookup API (e.g., Open Library API).
 
 ---
 
@@ -274,7 +274,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Curated directory of AI tools, Categorization/tagging, Search functionality, User ratings/reviews submission.
 *   **Potential Monetization:** Affiliate links to AI tools, Featured tool placements, Premium subscription for advanced search/comparison features.
 *   **Design Style:** Modern, Tech-focused, Organized.
-*   **Potential Stack/Tech:** Default, Web scraping (optional, for review aggregation).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Web scraping (optional, for review aggregation).
 
 ---
 
@@ -285,7 +285,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Podcast search/database (using existing APIs), User rating system, Interest tagging, Basic AI recommendation generation.
 *   **Potential Monetization:** Freemium (basic recommendations), Subscription for advanced features (playlist creation, cross-platform sync, deeper personalization).
 *   **Design Style:** Clean, Audio-focused, Engaging.
-*   **Potential Stack/Tech:** Default + Podcast Index API or similar, AI for recommendation engine.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Podcast Index API or similar, AI for recommendation engine.
 
 ---
 
@@ -296,7 +296,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Input forms for key impact areas (travel, energy, diet), Basic footprint calculation (using standard emission factors), Personalized reduction tips library.
 *   **Potential Monetization:** Free (focus on impact), Potential partnerships with sustainable brands, Premium features for detailed tracking/reporting.
 *   **Design Style:** Green, Informative, Action-oriented.
-*   **Potential Stack/Tech:** Default, Database of emission factors.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Database of emission factors.
 
 ---
 
@@ -307,7 +307,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Simple template selection, Content editing (text, images), Basic RSVP form builder (stores data in Supabase), Page publishing.
 *   **Potential Monetization:** Pay-per-event page, Subscription for multiple events or advanced features (custom domains, analytics).
 *   **Design Style:** Clean, Event-focused, Customizable templates.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -318,7 +318,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Interest/keyword input, News aggregation from selected sources (RSS/APIs), AI filtering/ranking based on relevance, Personalized feed display.
 *   **Potential Monetization:** Freemium (limited topics/sources), Subscription for unlimited tracking, real-time alerts, summarization features.
 *   **Design Style:** Minimalist, Text-focused, Efficient.
-*   **Potential Stack/Tech:** Default + News APIs (e.g., NewsAPI.org), RSS parsing libraries, AI for filtering/summarization.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + News APIs (e.g., NewsAPI.org), RSS parsing libraries, AI for filtering/summarization.
 
 ---
 
@@ -329,7 +329,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Pre-defined challenge library, Challenge participation tracking (manual), Basic progress visualization, Optional social sharing/groups.
 *   **Potential Monetization:** Free (community/wellbeing focus), Optional premium challenges or content.
 *   **Design Style:** Calming, Minimalist, Encouraging.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -340,7 +340,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Opportunity listings, Search/filter functionality, Organization profiles (basic), User accounts for saving opportunities.
 *   **Potential Monetization:** Free for users and basic listings for non-profits, Featured listings or recruitment tools for organizations.
 *   **Design Style:** Community-focused, Positive, Action-oriented.
-*   **Potential Stack/Tech:** Default, Web scraping (optional), Geolocation API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Web scraping (optional), Geolocation API.
 
 ---
 
@@ -351,7 +351,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Basic mind map creation (nodes, connections), AI suggestion feature per node, Export map (text/image).
 *   **Potential Monetization:** Freemium (limited AI suggestions), Subscription for unlimited AI use, advanced layout options, collaboration features.
 *   **Design Style:** Visual, Dynamic, Creative.
-*   **Potential Stack/Tech:** Default + AI integration (LLM), Mind mapping library (e.g., React Flow).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM), Mind mapping library (e.g., React Flow).
 
 ---
 
@@ -362,7 +362,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Project creation & step definition, Materials list management, Basic cost estimation, Progress tracking (checklist).
 *   **Potential Monetization:** Free, Premium features (material quantity calculators, budget tracking, tool inventory).
 *   **Design Style:** Practical, Organized, Utilitarian.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -373,7 +373,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Encrypted document upload/storage, Document categorization, Secure user authentication (MFA), Basic access sharing (view only).
 *   **Potential Monetization:** Subscription based on storage amount or number of shared contacts. Security is paramount.
 *   **Design Style:** Secure, Minimalist, Trustworthy.
-*   **Potential Stack/Tech:** Default (heavy focus on Supabase Auth/Storage/RLS, potentially client-side encryption).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase, with heavy focus on Supabase Auth/Storage/RLS if chosen, potentially client-side encryption) or user-chosen stack.
 
 ---
 
@@ -384,7 +384,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Text input, AI analysis for tone/style/readability, Feedback display, Target style selection (e.g., Formal, Casual, Persuasive).
 *   **Potential Monetization:** Freemium (limited analysis length/features), Subscription for advanced analysis, custom style profiles, integration (e.g., Google Docs add-on).
 *   **Design Style:** Clean, Analytical, Educational.
-*   **Potential Stack/Tech:** Default + AI integration (LLM fine-tuned for linguistic analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM fine-tuned for linguistic analysis).
 
 ---
 
@@ -395,7 +395,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Business profiles & listing creation (type of food, pickup time, price), Consumer browsing/searching nearby offers, Basic notification system for new listings.
 *   **Potential Monetization:** Small commission per transaction, Subscription fee for businesses for premium features (analytics, scheduling).
 *   **Design Style:** Appetizing, Local, Fast-paced.
-*   **Potential Stack/Tech:** Default, Geolocation API, Real-time notifications (Supabase).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Geolocation API, Real-time notifications (e.g., Supabase if chosen).
 
 ---
 
@@ -406,7 +406,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Recipient profile input, AI gift recommendation generation, Filtering by category/price, Links to product pages.
 *   **Potential Monetization:** Affiliate links, Partnerships with retailers, Premium features (saving profiles, occasion reminders).
 *   **Design Style:** Fun, Inspirational, Helpful.
-*   **Potential Stack/Tech:** Default + AI integration (LLM), Affiliate network integration.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM), Affiliate network integration.
 
 ---
 
@@ -417,7 +417,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** User profiles (courses, availability), Search/filter for partners/groups, Group creation, Basic session scheduling/proposal system.
 *   **Potential Monetization:** Freemium (basic matching), Premium features (advanced scheduling tools, resource sharing within groups, tutor listings).
 *   **Design Style:** Academic, Collaborative, Organized.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -428,7 +428,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Exercise selection (limited set), Camera input & pose estimation, Real-time feedback for 1-2 key exercises, Basic performance summary.
 *   **Potential Monetization:** Freemium (limited exercises), Subscription for full exercise library, personalized feedback, progress tracking.
 *   **Design Style:** Minimalist, Focused, Technical.
-*   **Potential Stack/Tech:** Default + Frontend AI/ML library for pose estimation (e.g., TensorFlow.js MoveNet, MediaPipe Pose).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Frontend AI/ML library for pose estimation (e.g., TensorFlow.js MoveNet, MediaPipe Pose).
 
 ---
 
@@ -439,7 +439,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Forum creation wizard, Category/thread/post management, User profiles & posting, Basic moderation tools.
 *   **Potential Monetization:** Subscription tiers based on member count, storage, or features (custom themes, plugins).
 *   **Design Style:** Clean, Customizable, Community-centric.
-*   **Potential Stack/Tech:** Default (heavy use of Supabase for data and potentially Realtime).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase, with heavy use of Supabase for data and potentially Realtime if chosen) or user-chosen stack.
 
 ---
 
@@ -450,7 +450,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Story writing interface, AI suggestion feature at defined points, Basic chapter publishing, Reader view.
 *   **Potential Monetization:** Freemium (limited AI use/stories), Subscription for authors (unlimited AI, advanced features), Optional reader subscription for voting/early access.
 *   **Design Style:** Immersive, Creative, Text-focused.
-*   **Potential Stack/Tech:** Default + AI integration (LLM).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM).
 
 ---
 
@@ -461,7 +461,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Service provider directory (local focus), Review aggregation/display, User review submission, Search/filter by service/location.
 *   **Potential Monetization:** Featured provider listings, Lead generation fees for providers, Premium features for users (e.g., verified reviewer badges).
 *   **Design Style:** Trustworthy, Local, Utilitarian.
-*   **Potential Stack/Tech:** Default, Web scraping (optional), Geolocation API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Web scraping (optional), Geolocation API.
 
 ---
 
@@ -472,7 +472,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Pre-session questionnaire, AI-generated meditation script (text), Basic session timer.
 *   **Potential Monetization:** Freemium (limited session types/lengths), Subscription for unlimited access, voice options, progress tracking, different themes.
 *   **Design Style:** Calming, Minimalist, Personalized.
-*   **Potential Stack/Tech:** Default + AI integration (LLM), Text-to-Speech API (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM), Text-to-Speech API (optional).
 
 ---
 
@@ -483,7 +483,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Rule database for 5-10 popular games, Searchable rules, Score tracker for 2-3 games, User accounts for saving game states.
 *   **Potential Monetization:** Free (community resource), One-time purchase per game pack, Subscription for full library access or ad-free experience.
 *   **Design Style:** Themed (matching games), Functional, Easy-to-use during play.
-*   **Potential Stack/Tech:** Default, Game rule data entry/curation.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Game rule data entry/curation.
 
 ---
 
@@ -494,7 +494,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Keyword/description input, AI name generation, AI slogan generation, Basic filtering/favoriting.
 *   **Potential Monetization:** Freemium (limited generations), Pay-per-use credits, Subscription for advanced features (domain checks, logo ideas).
 *   **Design Style:** Creative, Modern, Simple.
-*   **Potential Stack/Tech:** Default + AI integration (LLM), Domain availability API (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM), Domain availability API (optional).
 
 ---
 
@@ -505,7 +505,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Recipe submission form (standardized fields), Browse/search recipes, Filtering by platform/device, User ratings/comments.
 *   **Potential Monetization:** Free (community focus), Premium features (advanced search, recipe validation tools).
 *   **Design Style:** Tech-focused, Organized, Collaborative.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -516,7 +516,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Skin profile questionnaire, AI routine generation, Product recommendations (curated database), Basic routine steps display.
 *   **Potential Monetization:** Freemium (basic routine), Subscription for advanced features (ingredient analysis, progress tracking, product alternative suggestions), Affiliate links.
 *   **Design Style:** Clean, Clinical, Personalized, Trustworthy.
-*   **Potential Stack/Tech:** Default + AI integration (LLM or rule-based system), Product database/API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM or rule-based system), Product database/API.
 
 ---
 
@@ -527,7 +527,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Lost/Found pet posting form, Map view of alerts, Search/filter by area/pet type, Basic user accounts & contact info (securely handled).
 *   **Potential Monetization:** Free (community service), Optional donations, Premium features (alert boosting, wider notification radius).
 *   **Design Style:** Urgent, Hopeful, Community-driven.
-*   **Potential Stack/Tech:** Default, Geolocation API, Real-time notifications (Supabase).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Geolocation API, Real-time notifications (e.g., Supabase if chosen).
 
 ---
 
@@ -538,7 +538,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Text editor, Citation formatting helper (APA/MLA), Tone/formality analysis & suggestions, Basic grammar/style checks.
 *   **Potential Monetization:** Freemium (limited checks/styles), Subscription for full features, plagiarism check integration, multiple citation styles.
 *   **Design Style:** Academic, Formal, Utilitarian.
-*   **Potential Stack/Tech:** Default + AI integration (LLM fine-tuned for academic style), Citation database/API, Plagiarism checker API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM fine-tuned for academic style), Citation database/API, Plagiarism checker API.
 
 ---
 
@@ -549,7 +549,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Exhibit database (curated for one museum), QR code scanning/manual lookup, Display of additional text/images/videos per exhibit, Simple quiz/trivia per exhibit.
 *   **Potential Monetization:** Free (provided by museum), One-time purchase, Included with museum admission.
 *   **Design Style:** Themed to museum, Engaging, Informative.
-*   **Potential Stack/Tech:** Default, QR code scanning library.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, QR code scanning library.
 
 ---
 
@@ -560,7 +560,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Dream entry form (text), AI theme/emotion tagging suggestions, Basic dream search/calendar view, Simple interpretation suggestions (optional).
 *   **Potential Monetization:** Freemium (limited entries/analysis), Subscription for unlimited journaling, advanced pattern analysis, different interpretation models.
 *   **Design Style:** Ethereal, Personal, Introspective.
-*   **Potential Stack/Tech:** Default + AI integration (LLM for analysis/interpretation).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM for analysis/interpretation).
 
 ---
 
@@ -571,7 +571,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Furniture listing creation, Search/filter/map view, User accounts, In-app messaging.
 *   **Potential Monetization:** Small listing fee, Featured listings, Commission on optional integrated delivery services.
 *   **Design Style:** Clean, Visual, Furniture-focused.
-*   **Potential Stack/Tech:** Default, Geolocation API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Geolocation API.
 
 ---
 
@@ -582,7 +582,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Podcast episode input (search/RSS), Audio player with clipping selection, Shareable clip generation (audio file/link), Basic social sharing options.
 *   **Potential Monetization:** Freemium (limited clips/length), Subscription for unlimited clipping, transcription features, team/collaboration features.
 *   **Design Style:** Minimalist, Audio-centric, Shareable.
-*   **Potential Stack/Tech:** Default + Podcast Index API, Server-side audio processing library (e.g., ffmpeg).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Podcast Index API, Server-side audio processing library (e.g., ffmpeg).
 
 ---
 
@@ -593,7 +593,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Prompt input form, AI story generation, Story display (text), Option to save favorite stories.
 *   **Potential Monetization:** Freemium (limited generations), Subscription for unlimited stories, different story styles/lengths, illustration generation (future).
 *   **Design Style:** Whimsical, Child-friendly, Cozy.
-*   **Potential Stack/Tech:** Default + AI integration (LLM fine-tuned for children's stories).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM fine-tuned for children's stories).
 
 ---
 
@@ -604,7 +604,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Deal/Happy Hour listings, Search/filter by time/day/type/location, Map view, User submissions & verification (basic).
 *   **Potential Monetization:** Featured listings for restaurants, Premium subscription for users (real-time alerts, saving favorites).
 *   **Design Style:** Lively, Engaging, Value-focused.
-*   **Potential Stack/Tech:** Default, Geolocation API, Web scraping (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Geolocation API, Web scraping (optional).
 
 ---
 
@@ -615,7 +615,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Meeting goal/topic input, Attendee list, AI agenda item suggestion, Time allocation suggestion, Agenda formatting/export.
 *   **Potential Monetization:** Freemium (basic agendas), Subscription for advanced features (integration with calendars, action item tracking integration, custom templates).
 *   **Design Style:** Professional, Organized, Efficient.
-*   **Potential Stack/Tech:** Default + AI integration (LLM).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM).
 
 ---
 
@@ -626,7 +626,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Word list creation/import (basic), Spaced repetition flashcards, One or two simple game modes, Basic progress tracking.
 *   **Potential Monetization:** Freemium (limited word lists/languages), Subscription for full access, more game modes, offline access.
 *   **Design Style:** Playful, Colorful, Educational.
-*   **Potential Stack/Tech:** Default, Spaced Repetition System (SRS) algorithm implementation.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Spaced Repetition System (SRS) algorithm implementation.
 
 ---
 
@@ -637,7 +637,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Structured input forms based on common grant sections, AI drafting assistance for key sections, Template library (basic), Collaboration features (basic).
 *   **Potential Monetization:** Subscription model based on usage or number of proposals, Premium templates/features.
 *   **Design Style:** Professional, Formal, Supportive.
-*   **Potential Stack/Tech:** Default + AI integration (LLM fine-tuned for grant writing).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM fine-tuned for grant writing).
 
 ---
 
@@ -648,7 +648,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Dog park directory/map, User check-ins, Condition reporting (simple scale/tags), Basic park feed/updates.
 *   **Potential Monetization:** Free (community focus), Optional premium features (playdate scheduling, advanced park alerts).
 *   **Design Style:** Fun, Outdoorsy, Community-focused.
-*   **Potential Stack/Tech:** Default, Geolocation API, Real-time updates (Supabase).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Geolocation API, Real-time updates (e.g., Supabase if chosen).
 
 ---
 
@@ -659,7 +659,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Series/creator following, Upcoming release calendar view, Pull list builder, Export pull list (text/CSV).
 *   **Potential Monetization:** Freemium (limited series tracking), Subscription for unlimited tracking, variant cover tracking, integration with digital comic platforms (future).
 *   **Design Style:** Comic-book themed, Organized, Collector-focused.
-*   **Potential Stack/Tech:** Default, Comic release data APIs (e.g., Comic Vine API, publisher APIs if available), Web scraping.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Comic release data APIs (e.g., Comic Vine API, publisher APIs if available), Web scraping.
 
 ---
 
@@ -670,7 +670,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Email context input, AI subject line generation (multiple options), Basic tone/style selection.
 *   **Potential Monetization:** Freemium (limited generations), Subscription for unlimited use, A/B testing suggestions, performance prediction features.
 *   **Design Style:** Clean, Data-driven, Marketing-focused.
-*   **Potential Stack/Tech:** Default + AI integration (LLM fine-tuned for marketing copy).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM fine-tuned for marketing copy).
 
 ---
 
@@ -681,7 +681,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Guided self-assessment questionnaire, Personalized recommendations based on answers, Library of ergonomic tips and exercises.
 *   **Potential Monetization:** Free (basic assessment), Premium subscription for advanced features (pose estimation analysis, personalized exercise plans, progress tracking).
 *   **Design Style:** Health-focused, Informative, Professional.
-*   **Potential Stack/Tech:** Default, Pose estimation library (optional, e.g., TensorFlow.js MoveNet).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Pose estimation library (optional, e.g., TensorFlow.js MoveNet).
 
 ---
 
@@ -692,7 +692,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Tour creation interface (map-based point placement), Content input per point (text, image), Tour publishing, Mobile web view for following tours (GPS-based).
 *   **Potential Monetization:** Pay-per-tour creation, Subscription for creators (advanced features), Option for creators to charge for their tours (platform takes a cut).
 *   **Design Style:** Historical, Map-centric, Engaging.
-*   **Potential Stack/Tech:** Default, Geolocation/Mapping API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Geolocation/Mapping API.
 
 ---
 
@@ -703,7 +703,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Key/genre/mood input, AI chord progression generation, Display of chords (standard notation), Basic filtering/variation options.
 *   **Potential Monetization:** Freemium (limited generations/genres), Subscription for advanced features (more genres, complexity controls, audio playback, export to MIDI).
 *   **Design Style:** Minimalist, Music-focused, Creative.
-*   **Potential Stack/Tech:** Default + AI integration (LLM or model trained on music theory), Web Audio API (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI integration (LLM or model trained on music theory), Web Audio API (optional).
 
 ---
 
@@ -714,7 +714,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Anonymous feedback submission form, Secure viewing portal for administrators, Basic categorization of feedback (optional, by submitter).
 *   **Potential Monetization:** Subscription model for companies based on number of employees or features (e.g., analytics, response tracking).
 *   **Design Style:** Minimalist, Trustworthy, Secure.
-*   **Potential Stack/Tech:** Default (strong focus on security and anonymity mechanisms).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack (strong focus on security and anonymity mechanisms).
 
 ---
 ### 66. AI Meeting Summarizer & Emotional Tone Agent
@@ -724,7 +724,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Integration (Zoom/Meet), Transcription, AI Summary, Action Item Extraction, Emotional Tone Detection (basic), Role-based summary view (basic).
 *   **Potential Monetization:** Freemium, Premium tiers (history, CRM integration, advanced emotional/strategic analysis, Notion/Slack export, diplomatic follow-up emails).
 *   **Design Style:** Professional, Data-driven, Insightful.
-*   **Potential Stack/Tech:** Default + AI (Speech-to-Text, LLM for summary/analysis, potentially audio tone analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Speech-to-Text, LLM for summary/analysis, potentially audio tone analysis).
 
 ---
 
@@ -735,7 +735,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Topic/Script input, AI Script generation, AI Voice-over (TTS), Basic visual selection/generation, Vertical video compilation.
 *   **Potential Monetization:** Pay-per-video, Subscription tiers based on volume/features (A/B testing, performance analytics, 'Ghost Cloner' style transfer).
 *   **Design Style:** Modern, Fast-paced, Creator-centric.
-*   **Potential Stack/Tech:** Default + AI (LLM for script, TTS, potentially Video Generation AI), Video processing libraries.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for script, TTS, potentially Video Generation AI), Video processing libraries.
 
 ---
 
@@ -746,7 +746,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Source/Theme input, Automated scraping/monitoring (select sources), AI filtering & summarization, Dashboard/Digest view, Basic weak signal detection.
 *   **Potential Monetization:** Subscription tiers based on number of themes/sources, alert frequency, multi-modal analysis (text, audio, video), Discord bot integration.
 *   **Design Style:** Analytical, Data-rich, Efficient.
-*   **Potential Stack/Tech:** Default + Web scraping (Firecrawl MCP), AI (LLM for analysis/summary), RSS/API integrations, potentially Speech-to-Text.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Web scraping (Firecrawl MCP), AI (LLM for analysis/summary), RSS/API integrations, potentially Speech-to-Text.
 
 ---
 
@@ -757,7 +757,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Idea input, AI Product content generation (e.g., ebook outline, template structure), Basic storefront hosting, Perceived value analysis (basic), AI Customer Success Agent (basic Q&A).
 *   **Potential Monetization:** Subscription tiers, Commission on sales, Premium AI generation features, Auto-optimizing store features.
 *   **Design Style:** Minimalist, Creator-empowering, Automated.
-*   **Potential Stack/Tech:** Default + AI (LLM for content/analysis), Stripe MCP integration.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for content/analysis), Stripe MCP integration.
 
 ---
 
@@ -768,7 +768,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Simple expense tracking, AI detection of potential emotional spending, Basic financial mindset coaching (text-based), Value-based goal setting.
 *   **Potential Monetization:** Subscription for personalized AI coaching, advanced mindset modules, life scenario projections, financial integration routines.
 *   **Design Style:** Minimalist, Calming, Reflective.
-*   **Potential Stack/Tech:** Default + AI (LLM for coaching/analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for coaching/analysis).
 
 ---
 
@@ -779,7 +779,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Guided questioning cycles, Basic breathwork timer/guide, Augmented journal input, AI-driven emotional state detection (basic, from text/voice tone), Actionable micro-exercise suggestions.
 *   **Potential Monetization:** Subscription for advanced coaching modules, personalized pathways, "face-yourself" emotional mirror (camera analysis), living decision tree visualization.
 *   **Design Style:** Introspective, Supportive, Personalized.
-*   **Potential Stack/Tech:** Default + AI (LLM, potentially emotion detection from text/audio/video).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM, potentially emotion detection from text/audio/video).
 
 ---
 
@@ -790,7 +790,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Customizable work/break cycles, AI energy-based cycle suggestion, Basic friction detection & micro-intervention prompts, Focus streak tracking/gamification.
 *   **Potential Monetization:** Subscription for advanced features (sensory tracking integration, live "Flow Playlist" generation, gamified immersion modes, friction assistant).
 *   **Design Style:** Minimalist, Focused, Gamified (subtly).
-*   **Potential Stack/Tech:** Default, potentially Web Audio API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, potentially Web Audio API.
 
 ---
 
@@ -801,7 +801,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Workflow input (text description), AI analysis for automation potential, Suggestion of automatable tasks & tools, Basic time/cost saving estimation.
 *   **Potential Monetization:** Freemium (basic audit), Subscription for advanced features (browser shadowing analysis, interactive process rebuilding suggestions, direct integration suggestions for Zapier/Make).
 *   **Design Style:** Analytical, Process-oriented, Actionable.
-*   **Potential Stack/Tech:** Default + AI (LLM for process analysis), Browser extension (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for process analysis), Browser extension (optional).
 
 ---
 
@@ -812,7 +812,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Thought submission interface (text), On-chain recording (MindHash), Simple visualization of thought chains/propagation, Basic "mental impact" score.
 *   **Potential Monetization:** Tokenomics based on thought propagation/validation, Access to DAO features, Marketplace for "high-impact" thoughts (speculative).
 *   **Design Style:** Abstract, Conceptual, Network-focused.
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (Smart Contracts in Solidity/Move), Hashing algorithms, AI (optional, for analyzing thought patterns).
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (Smart Contracts in Solidity/Move), Hashing algorithms, AI (optional, for analyzing thought patterns).
 
 ---
 
@@ -823,7 +823,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Time fragment tokenization interface, Basic marketplace for trading fragments, Smart contract template for time-bound commitments, Simple notification system for upcoming commitments.
 *   **Potential Monetization:** Platform transaction fees, Premium features for creating complex time fragments or derivatives (speculative).
 *   **Design Style:** Futuristic, Speculative, Game-like.
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (Smart Contracts), Oracles (potentially, for verifying commitment fulfillment).
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (Smart Contracts), Oracles (potentially, for verifying commitment fulfillment).
 
 ---
 
@@ -834,7 +834,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Input interface for projective/symbolic responses, On-chain storage of anonymized inputs, AI Oracle interpreting collective patterns, Basic DAO treasury/action mechanism triggered by oracle.
 *   **Potential Monetization:** Tokenomics based on participation and pattern contribution, Access to collective insights, Tools for interpreting personal subconscious patterns reflected in the DAO.
 *   **Design Style:** Mysterious, Symbolic, Organic.
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (Smart Contracts, Storage), AI (LLM or specialized model for psychological pattern analysis).
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (Smart Contracts, Storage), AI (LLM or specialized model for psychological pattern analysis).
 
 ---
 
@@ -845,7 +845,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Loop creation interface (defining simple trigger/effect), On-chain loop execution engine, Staking mechanism for "loop energy", Basic loop interaction (e.g., "break" transaction).
 *   **Potential Monetization:** In-game currency/energy purchase, Marketplace for complex loop components or visual effects, Tournament entry fees.
 *   **Design Style:** Abstract, Cyberpunk, Strategic.
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (complex Smart Contracts for game logic and execution).
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (complex Smart Contracts for game logic and execution).
 
 ---
 
@@ -856,7 +856,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Basic interaction mechanism (e.g., sending micro-messages/tokens), On-chain interaction recorder, AI analysis identifying behavioral patterns/styles (basic), Visualization of interaction network without explicit IDs.
 *   **Potential Monetization:** Tools for analyzing behavioral patterns, Access to specific interaction "spaces" based on vibe, Secure messaging based on recognized patterns.
 *   **Design Style:** Minimalist, Abstract, Data-visualization heavy.
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (Smart Contracts for interaction logging), AI (for behavioral pattern analysis).
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (Smart Contracts for interaction logging), AI (for behavioral pattern analysis).
 
 ---
 
@@ -867,7 +867,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Emotion reporting/staking interface, On-chain creation of temporary emotional token pools, Basic utility for emotional tokens (e.g., access a specific chat room), Daily emotional economic snapshot.
 *   **Potential Monetization:** Transaction fees for emotional token swaps (speculative), Access to advanced emotional analytics, Tools for "emotional finance" experiments.
 *   **Design Style:** Dynamic, Colorful, Experimental.
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (Smart Contracts for staking and token pools), AI (optional, for analyzing emotion from text/voice).
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (Smart Contracts for staking and token pools), AI (optional, for analyzing emotion from text/voice).
 
 ---
 
@@ -878,7 +878,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Daily input mechanism (text/voice journal), Core AI learning model, Basic interaction interface (Q&A with Alter Ego), Simple visualization of Ego evolution.
 *   **Potential Monetization:** Subscription for advanced learning/interaction, personalized avatar customization, "Future Self" simulation access, potential NFT of evolved Ego states.
 *   **Design Style:** Futuristic, Personal, Reflective.
-*   **Potential Stack/Tech:** Default + AI (LLM with continuous learning/personalization capabilities), Secure data storage.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM with continuous learning/personalization capabilities), Secure data storage.
 
 ---
 
@@ -889,7 +889,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Random prompt delivery, Uneditable video recording, Private journal view, Basic AI emotion/authenticity feedback.
 *   **Potential Monetization:** Premium access to deeper psychological analysis, historical journal insights, optional secure sharing with a therapist or coach.
 *   **Design Style:** Raw, Minimalist, Unfiltered.
-*   **Potential Stack/Tech:** Default + AI (Emotion detection from video/audio).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Emotion detection from video/audio).
 
 ---
 
@@ -900,7 +900,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Intensity level selection, Daily micro-challenge delivery (text-based), Manual completion tracking, Basic progress visualization (e.g., "comfort zone expansion").
 *   **Potential Monetization:** Subscription for personalized challenge generation, specific goal-oriented friction tracks (e.g., "Public Speaking Fear"), "Hardcore Mode", community features.
 *   **Design Style:** Minimalist, Bold, Challenging.
-*   **Potential Stack/Tech:** Default + AI (LLM for challenge generation/personalization).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for challenge generation/personalization).
 
 ---
 
@@ -911,7 +911,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Anonymous thought posting, Geofenced thought feed, Upvote/downvote system, Basic map visualization of thought density/mood.
 *   **Potential Monetization:** Premium access to analytics (e.g., neighborhood mood trends), private "introspective" version, AI therapeutic chat integration.
 *   **Design Style:** Ephemeral, Text-based, Map-centric.
-*   **Potential Stack/Tech:** Default + Geolocation API, Real-time database (Supabase).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Geolocation API, Real-time database (e.g., Supabase if chosen).
 
 ---
 
@@ -922,7 +922,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Guided prompts around legacy/regrets/mission, Structured planning sections (e.g., "What to leave behind", "Actions before"), Secure vault for final messages/wishes (basic).
 *   **Potential Monetization:** Premium "Rebirth Planning" modules, access to rituals/content, AI mentorship based on legacy goals.
 *   **Design Style:** Sober, Reflective, Profound.
-*   **Potential Stack/Tech:** Default, Secure storage.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Secure storage.
 
 ---
 
@@ -933,7 +933,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Timed session rooms, Real-time competitor visibility (basic), Manual focus reporting / simple automated checks (e.g., window focus), Basic points/leaderboard system.
 *   **Potential Monetization:** Tournament entry fees, Premium subscriptions (advanced focus tracking, private rooms, team features), Sponsorships from productivity tools.
 *   **Design Style:** Gamified, Competitive, Minimalist during focus sessions.
-*   **Potential Stack/Tech:** Default, Real-time database/websockets, potentially input/camera analysis libraries.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Real-time database/websockets, potentially input/camera analysis libraries.
 
 ---
 
@@ -944,7 +944,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Basic user profile/history input, AI clone generation (simple model), Interface for defining alternative scenarios, Text-based simulation results/narrative.
 *   **Potential Monetization:** Subscription for advanced simulation capabilities, access to "TimeLapses" (visualizations), AI coaching based on simulations.
 *   **Design Style:** Futuristic, Exploratory, Narrative-driven.
-*   **Potential Stack/Tech:** Default + AI (LLM capable of simulation/projection).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM capable of simulation/projection).
 
 ---
 
@@ -955,7 +955,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Paired user connection, Shared breath pacer visualization, Manual stress/calm level reporting with haptic feedback trigger, Basic shared emotional moment log.
 *   **Potential Monetization:** Subscription for multi-pair connections, advanced biometric integration (wearables), enriched relational interface/analytics.
 *   **Design Style:** Intimate, Minimalist, Sensory.
-*   **Potential Stack/Tech:** Default, Real-time database/websockets, Wearable API integration (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Real-time database/websockets, Wearable API integration (optional).
 
 ---
 
@@ -966,7 +966,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Idea/dream capture (text/voice), AI tagging/clustering, Periodic idea resurfacing prompts, Basic visualization of idea evolution/connections.
 *   **Potential Monetization:** Subscription for advanced AI incubation features, access to collaborator matchmaking, marketplace for mature "idea seeds".
 *   **Design Style:** Organic, Creative, Emergent.
-*   **Potential Stack/Tech:** Default + AI (LLM for analysis/connection).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for analysis/connection).
 
 ---
 
@@ -977,7 +977,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Task definition & time logging, AI-assisted task value assessment (basic), TimeCoin wallet, Simple reward store (e.g., unlock focus music).
 *   **Potential Monetization:** Subscription for advanced features, marketplace for exchanging TimeCoins, partnerships for rewards, potential tokenization (advanced).
 *   **Design Style:** Gamified, Economic, Disciplined.
-*   **Potential Stack/Tech:** Default + AI (for task value assessment).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (for task value assessment).
 
 ---
 
@@ -988,7 +988,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Data import connectors (basic, e.g., text journal import), AI analysis for chapter/theme identification, Interactive timeline visualization, Basic emotional annotation.
 *   **Potential Monetization:** Premium analysis features ("Regret analysis", "Destiny Pivots"), advanced visualization/export options, secure sharing with family/therapist.
 *   **Design Style:** Reflective, Visual, Narrative.
-*   **Potential Stack/Tech:** Default + AI (LLM for narrative/thematic analysis, potentially sentiment/emotion analysis), Data import APIs.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for narrative/thematic analysis, potentially sentiment/emotion analysis), Data import APIs.
 
 ---
 
@@ -999,7 +999,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Daily matching algorithm (basic), Secure audio call interface (WebRTC), Post-call reflection prompt (private), Ephemeral call nature (no recording).
 *   **Potential Monetization:** Premium subscription for basic thematic filtering (e.g., "Talk about creativity"), access to anonymized archive of impactful conversation snippets (opt-in).
 *   **Design Style:** Minimalist, Intimate, Ephemeral.
-*   **Potential Stack/Tech:** Default + AI (for matching), WebRTC for audio calls.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (for matching), WebRTC for audio calls.
 
 ---
 
@@ -1010,7 +1010,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Random pairing into timed rooms, Simple video stream (optional), Post-session mutual focus rating, Basic focus streak tracking.
 *   **Potential Monetization:** Subscription for features like preferred partner matching, themed focus rooms, team focus sessions, leaderboards.
 *   **Design Style:** Minimalist, Functional, Accountable.
-*   **Potential Stack/Tech:** Default + WebRTC for video streaming.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + WebRTC for video streaming.
 
 ---
 
@@ -1021,7 +1021,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Data input interface (text, voice), Core AI training/fine-tuning process, Conversational interface with Legacy AI, Basic access control for family.
 *   **Potential Monetization:** Subscription based on data storage/training complexity, premium voice cloning, "Immortality Pack", secure family vault features.
 *   **Design Style:** Personal, Legacy-focused, Conversational.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuning, voice cloning), Secure long-term storage.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuning, voice cloning), Secure long-term storage.
 
 ---
 
@@ -1032,7 +1032,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Connect social accounts (read-only initially), AI analysis of user's style, Draft post/reply suggestions, Basic content curation suggestions, User approval workflow.
 *   **Potential Monetization:** Subscription tiers based on number of connected accounts, level of automation, pro features for community managers/brands.
 *   **Design Style:** Professional, Efficient, AI-assisted.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for social media style), Social media APIs.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for social media style), Social media APIs.
 
 ---
 
@@ -1043,7 +1043,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Micro-learning module interface, Quiz/action validation, Skill Token issuance (on-chain), Basic Skill Token wallet/display, Simple marketplace for unlocking content with tokens.
 *   **Potential Monetization:** Premium content unlocked by tokens, partnerships with companies seeking specific skills (recruitment), NFT skill badges, transaction fees on token marketplace.
 *   **Design Style:** Gamified, Educational, Credential-focused.
-*   **Potential Stack/Tech:** Default + Blockchain integration (Monad Testnet), Smart Contracts for tokens/validation.
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Blockchain integration (Monad Testnet), Smart Contracts for tokens/validation.
 
 ---
 
@@ -1054,7 +1054,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Intention setting interface, AI content curation/delivery (one piece at a time), Simple engagement mechanism (e.g., summarize, save note, mark as done), Basic knowledge graph visualization.
 *   **Potential Monetization:** Subscription for advanced AI curation, different learning/creation modes, integration with knowledge management tools, gamified knowledge universe.
 *   **Design Style:** Minimalist, Focused, Constructive.
-*   **Potential Stack/Tech:** Default + AI (LLM for curation/understanding intent), Content APIs/Web scraping.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for curation/understanding intent), Content APIs/Web scraping.
 
 ---
 
@@ -1065,7 +1065,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Voice input, Real-time transcription, AI reformulation based on selected mode, Text display of original & reformulated thoughts, Basic emotional tagging of reflections.
 *   **Potential Monetization:** Subscription for premium AI modes/voices (e.g., "Naval Ravikant mode"), emotional archive analysis, integration with journaling apps.
 *   **Design Style:** Conversational, Reflective, Minimalist.
-*   **Potential Stack/Tech:** Default + AI (Speech-to-Text, LLM for reformulation/analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Speech-to-Text, LLM for reformulation/analysis).
 
 ---
 
@@ -1076,7 +1076,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Anonymous contribution submission, Value-based voting/rating system, Ephemeral reputation score per contribution, Random role assignment (optional).
 *   **Potential Monetization:** Tokens earned through high-value contributions, Premium tools for creation/analysis, Matchmaking for anonymous collaboration based on contribution quality.
 *   **Design Style:** Abstract, Meritocratic, Text-focused.
-*   **Potential Stack/Tech:** Default, Anonymity protocols, Reputation system algorithm.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Anonymity protocols, Reputation system algorithm.
 
 ---
 
@@ -1087,7 +1087,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Dream journal, AI theme/symbol detection, Reality check reminder system, Library of basic audio cues for sleep playback.
 *   **Potential Monetization:** Subscription for advanced audio cues, personalized AI interpretation models, sleep tracking integration, community of "oneironauts".
 *   **Design Style:** Dreamlike, Introspective, Scientific.
-*   **Potential Stack/Tech:** Default + AI (LLM for interpretation), Sleep tracking API integration (optional), Audio generation/playback.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for interpretation), Sleep tracking API integration (optional), Audio generation/playback.
 
 ---
 
@@ -1098,7 +1098,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Manual trigger, Library of micro-interventions (user-selected/basic AI selection), Simple success/failure logging, Basic "mental battle" win streak tracker.
 *   **Potential Monetization:** Subscription for advanced AI intervention selection, personalized intervention paths based on habit/trigger, integration with wearables for automatic detection.
 *   **Design Style:** Minimalist, Urgent, Supportive.
-*   **Potential Stack/Tech:** Default + AI (for intervention selection/sentiment analysis - optional), Wearable integration (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (for intervention selection/sentiment analysis - optional), Wearable integration (optional).
 
 ---
 
@@ -1109,7 +1109,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Life event/decision input interface, AI simulation engine generating text narratives of alternative paths, Basic interactive "choice point" exploration within simulations.
 *   **Potential Monetization:** Pay-per-simulation, Subscription for unlimited simulations, deeper branching narratives, AI coaching based on exploring alternatives.
 *   **Design Style:** Narrative, Reflective, Exploratory.
-*   **Potential Stack/Tech:** Default + AI (LLM capable of narrative simulation).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM capable of narrative simulation).
 
 ---
 
@@ -1120,7 +1120,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Basic distraction blocking (site list), Selection of focusing soundscapes/silence, Session timer, Simple "defer thought" input.
 *   **Potential Monetization:** Subscription for advanced soundscapes, AI-adaptive environments based on detected focus levels (requires input analysis), integration with productivity tools.
 *   **Design Style:** Minimalist, Calming, Immersive.
-*   **Potential Stack/Tech:** Default, Web Audio API, Browser extension framework (optional), Input analysis (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Web Audio API, Browser extension framework (optional), Input analysis (optional).
 
 ---
 
@@ -1131,7 +1131,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** App blocking configuration, 24hr timer activation, Basic post-simulation reflection prompts.
 *   **Potential Monetization:** Subscription for advanced features (AI Phantom configuration, detailed impact report, longer simulation periods, guided "digital minimalism" coaching).
 *   **Design Style:** Sober, Minimalist, Confronting.
-*   **Potential Stack/Tech:** Default, Platform-specific APIs for blocking/notifications (may be limited).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Platform-specific APIs for blocking/notifications (may be limited).
 
 ---
 
@@ -1142,7 +1142,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Persona selection, Goal/context input for bot, AI-generated draft responses/actions, User approval workflow before bot acts.
 *   **Potential Monetization:** Subscription based on usage frequency or complexity of interactions, premium persona library, "Guilds" of users sharing bot strategies.
 *   **Design Style:** Bold, Edgy, Controlled Chaos.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for specific personas/tasks), Integration with relevant platform APIs (email, social media - requires careful handling).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for specific personas/tasks), Integration with relevant platform APIs (email, social media - requires careful handling).
 
 ---
 
@@ -1153,7 +1153,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Anonymous memory submission (text/image), Daily random "echo" delivery, Simple interface for viewing received echoes, No profiles or direct communication.
 *   **Potential Monetization:** Premium access to curated themed echo collections, options to "imprint" echoes (save favorites), potential NFT of highly resonant echoes (opt-in).
 *   **Design Style:** Minimalist, Poetic, Ephemeral.
-*   **Potential Stack/Tech:** Default, Secure anonymous submission handling.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Secure anonymous submission handling.
 
 ---
 
@@ -1164,7 +1164,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Emotion selection for daily practice, AI-generated trigger exercise (text/image prompt), Simple post-exercise reflection log, Basic progress tracking on emotional range/control.
 *   **Potential Monetization:** Subscription for wider range of emotions, advanced trigger types (audio, interactive), personalized emotional workout plans, "mood-shifting" for specific situations (pre-meeting prep).
 *   **Design Style:** Focused, Therapeutic, Empowering.
-*   **Potential Stack/Tech:** Default + AI (LLM for prompt generation), potentially image/audio generation APIs.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for prompt generation), potentially image/audio generation APIs.
 
 ---
 
@@ -1175,7 +1175,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Input current situation & potential decisions, AI generation of 2-3 plausible future timelines (narrative text), Identification of key future "choice points".
 *   **Potential Monetization:** Subscription for more detailed/longer simulations, AI mentor guidance within timelines, exploring more variables simultaneously.
 *   **Design Style:** Narrative, Exploratory, Strategic.
-*   **Potential Stack/Tech:** Default + AI (LLM capable of complex narrative simulation).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM capable of complex narrative simulation).
 
 ---
 
@@ -1186,7 +1186,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Selection of base soundscape themes, Real-time generative audio engine (basic), Simple adaptation based on microphone input (activity level) or manual mode selection.
 *   **Potential Monetization:** Subscription for premium sound engines/themes, integration with biometric data (heart rate, breath) for finer adaptation, custom soundscape creation tools.
 *   **Design Style:** Immersive, Minimalist Interface, Sensory.
-*   **Potential Stack/Tech:** Default + Web Audio API, Generative audio algorithms/libraries, AI (optional, for interpreting user state).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Web Audio API, Generative audio algorithms/libraries, AI (optional, for interpreting user state).
 
 ---
 
@@ -1197,7 +1197,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Guided journaling prompts focused on shadow work, AI analysis identifying recurring shadow themes, Simple visualization of shadow aspects, Secure & private journal.
 *   **Potential Monetization:** Subscription for advanced AI analysis/dialogue modes, personalized integration exercises, themed shadow work modules (e.g., "Money Shadow", "Relationship Shadow").
 *   **Design Style:** Introspective, Deep, Secure.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for psychological/therapeutic dialogue).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for psychological/therapeutic dialogue).
 
 ---
 
@@ -1208,7 +1208,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Multi-format loop input (text, voice), Basic AI processing for visual theme/ambient sound, Timeline view of processed loops, Private gallery.
 *   **Potential Monetization:** Subscription for advanced AI artistic styles, longer loop processing, high-resolution exports, private sharing features, potential NFT of unique LifeLoop artifacts.
 *   **Design Style:** Artistic, Immersive, Personal.
-*   **Potential Stack/Tech:** Default + AI (Image/Video generation, Audio processing/generation), Multimedia handling.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Image/Video generation, Audio processing/generation), Multimedia handling.
 
 ---
 
@@ -1219,7 +1219,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Timed "Null Session" interface, Simple post-session reflection input (e.g., scale of presence), Sparse prompt delivery, Basic tracking of time spent in "Null".
 *   **Potential Monetization:** Subscription for guided "Null Retreats" (longer, themed sessions), access to rare philosophical content, potential integration with biofeedback for presence measurement.
 *   **Design Style:** Ultra-Minimalist, Zen, Profound.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -1230,7 +1230,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Secure question input, AI decision engine (using user data + logic/randomness), Delivery of single, binding decision, Monthly "token" limit mechanism, Decision impact journal.
 *   **Potential Monetization:** Subscription for different AI oracle "personalities" (e.g., Stoic, Hacker, Mystic), potential for earning extra tokens through reflection exercises, "paradox mode" suggesting two opposite answers.
 *   **Design Style:** Minimalist, Decisive, Slightly Provocative.
-*   **Potential Stack/Tech:** Default + AI (LLM or decision model), Secure user data handling.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM or decision model), Secure user data handling.
 
 ---
 
@@ -1241,7 +1241,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Time-limited content creation window, Ephemeral feed (content disappears after short period), Basic presence validation check (e.g., simple prompt).
 *   **Potential Monetization:** Premium features like themed "present moment" rooms, tools for capturing presence more effectively, potential real-time local connection features ("Who is 'alive now' near me?").
 *   **Design Style:** Ephemeral, Raw, Minimalist.
-*   **Potential Stack/Tech:** Default, Real-time database/websockets, Strict time-based logic.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Real-time database/websockets, Strict time-based logic.
 
 ---
 
@@ -1252,7 +1252,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Skill listing (offer/need), Swap proposal system, Calendar integration (read availability), Automated time slot suggestion for swaps.
 *   **Potential Monetization:** Freemium (limited swaps/month), Subscription for unlimited swaps, advanced scheduling features, group skill swaps.
 *   **Design Style:** Practical, Efficient, Collaborative.
-*   **Potential Stack/Tech:** Default + Calendar APIs (Google, Microsoft Graph).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Calendar APIs (Google, Microsoft Graph).
 
 ---
 
@@ -1263,7 +1263,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Repo analysis (link input), Detection of common code smells, Basic security checks (e.g., hardcoded secrets), Suggestions for refactoring based on general best practices.
 *   **Potential Monetization:** Subscription based on repo size/number of users, advanced analysis features (custom rule engine, deeper security analysis, architectural pattern checking), CI/CD integration.
 *   **Design Style:** Developer-focused, Analytical, Actionable.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for code analysis), Git hosting APIs, Static analysis tools integration.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for code analysis), Git hosting APIs, Static analysis tools integration.
 
 ---
 ### 116. "Meme Stock" Sentiment Tracker & Alert System
@@ -1273,7 +1273,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Stock/Subreddit/Hashtag tracking configuration, Real-time sentiment score display, Hype spike detection (volume/sentiment velocity), Basic email/push alerts.
 *   **Potential Monetization:** Freemium (limited tracked items/alerts), Subscription for real-time data, advanced sentiment analysis (e.g., sarcasm detection), broader source monitoring.
 *   **Design Style:** Data-driven, Fast-paced, "Degenerate Finance" aesthetic (optional).
-*   **Potential Stack/Tech:** Default + AI (Sentiment Analysis), Reddit API, Twitter API, Stock data API.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Sentiment Analysis), Reddit API, Twitter API, Stock data API.
 
 ---
 
@@ -1284,7 +1284,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Anonymous idea submission, Community commenting/voting system, Roast Score calculation, Categorization of ideas.
 *   **Potential Monetization:** Premium features for submitters (e.g., detailed AI analysis report, private feedback rounds), Subscription for active reviewers (access to analytics, badges).
 *   **Design Style:** Edgy, Humorous, Direct.
-*   **Potential Stack/Tech:** Default + AI (optional, for automated roasting/analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (optional, for automated roasting/analysis).
 
 ---
 
@@ -1295,7 +1295,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Profile creation (basic), Scenario participation/choice making, Matching based on scenario compatibility, Basic chat after match.
 *   **Potential Monetization:** Freemium (limited scenarios/matches), Subscription for unlimited access, advanced scenario creation tools, AI co-creation features.
 *   **Design Style:** Narrative, Playful, Mysterious.
-*   **Potential Stack/Tech:** Default + AI (optional, for scenario generation/matching).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (optional, for scenario generation/matching).
 
 ---
 
@@ -1306,7 +1306,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** NPC generator (name, trait, basic dialogue), Encounter idea generator (creatures, basic setting), Descriptive text generator (locations, items), Searchable rule reference (SRD).
 *   **Potential Monetization:** Freemium (limited generation), Subscription for advanced generation (plot hooks, custom monster stats, voice generation for NPCs), integration with VTTs (Virtual Tabletops).
 *   **Design Style:** Fantasy/Thematic, Organized, DM-friendly.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for TTRPGs), RPG rule databases (SRD).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for TTRPGs), RPG rule databases (SRD).
 
 ---
 
@@ -1317,7 +1317,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Context input form, AI apology draft generator (with different tone options), Public apology analysis tool (input URL/text), Basic sentiment scoring of analyzed apologies.
 *   **Potential Monetization:** Pay-per-draft/analysis, Subscription for PR agencies/brands (advanced analysis, crisis simulation, template library).
 *   **Design Style:** Professional, Serious, Analytical.
-*   **Potential Stack/Tech:** Default + AI (LLM for drafting/sentiment analysis), Web scraping (for analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for drafting/sentiment analysis), Web scraping (for analysis).
 
 ---
 
@@ -1328,7 +1328,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** User accounts, Pet rock profile creation (image upload, name), Rating system (multiple funny criteria), Leaderboards.
 *   **Potential Monetization:** Cosmetic upgrades for rock profiles (digital hats, googly eyes), "Promote My Rock" feature, Merchandise (T-shirts of top rocks).
 *   **Design Style:** Absurdist, Minimalist, Humorous.
-*   **Potential Stack/Tech:** Default, Image hosting.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Image hosting.
 
 ---
 
@@ -1339,7 +1339,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Cloud photo upload, Commenting system, User profiles/gallery, AI shape suggestion feature.
 *   **Potential Monetization:** Premium AI interpretation styles, Cloud identification features (real cloud types), "Cloud of the Day" contests.
 *   **Design Style:** Dreamy, Sky-themed, Relaxing.
-*   **Potential Stack/Tech:** Default + AI (Image analysis/Object recognition, potentially fine-tuned for abstract shapes).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Image analysis/Object recognition, potentially fine-tuned for abstract shapes).
 
 ---
 
@@ -1350,7 +1350,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Map interface with pinning, Plant identification guide (curated), Location submission with photos/notes, Community comments/verification.
 *   **Potential Monetization:** Premium features (seasonal alerts, advanced identification tools, recipe suggestions), Partnerships with local foraging groups/experts.
 *   **Design Style:** Natural, Local, Educational.
-*   **Potential Stack/Tech:** Default, Geolocation/Mapping API, Plant identification API (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Geolocation/Mapping API, Plant identification API (optional).
 
 ---
 
@@ -1361,7 +1361,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Anonymous complaint submission, Complaint browsing/voting, Display/playback of generated song snippets (AI or curated).
 *   **Potential Monetization:** Option to commission a song for a specific complaint, Merchandise based on popular complaint themes, Premium voting power.
 *   **Design Style:** Humorous, Musical, Cathartic.
-*   **Potential Stack/Tech:** Default + AI (Music generation based on text sentiment - advanced), Audio hosting/playback.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Music generation based on text sentiment - advanced), Audio hosting/playback.
 
 ---
 
@@ -1372,7 +1372,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Scenario selection (e.g., "The Dirty Dishes"), Dialogue-based interaction with AI roommate, Basic feedback on communication approach, Simple outcome simulation.
 *   **Potential Monetization:** Subscription for access to more scenarios, advanced AI personalities, detailed communication analysis, conflict resolution tips library.
 *   **Design Style:** Realistic (slightly exaggerated), Educational, Interactive.
-*   **Potential Stack/Tech:** Default + AI (LLM for conversational simulation and feedback).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for conversational simulation and feedback).
 
 ---
 
@@ -1383,7 +1383,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Pet Rock NFT minting, Basic on-chain interaction functions (polish, sun), Metadata evolution based on interactions, Simple viewing gallery.
 *   **Potential Monetization:** Fees for specific evolution actions, Marketplace for trading evolved rocks, Cosmetic NFT add-ons (hats, etc.).
 *   **Design Style:** Pixelated/Retro or Minimalist, Blockchain-themed.
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (NFT Smart Contracts, Oracles for external triggers).
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (NFT Smart Contracts, Oracles for external triggers).
 
 ---
 
@@ -1394,7 +1394,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** AI art generation module (e.g., Stable Diffusion API call triggered by contract), DAO voting mechanism for prompts/parameters, Simple gallery of generated art, Basic treasury management contract.
 *   **Potential Monetization:** Sale of generated art NFTs, Trading of DAArt governance tokens, Access to premium AI models/parameters via token holding.
 *   **Design Style:** Generative Art aesthetic, Decentralized/DAO theme.
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (DAO contracts, Treasury contract), AI Art Generation API, IPFS for storing art.
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (DAO contracts, Treasury contract), AI Art Generation API, IPFS for storing art.
 
 ---
 
@@ -1405,7 +1405,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Emotion reporting/data feed input, Prediction market interface (betting on next dominant emotion), Smart contract for market creation/resolution, Real-time odds display.
 *   **Potential Monetization:** Small percentage fee on winning bets, Data access fees for historical emotion trends, Tools for automated emotion trading bots.
 *   **Design Style:** Financial/Trading UI, Dynamic, Colorful (mood-based).
-*   **Potential Stack/Tech:** Default (Frontend) + Monad Testnet integration (Prediction Market Smart Contracts), Oracles (for external data feeds or user reporting aggregation).
+*   **Potential Stack/Tech:** Suggested Default Frontend (e.g., Next.js) or user-chosen frontend + Monad Testnet integration (Prediction Market Smart Contracts), Oracles (for external data feeds or user reporting aggregation).
 
 ---
 
@@ -1416,7 +1416,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Joke submission interface, AI joke generation module, User rating system for AI jokes, Leaderboard of best AI-generated jokes (or most improved AI).
 *   **Potential Monetization:** Subscription for access to advanced AI models, tools for generating routines on specific topics, "Roast Battle" mode against the AI.
 *   **Design Style:** Playful, Stage-themed, Humorous.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for humor/comedy).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for humor/comedy).
 
 ---
 
@@ -1427,7 +1427,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Situation/tone selection, AI excuse generation, Rating/saving favorite excuses, Basic sharing options.
 *   **Potential Monetization:** Free (viral potential), Optional premium excuse categories (e.g., "Excuses involving historical figures"), "Generate Alibi" feature (more complex narrative).
 *   **Design Style:** Whimsical, Humorous, Slightly chaotic.
-*   **Potential Stack/Tech:** Default + AI (LLM).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM).
 
 ---
 
@@ -1438,7 +1438,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Analysis mode (text input, AI analysis/rating), Generation mode (situation input, AI note generation), Subtlety level selector.
 *   **Potential Monetization:** Free (entertainment), Premium "Corporate Jargon" passive-aggression module, "Translate to Direct Communication" feature.
 *   **Design Style:** Minimalist, Slightly sinister, Tongue-in-cheek.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for subtext/passive aggression).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for subtext/passive aggression).
 
 ---
 
@@ -1449,7 +1449,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Random superpower generator, User profile displaying assigned power, Simple sharing/commenting feed.
 *   **Potential Monetization:** Cosmetic profile upgrades, "Reroll superpower" option (paid), Merchandise based on popular useless superpowers.
 *   **Design Style:** Quirky, Colorful, Imaginative.
-*   **Potential Stack/Tech:** Default, Large list/generator for superpowers.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Large list/generator for superpowers.
 
 ---
 
@@ -1460,7 +1460,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Philosopher/stance selection, AI moderator posing questions, Text-based debate interface, Basic scoring/voting system.
 *   **Potential Monetization:** Subscription for access to more obscure philosophers/stances, ranked matchmaking, AI debate analysis feedback.
 *   **Design Style:** Academic but Gamified, Text-heavy, Thought-provoking.
-*   **Potential Stack/Tech:** Default + AI (LLM for moderation, potentially for representing philosophers).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for moderation, potentially for representing philosophers).
 
 ---
 
@@ -1471,7 +1471,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Event input, AI conspiracy theory generation, Options for theory elements (aliens, government, etc.), Shareable theory output.
 *   **Potential Monetization:** Free (entertainment/educational tool), Premium "Deep State" generation mode, "Connect the Dots" visualization feature.
 *   **Design Style:** Over-the-top, Mysterious, Humorous.
-*   **Potential Stack/Tech:** Default + AI (LLM trained on conspiracy tropes).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM trained on conspiracy tropes).
 
 ---
 
@@ -1482,7 +1482,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Pet Peeve selection, Basic care actions, Simple evolution states, Status indicators (e.g., Annoyance Level).
 *   **Potential Monetization:** Cosmetic items for the Pet Peeve, New Pet Peeve types to unlock, "Group Therapy" mini-games with other users' peeves.
 *   **Design Style:** Annoying yet Cute, Pixelated/Retro, Humorous.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -1493,7 +1493,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Fake sensor readings display, Random EVP sound playback, "Ghost Radar" visualization (random dots).
 *   **Potential Monetization:** Cosmetic skins for the interface, Premium "entity types" (poltergeist mode, friendly ghost mode), Ad-supported free version.
 *   **Design Style:** Spooky, Techy (pseudo-scientific), Fun.
-*   **Potential Stack/Tech:** Default, Access to device sensors via browser APIs.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Access to device sensors via browser APIs.
 
 ---
 
@@ -1504,7 +1504,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Recipient context input, AI compliment generation, Options for different tones (sincere, humorous, formal).
 *   **Potential Monetization:** Freemium (limited generations), Subscription for advanced features (saving profiles, occasion-specific compliments, "roast-compliment" generator).
 *   **Design Style:** Positive, Friendly, Simple.
-*   **Potential Stack/Tech:** Default + AI (LLM).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM).
 
 ---
 
@@ -1515,7 +1515,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Event/divergence point selection, AI narrative generation for alternate outcome, Basic timeline visualization.
 *   **Potential Monetization:** Pay-per-simulation, Subscription for exploring more complex divergences or longer timelines, "Create your own divergence" feature.
 *   **Design Style:** Historical, Educational, Narrative.
-*   **Potential Stack/Tech:** Default + AI (LLM trained on historical data and causal reasoning).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM trained on historical data and causal reasoning).
 
 ---
 
@@ -1526,7 +1526,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Context selection, Random prompt generation, Categorization of prompts (icebreakers, deep questions, fun facts).
 *   **Potential Monetization:** Freemium (basic prompts), Subscription for specialized prompt packs (e.g., "Creative Collaboration Starters," "Philosophical Debate Topics"), AI analysis of conversation context for better prompts (advanced).
 *   **Design Style:** Minimalist, Discreet, Helpful.
-*   **Potential Stack/Tech:** Default + AI (LLM for prompt generation).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for prompt generation).
 
 ---
 
@@ -1537,7 +1537,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Joke category selection, AI joke generation, Joke rating system (user votes), Basic text-based delivery feedback.
 *   **Potential Monetization:** Premium joke categories, Advanced voice-based delivery coaching, "Dad Joke Battle" mode against AI or other users.
 *   **Design Style:** Cheesy, Retro, Humorous.
-*   **Potential Stack/Tech:** Default + AI (LLM for jokes, potentially voice analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for jokes, potentially voice analysis).
 
 ---
 
@@ -1548,7 +1548,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Item/price input, Needs assessment questionnaire, AI-generated pros/cons list, Waiting period suggestion.
 *   **Potential Monetization:** Premium features (integration with budgeting apps, tracking savings from avoided purchases, personalized "impulse triggers" analysis).
 *   **Design Style:** Minimalist, Rational, Financial-focused.
-*   **Potential Stack/Tech:** Default + AI (LLM or rule-based system).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM or rule-based system).
 
 ---
 
@@ -1559,7 +1559,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Text upload, AI analysis for inconsistencies (character actions, timeline), Highlighting potential plot holes, Basic fix suggestions.
 *   **Potential Monetization:** Freemium (limited word count), Subscription based on document length or advanced analysis features (thematic consistency, pacing analysis).
 *   **Design Style:** Analytical, Writer-focused, Detailed.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for narrative analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for narrative analysis).
 
 ---
 
@@ -1570,7 +1570,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Trope selection, AI fake news article generation, Highlighting/explanation of used tropes.
 *   **Potential Monetization:** Free (educational purpose), Premium modules on specific types of disinformation, "Spot the Fake" quiz mode.
 *   **Design Style:** News-like but clearly marked as Fake/Parody, Educational overlays.
-*   **Potential Stack/Tech:** Default + AI (LLM).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM).
 
 ---
 
@@ -1581,7 +1581,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Text input for each party, AI summarization of arguments, Identification of common ground/key differences, Basic compromise suggestions.
 *   **Potential Monetization:** Freemium (limited use), Subscription for advanced features (tone analysis, communication style feedback, saving argument history).
 *   **Design Style:** Neutral, Calm, Facilitative.
-*   **Potential Stack/Tech:** Default + AI (LLM for summarization and analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for summarization and analysis).
 
 ---
 
@@ -1592,7 +1592,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Daily kindness suggestion, Categorization (e.g., free, low-cost, time-based), Manual completion tracking, Kindness streak counter.
 *   **Potential Monetization:** Free (community good focus), Optional premium suggestion packs (e.g., "Kindness for Introverts," "Environmental Kindness"), Team kindness challenges.
 *   **Design Style:** Positive, Uplifting, Simple.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -1603,7 +1603,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Basic car configurator (select model, color, key options), Estimated cost calculation (using generic data), Simple practicality score/commentary.
 *   **Potential Monetization:** Affiliate links to dealerships/financing, Premium configuration options (rare models, detailed performance tuning), "Can I Afford This?" financial planning integration.
 *   **Design Style:** Sleek, Automotive, Slightly Humorous.
-*   **Potential Stack/Tech:** Default, Car data API/database, Financial calculation logic.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Car data API/database, Financial calculation logic.
 
 ---
 
@@ -1614,7 +1614,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Input form (theme, mood, keywords, style), AI poem generation, Option to regenerate/tweak, Simple text output.
 *   **Potential Monetization:** Freemium (limited generations/styles), Subscription for unlimited poems, advanced style controls, specific poet emulation modes, option to commission human review/polish.
 *   **Design Style:** Elegant, Text-focused, Creative.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for poetry).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for poetry).
 
 ---
 
@@ -1625,7 +1625,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** NPC role selection (e.g., Guard, Farmer), Simple task loop gameplay, Basic dialogue interactions, Random event system.
 *   **Potential Monetization:** Cosmetic items for the NPC, Unlockable NPC roles or locations, "Hero Interaction" DLC packs.
 *   **Design Style:** Pixelated/Retro or Low-poly, Humorous, Mundane.
-*   **Potential Stack/Tech:** Default or simple game engine integration.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, or simple game engine integration.
 
 ---
 
@@ -1636,7 +1636,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Jargon translator (text input, AI translation), Buzzword Bingo card generator, List of common buzzwords.
 *   **Potential Monetization:** Premium features (real-time jargon detection via microphone input - risky!, custom bingo cards for specific industries, "Translate Plain English to Corporate Jargon" mode).
 *   **Design Style:** Corporate but Satirical, Clean, Functional.
-*   **Potential Stack/Tech:** Default + AI (LLM for translation/jargon identification).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for translation/jargon identification).
 
 ---
 
@@ -1647,7 +1647,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Input birth info/style, AI horoscope generation, Daily/weekly delivery option.
 *   **Potential Monetization:** Freemium (basic horoscope), Subscription for different AI astrologer "personalities", relationship compatibility reports (parody), "Life Path" readings.
 *   **Design Style:** Mystical, Humorous, Personalized.
-*   **Potential Stack/Tech:** Default + AI (LLM for creative writing).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for creative writing).
 
 ---
 
@@ -1658,7 +1658,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Anonymous compliment submission, Random daily compliment delivery, Basic filtering for language.
 *   **Potential Monetization:** Free (focus on positivity), Optional cosmetic themes, "Compliment Streak" badges.
 *   **Design Style:** Uplifting, Minimalist, Global.
-*   **Potential Stack/Tech:** Default, Translation API (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Translation API (optional).
 
 ---
 
@@ -1669,7 +1669,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Image upload, AI critic personality selection, Generation of humorous/critical review text.
 *   **Potential Monetization:** Premium critic personalities, "Rate My Plating" score, Option to generate recipe suggestions based on the "failed" dish.
 *   **Design Style:** Humorous, Food-focused, Slightly Mean (optional).
-*   **Potential Stack/Tech:** Default + AI (Image analysis + LLM fine-tuned for humorous critique).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Image analysis + LLM fine-tuned for humorous critique).
 
 ---
 
@@ -1680,7 +1680,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Existential Dread pet visualization, Care actions related to existential themes, Mood/state indicator, Occasional profound (or nonsensical) notifications.
 *   **Potential Monetization:** Cosmetic items (tiny beret, cup of black coffee), Unlockable philosophical "toys," "Share Your Dread" anonymous community feature.
 *   **Design Style:** Minimalist, Dark Humor, Abstract.
-*   **Potential Stack/Tech:** Default.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack.
 
 ---
 
@@ -1691,7 +1691,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** AI conspiracy theory generation, User input for debunking points, AI feedback on user's arguments (identifying fallacies, suggesting improvements).
 *   **Potential Monetization:** Subscription for access to a library of complex theories, advanced logical analysis feedback, "Debate the AI" mode.
 *   **Design Style:** Analytical, Educational, Critical Thinking focus.
-*   **Potential Stack/Tech:** Default + AI (LLM trained on logic, fallacies, and conspiracy structures).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM trained on logic, fallacies, and conspiracy structures).
 
 ---
 
@@ -1702,7 +1702,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Public domain story selection, Remix parameter inputs, AI-generated synopsis/chapter.
 *   **Potential Monetization:** Freemium (limited stories/parameters), Subscription for longer generations, more complex remixes, "Character Mashup" feature.
 *   **Design Style:** Classic meets Modern, Literary, Creative.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for narrative transformation), Public domain text database.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for narrative transformation), Public domain text database.
 
 ---
 
@@ -1713,7 +1713,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Topic input, AI limerick generation, User rating of generated limericks.
 *   **Potential Monetization:** Free (fun tool), Premium features (generating limericks in specific styles, "Limerick Battle" generator).
 *   **Design Style:** Playful, Simple, Text-based.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for poetic structure/rhyme).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for poetic structure/rhyme).
 
 ---
 
@@ -1724,7 +1724,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Image display (mix of real/AI), Guessing interface (Real/AI buttons), Scoring system, Basic difficulty levels.
 *   **Potential Monetization:** Ad-supported free version, Subscription for ad-free play, different image categories, "Expert Mode" with very subtle fakes, hints system.
 *   **Design Style:** Clean, Visual, Game-like.
-*   **Potential Stack/Tech:** Default, Large database of real and AI images, AI image generation API (for dynamic content).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack, Large database of real and AI images, AI image generation API (for dynamic content).
 
 ---
 
@@ -1735,7 +1735,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Image upload, AI image analysis, AI Haiku generation, Display image + Haiku.
 *   **Potential Monetization:** Freemium (limited uploads), Subscription for unlimited use, different poetic forms (Tanka, etc.), style options for the Haiku.
 *   **Design Style:** Minimalist, Visual, Poetic.
-*   **Potential Stack/Tech:** Default + AI (Image analysis + LLM fine-tuned for poetry/syllable counting).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Image analysis + LLM fine-tuned for poetry/syllable counting).
 
 ---
 
@@ -1746,7 +1746,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Text input, AI sarcasm likelihood analysis/score, Basic explanation of detected cues.
 *   **Potential Monetization:** Freemium (limited text length), Subscription for advanced analysis, "Translate to Sincere" feature, browser extension for real-time analysis.
 *   **Design Style:** Analytical, Text-focused, Slightly Humorous.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for sarcasm/subtext detection).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for sarcasm/subtext detection).
 
 ---
 
@@ -1757,7 +1757,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Text command input (e.g., "go north", "attack goblin"), AI generation of room descriptions/events, Basic combat resolution, Simple inventory system.
 *   **Potential Monetization:** Free basic adventures, Pay to unlock specific themes or advanced AI storytelling models, Cosmetic text interface themes.
 *   **Design Style:** Retro Text Adventure, Thematic.
-*   **Potential Stack/Tech:** Default + AI (LLM for dynamic narrative/game state management).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for dynamic narrative/game state management).
 
 ---
 
@@ -1768,7 +1768,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Dilemma presentation, User response input, Aggregated response visualization, Basic AI summary of arguments, Moderated comment section per dilemma.
 *   **Potential Monetization:** Subscription for access to a larger library of dilemmas, advanced AI analysis of ethical frameworks, private discussion groups.
 *   **Design Style:** Thought-provoking, Academic, Clean.
-*   **Potential Stack/Tech:** Default + AI (LLM for scenario generation/argument analysis).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM for scenario generation/argument analysis).
 
 ---
 
@@ -1779,7 +1779,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Image upload/keyword input, AI mood board generation (collage of images/colors), Basic color palette extraction, Style suggestions.
 *   **Potential Monetization:** Freemium (limited boards), Subscription for high-resolution boards, specific furniture item suggestions (with affiliate links), "Shop the Look" feature.
 *   **Design Style:** Visual, Inspirational, Design-focused.
-*   **Potential Stack/Tech:** Default + AI (Image analysis, Image generation/collage), Color analysis libraries.
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (Image analysis, Image generation/collage), Color analysis libraries.
 
 ---
 
@@ -1790,7 +1790,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Museum/interest/duration selection, AI tour path generation (list of exhibits/rooms), Basic context snippet per exhibit, Estimated timing.
 *   **Potential Monetization:** Pay-per-tour generation, Subscription for unlimited tours across multiple museums, integration with museum maps, audio guide generation (TTS).
 *   **Design Style:** Informative, Map-based (optional), Customizable.
-*   **Potential Stack/Tech:** Default + Museum exhibit data/APIs, AI (LLM for path generation/context), Mapping library (optional).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Museum exhibit data/APIs, AI (LLM for path generation/context), Mapping library (optional).
 
 ---
 
@@ -1801,7 +1801,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Leftover input (text list), AI recipe/meal idea generation focused on using inputs, Filtering by meal type (lunch, dinner).
 *   **Potential Monetization:** Freemium (limited suggestions), Subscription for advanced features (considering dietary needs, generating weekly plans based on potential leftovers, pantry inventory integration).
 *   **Design Style:** Practical, Food-focused, Waste-reduction theme.
-*   **Potential Stack/Tech:** Default + AI (LLM fine-tuned for recipe adaptation).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + AI (LLM fine-tuned for recipe adaptation).
 
 ---
 
@@ -1812,7 +1812,7 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Key Features (MVP):** Fetch random Wikipedia article, AI summary generation, Key concept identification, Related topic suggestions (links), Basic quiz generation.
 *   **Potential Monetization:** Free (using Wikipedia API), Premium features (saving learning paths, advanced concept mapping, tracking knowledge gained).
 *   **Design Style:** Educational, Minimalist, Curiosity-driven.
-*   **Potential Stack/Tech:** Default + Wikipedia API, AI (LLM for summarization, analysis, quiz generation).
+*   **Potential Stack/Tech:** Suggested Default (e.g., Next.js, Supabase) or user-chosen stack + Wikipedia API, AI (LLM for summarization, analysis, quiz generation).
 
 ---
 

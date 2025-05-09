@@ -118,7 +118,7 @@ function calculateTotalPrice(price, taxRate) {
 }
 ```
 
-## Component Structure (React/Next.js)
+## Component Structure (e.g., React/Next.js or chosen frontend framework)
 
 - One component per file
 - Follow this order for component methods:

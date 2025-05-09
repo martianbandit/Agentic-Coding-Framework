@@ -90,7 +90,7 @@
 
 ### 3. Technology Stack (If you have strong preferences or constraints)
 
-The Agentic PRD defaults to: Next.js, Supabase, Tailwind CSS.
+The Agentic PRD suggests as a default: Next.js, Supabase, Tailwind CSS. However, the final technology choices can be adapted by the user.
 
 ```
 [Do you have reasons to deviate from this standard? Specific technologies you absolutely want to use or avoid? Particular libraries in mind for certain functionalities? If not, leave blank, and the AI will follow the defaults.]

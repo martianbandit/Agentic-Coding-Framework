@@ -102,10 +102,11 @@ Refer to [`01_AI-RUN/00_Getting_Started.md`](01_AI-RUN/00_Getting_Started.md:1) 
 
 ## Technology Assumptions
 
-This workflow assumes a default stack of:
+This workflow suggests a default stack of:
 *   Frontend: Next.js (TypeScript)
 *   Backend/DB: Supabase
 *   Styling: Tailwind CSS (with Shadcn/ui inspiration)
+However, these are recommendations. The final technology stack can be adapted based on specific project requirements, the PRD, market research, or other analyses. The user will have the opportunity to define the most appropriate languages and frameworks for the frontend, backend, server, etc., with Next.js and Supabase being proposed as suitable options if they align with the project's needs.
 It also heavily relies on the availability and configuration of various **Model Context Protocol (MCP) servers** (see [`01_AI-RUN/Template/MCP-Context.md`](01_AI-RUN/Template/MCP-Context.md) and the PRD template Section 5.6.1) for tasks like documentation lookup, task management, GitHub operations, etc.
 
 ## Customization

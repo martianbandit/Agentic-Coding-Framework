@@ -7,7 +7,7 @@
 **Key Stakeholders:** `[User Name/ID], AI Coding Agent`
 
 **Preamble: Streamlined Workflow Approach**
-This PRD template is designed for a streamlined workflow where the primary user input is the core project idea and desired high-level features. The AI Coding Agent is expected to take significant initiative in proposing technical details, design elements, and specific tooling, defaulting to a Next.js and Supabase stack (as detailed in Section 1.10) unless otherwise specified by the user. Human validation will occur at key decision points proposed by the AI, as outlined in the AI-Human Interaction Protocol (Section 1.11).
+This PRD template is designed for a streamlined workflow where the primary user input is the core project idea and desired high-level features. The AI Coding Agent is expected to take significant initiative in proposing technical details, design elements, and specific tooling. While a Next.js and Supabase stack is suggested as a default (and detailed in Section 1.10), this is a recommendation. The user will have the final say in choosing the most appropriate frontend, backend, and other technologies based on project needs, PRD analysis, market research, or other factors. Human validation will occur at key decision points proposed by the AI, as outlined in the AI-Human Interaction Protocol (Section 1.11).
 
 ---
 ## 0. AI Agent Onboarding and PRD Interpretation Protocol
@@ -172,23 +172,24 @@ This PRD template is designed for a streamlined workflow where the primary user 
 
 ### 1.10. Default Technology Stack & AI Initiative in Tooling
 *Comment: Defines the default technical foundation and AI's role in tool selection.*
-Unless explicitly overridden by user input in Section 5.4, this project will default to:
-*   **Frontend:** Next.js (with TypeScript)
-*   **Backend/Database:** Supabase (PostgreSQL, Auth, Storage, Edge Functions)
-*   **Styling:** Tailwind CSS (with a custom Design System inspired by Shadcn/ui, as per Section 5.2)
+This project suggests the following default technology stack, which can be overridden by user input in Section 5.4:
+*   **Suggested Frontend:** Next.js (with TypeScript)
+*   **Suggested Backend/Database:** Supabase (PostgreSQL, Auth, Storage, Edge Functions)
+*   **Suggested Styling:** Tailwind CSS (with a custom Design System inspired by Shadcn/ui, as per Section 5.2)
+The final choice of technologies will be determined by the user, considering project requirements and analyses.
 
 The AI Coding Agent is empowered and expected to:
 1.  Select appropriate, stable versions for the core stack elements.
-2.  Identify, research, propose, and integrate relevant auxiliary libraries, **MCP servers** (e.g., for payments via Stripe MCP, advanced search, specific data processing via custom MCPs, documentation lookups via Context7 MCP, task management via Taskmaster AI MCP, direct Supabase interactions via Supabase MCP, GitHub operations via GitHub MCP), and third-party APIs compatible with this stack to best achieve the project goals.
-3.  Leverage Supabase's features (Auth, Storage, Realtime, Edge Functions, Vector DB for AI features, etc.) extensively as the first-choice backend solution.
+2.  Identify, research, propose, and integrate relevant auxiliary libraries, **MCP servers** (e.g., for payments via Stripe MCP, advanced search, specific data processing via custom MCPs, documentation lookups via Context7 MCP, task management via Taskmaster AI MCP, direct Supabase interactions via Supabase MCP, GitHub operations via GitHub MCP), and third-party APIs compatible with the chosen stack to best achieve the project goals.
+3.  If Supabase is chosen, leverage its features (Auth, Storage, Realtime, Edge Functions, Vector DB for AI features, etc.) extensively as the backend solution.
 4.  All such selections and proposed integrations will be documented by the AI in its detailed feature specifications (as per Section 9.1) or in a dedicated 'Proposed Technical Solutions & Integrations' section for human review and approval before implementation.
 
 #### 1.10.1. Access to Project Context for AI Agent
 *AI Agent Directive: For optimal understanding and consistency, you will have access to (or must request access to, if not immediately available) the following project context elements:*
 *   *The complete Git repository of the project (once initiated).*
-*   *Key configuration files (e.g., `tailwind.config.js`, `tsconfig.json`, `package.json`, `next.config.js`, Vercel/Supabase environment variables).*
+*   *Key configuration files (e.g., `tailwind.config.js`, `tsconfig.json`, `package.json`, framework-specific configuration like `next.config.js` if Next.js is chosen, Vercel/chosen hosting provider and Supabase/chosen backend environment variables).*
 *   *Existing Storybook documentation (if any).*
-*   *Supabase database schemas (via Supabase Studio interface or migration files).*
+*   *Database schemas (e.g., Supabase Studio interface or migration files if Supabase is chosen).*
 *   *Documentation for known/integrated MCPs (via Context7 MCP or provided links).*
 *   *When performing tasks like feature decomposition (Section 9.1) or code generation, actively refer to this context to ensure coherence and accuracy.*
 `[User can note any immediate exclusions or preferences here]`
@@ -274,7 +275,7 @@ The AI Coding Agent is empowered and expected to:
 `[AI to Query User or Propose Default L10n/I18n Setup]`
 
 ### 3.6. Preliminary API Design (AI to Propose if applicable, User to Validate)
-*AI Instruction: If the features imply backend interactions beyond simple Supabase CRUD (e.g., complex business logic in Edge Functions, or if a separate API layer is decided), propose a preliminary design for key API endpoints. Default to using Supabase Edge Functions for custom backend logic.*
+*AI Instruction: If the features imply backend interactions beyond simple CRUD operations (e.g., complex business logic in serverless functions, or if a separate API layer is decided), propose a preliminary design for key API endpoints. If Supabase is chosen, default to using Supabase Edge Functions for custom backend logic.*
 `[AI to Propose API Design for User Validation, if applicable]`
 
 ---
@@ -285,13 +286,13 @@ The AI Coding Agent is empowered and expected to:
 ### 4.1. Performance
 *AI Proposal:*
 *   Web Vitals (LCP, FID, CLS) should be in the 'Good' range.
-*   Server-side (Supabase Edge Function) responses for typical API calls should be < 500ms under normal load.
+*   Server-side (e.g., Supabase Edge Function if used) responses for typical API calls should be < 500ms under normal load.
 *   Page transitions should feel instant.
 `[User to Adjust/Confirm AI's Proposed Performance NFRs]`
 
 ### 4.2. Scalability
 *AI Proposal:*
-*   The system should leverage Supabase's inherent scalability for database and authentication.
+*   If Supabase is chosen, the system should leverage its inherent scalability for database and authentication.
 *   Edge functions should be written statelessly to allow for easy scaling.
 *   Target: Handle 1000 concurrent users with acceptable performance (as defined in 4.1) after initial launch phase.
 `[User to Adjust/Confirm AI's Proposed Scalability NFRs]`
@@ -299,17 +300,17 @@ The AI Coding Agent is empowered and expected to:
 ### 4.3. Security
 *AI Proposal:*
 *   All data transmission encrypted via HTTPS.
-*   Supabase Row Level Security (RLS) policies implemented for all relevant tables.
-*   Secure password handling (leveraging Supabase Auth).
-*   Protection against OWASP Top 10 vulnerabilities in any custom code (e.g., Next.js API routes, Supabase Edge Functions).
+*   If Supabase is chosen, Row Level Security (RLS) policies should be implemented for all relevant tables.
+*   Secure password handling (e.g., leveraging Supabase Auth if chosen, or a similar robust authentication service).
+*   Protection against OWASP Top 10 vulnerabilities in any custom code (e.g., API routes in the chosen frontend framework, serverless functions in the chosen backend).
 *   Regular dependency updates.
 `[User to Adjust/Confirm AI's Proposed Security NFRs]`
 
 ### 4.4. Reliability and Availability
 *AI Proposal:*
-*   Target 99.9% uptime (leveraging Vercel/Supabase infrastructure).
-*   Implement robust error handling and logging in Edge Functions and frontend.
-*   Utilize Supabase automated backups.
+*   Target 99.9% uptime (leveraging the chosen hosting provider, e.g., Vercel, and backend infrastructure, e.g., Supabase).
+*   Implement robust error handling and logging in serverless functions/backend and frontend.
+*   Utilize automated backups provided by the chosen database service (e.g., Supabase).
 `[User to Adjust/Confirm AI's Proposed Reliability/Availability NFRs]`
 
 ### 4.5. Maintainability
@@ -347,7 +348,7 @@ The AI Coding Agent is empowered and expected to:
 `[User to Adjust/Confirm AI's Proposed Documentation Plan]`
 
 ### 4.10. NFR Verification Criteria for AI Agent
-*AI Instruction: For each NFR above, you will define specific, verifiable criteria in your detailed feature specifications (Section 9.1) that your generated code must meet. E.g., for Performance: "Ensure all database queries generated for Supabase use appropriate RLS and table indexes where applicable."*
+*AI Instruction: For each NFR above, you will define specific, verifiable criteria in your detailed feature specifications (Section 9.1) that your generated code must meet. E.g., for Performance: "Ensure all database queries generated for the chosen database (e.g., Supabase) use appropriate security mechanisms (like RLS) and table indexes where applicable."*
 `[This section is a directive to the AI for its internal processes]`
 
 ---
@@ -385,39 +386,39 @@ The AI Coding Agent is empowered and expected to:
 `[AI to Propose Specific A11Y Targets or Reiterate General Commitment for User Validation]`
 
 ### 5.3. Proposed System Architecture (AI to Generate)
-*AI Instruction: Generate a high-level system architecture diagram using **Mermaid syntax** showing Next.js frontend, Supabase (Auth, DB, Storage, Edge Functions), and any key proposed MCPs/Third-Party APIs. Briefly describe component responsibilities.*
+*AI Instruction: Generate a high-level system architecture diagram using **Mermaid syntax** showing the proposed/chosen frontend (e.g., Next.js), backend/database (e.g., Supabase: Auth, DB, Storage, Edge Functions), and any key proposed MCPs/Third-Party APIs. Briefly describe component responsibilities. Adapt the diagram if a different stack is chosen.*
 ```mermaid
 graph TD
-    UserInterface["Next.js Frontend (Vercel)"] -->|API Calls/SDK| SupabaseEdgeFunctions["Supabase Edge Functions"];
-    UserInterface -->|SDK| SupabaseAuth["Supabase Auth"];
-    UserInterface -->|SDK/Direct| SupabaseDB["Supabase DB (PostgreSQL)"];
-    UserInterface -->|SDK| SupabaseStorage["Supabase Storage"];
-    SupabaseEdgeFunctions --> SupabaseDB;
-    SupabaseEdgeFunctions -->|Optional| ExternalAPI1["External API/MCP 1"];
-    SupabaseEdgeFunctions -->|Optional| ExternalAPI2["External API/MCP 2"];
+    UserInterface["Proposed Frontend (e.g., Next.js on Vercel)"] -->|API Calls/SDK| BackendFunctions["Proposed Backend Functions (e.g., Supabase Edge Functions)"];
+    UserInterface -->|SDK| AuthService["Proposed Auth Service (e.g., Supabase Auth)"];
+    UserInterface -->|SDK/Direct| DatabaseService["Proposed Database (e.g., Supabase DB - PostgreSQL)"];
+    UserInterface -->|SDK| StorageService["Proposed Storage Service (e.g., Supabase Storage)"];
+    BackendFunctions --> DatabaseService;
+    BackendFunctions -->|Optional| ExternalAPI1["External API/MCP 1"];
+    BackendFunctions -->|Optional| ExternalAPI2["External API/MCP 2"];
 
     style UserInterface fill:#D5F5E3,stroke:#333,stroke-width:2px
-    style SupabaseEdgeFunctions fill:#AED6F1,stroke:#333,stroke-width:2px
-    style SupabaseAuth fill:#AED6F1,stroke:#333,stroke-width:2px
-    style SupabaseDB fill:#AED6F1,stroke:#333,stroke-width:2px
-    style SupabaseStorage fill:#AED6F1,stroke:#333,stroke-width:2px
+    style BackendFunctions fill:#AED6F1,stroke:#333,stroke-width:2px
+    style AuthService fill:#AED6F1,stroke:#333,stroke-width:2px
+    style DatabaseService fill:#AED6F1,stroke:#333,stroke-width:2px
+    style StorageService fill:#AED6F1,stroke:#333,stroke-width:2px
     style ExternalAPI1 fill:#FADBD8,stroke:#333,stroke-width:2px
     style ExternalAPI2 fill:#FADBD8,stroke:#333,stroke-width:2px
 ```
 `[AI to Refine Diagram and Description for User Validation]`
 
 ### 5.4. Technology Stack (User Override / Confirmation of Defaults)
-*User Instruction: The project will use Next.js, Supabase, and Tailwind CSS by default (see Section 1.10). Use this section if you have specific preferences for other tools, versions, or auxiliary libraries. If left blank, the AI will proceed with the defaults and select appropriate versions/libraries.*
+*User Instruction: The project suggests Next.js, Supabase, and Tailwind CSS as a default stack (see Section 1.10). Use this section to specify your preferences for frontend framework, backend services (database, auth, storage, serverless functions), styling solutions, or any other tools, versions, or auxiliary libraries. If left blank, the AI will proceed with the suggested defaults and select appropriate versions/libraries, but will seek your confirmation.*
 `[User to provide any overrides or specific requests]`
 
 *AI Instruction: Confirm the final stack here after considering user input. You are responsible for selecting appropriate versions and necessary auxiliary libraries compatible with the core stack and project needs.*
 `[AI to Confirm Final Stack (incorporating user input if any) for User Validation]`
 
 ### 5.5. Data Requirements (AI to Propose Model based on Features)
-*User Instruction: You can list key data entities if you have them in mind (e.g., 'Users', 'Products', 'Orders'). Otherwise, the AI Agent will analyze the features you've described (Section 3.1) and propose a detailed database schema for Supabase/PostgreSQL. This proposal will be part of its detailed feature specification (Section 9.1.6) and will require your review.*
+*User Instruction: You can list key data entities if you have them in mind (e.g., 'Users', 'Products', 'Orders'). Otherwise, the AI Agent will analyze the features you've described (Section 3.1) and propose a detailed database schema for the chosen database technology (e.g., Supabase/PostgreSQL). This proposal will be part of its detailed feature specification (Section 9.1.6) and will require your review.*
 `[User to list key data entities, if known]`
 
-*AI Instruction: Based on user's feature list and any listed entities, you will propose a detailed Supabase (PostgreSQL) schema using Prisma-like syntax or pseudo-SQL in your feature specifications (Section 9.1.6). Also propose data seeding strategies for dev/test environments.*
+*AI Instruction: Based on user's feature list and any listed entities, you will propose a detailed database schema (e.g., for Supabase/PostgreSQL using Prisma-like syntax or pseudo-SQL) in your feature specifications (Section 9.1.6). Also propose data seeding strategies for dev/test environments.*
 `[This section is a directive to the AI; detailed proposals will be in AI's feature specs]`
 
 ### 5.6. Third-Party Integrations & MCP Servers (AI to Propose Solutions based on Needs)
@@ -447,12 +448,12 @@ graph TD
 `[User to fill or leave for AI to populate based on needs identified from features]`
 *AI Instruction: Review this catalog. For "Connected and Available" MCPs, prioritize their use. For "Known" or "Desired" MCPs not yet connected, or for new needs, follow protocol in 9.7.1. You can also propose additions to this catalog if new needs are identified.*
 
-*AI Instruction: Based on user's feature list and any stated integration needs or catalog entries, you will research and propose specific third-party services, **MCP servers**, or other APIs. Detail your proposals, including rationale and integration points, in your feature specifications (Section 9.1.9). Prioritize robust, secure, and well-supported options compatible with Next.js/Supabase. For all MCP integrations, you MUST implement them following the detailed logic outlined in Section 9.9 'Standard MCP Integration Logic'.*
+*AI Instruction: Based on user's feature list and any stated integration needs or catalog entries, you will research and propose specific third-party services, **MCP servers**, or other APIs. Detail your proposals, including rationale and integration points, in your feature specifications (Section 9.1.9). Prioritize robust, secure, and well-supported options compatible with the chosen technology stack (e.g., Next.js/Supabase, or alternatives). For all MCP integrations, you MUST implement them following the detailed logic outlined in Section 9.9 'Standard MCP Integration Logic'.*
 `[This section is a directive to the AI; detailed proposals will be in AI's feature specs]`
 
 ### 5.7. Directory Structure and Naming Conventions (AI to Adhere to Defaults)
-*AI Instruction: You will adhere to the default Agentic Project Boilerplate structure (Section 5.8), which uses Atomic Design principles for Next.js App Router. Key conventions include `PascalCase.tsx` for components/pages, `kebab-case.ts` for utils, and `camelCase` for functions/variables. Clarify any deviations if necessary for specific project needs in your technical proposals.*
-    *   **Default Structure Overview (Next.js App Router & Atomic Design):**
+*AI Instruction: You will adhere to a conventional project structure (e.g., the default Agentic Project Boilerplate structure in Section 5.8 if Next.js is chosen, or an equivalent standard structure for the selected framework), which typically uses Atomic Design principles for frontend frameworks. Key conventions generally include `PascalCase.tsx` (or equivalent for other languages) for components/pages, `kebab-case.ts` (or equivalent) for utils, and `camelCase` for functions/variables. Clarify any deviations if necessary for specific project needs in your technical proposals.*
+    *   **Suggested Structure Overview (e.g., for Next.js App Router & Atomic Design):**
         ```
         /app/(routes)
         /components/{atoms,molecules,organisms,templates,ui}
@@ -461,7 +462,7 @@ graph TD
 `[This section confirms AI's adherence to predefined standards]`
 
 ### 5.8. Agentic Project Boilerplate (Conceptual - AI to Assume)
-*AI Instruction: You will operate as if starting from or evolving an "Agentic Project Boilerplate." This pre-configured Next.js template includes: TypeScript (strict), Tailwind CSS (with base design tokens to be defined by you based on user input/defaults), Atomic Design structure, ESLint/Prettier/Husky, Storybook, basic testing setup, and CI/CD placeholders. Your initial project setup tasks should include structuring the project files and base configurations as if this boilerplate were being instantiated. If a Git repository with an actual boilerplate is provided by the user, you should use that as your starting point. Otherwise, create the foundational structure (directories, key config files like `tailwind.config.js`, basic `package.json` with Next.js/Supabase/Tailwind) according to the conceptual boilerplate described.*
+*AI Instruction: You will operate as if starting from or evolving an "Agentic Project Boilerplate." If Next.js is chosen, this pre-configured template includes: TypeScript (strict), Tailwind CSS (with base design tokens to be defined by you based on user input/defaults), Atomic Design structure, ESLint/Prettier/Husky, Storybook, basic testing setup, and CI/CD placeholders. If a different framework is selected, you will adapt to a similar standard boilerplate for that technology. Your initial project setup tasks should include structuring the project files and base configurations accordingly. If a Git repository with an actual boilerplate is provided by the user, you should use that as your starting point. Otherwise, create the foundational structure (directories, key config files, basic `package.json` or equivalent with chosen technologies) according to the conceptual boilerplate for the selected stack.*
 `[This section sets AI's operational context]`
 
 ---
@@ -512,7 +513,7 @@ graph TD
 ---
 
 ## 7. Deployment and Launch Plan (AI to Propose, User to Validate)
-*AI Instruction: Propose a basic deployment and launch plan, assuming Vercel for Next.js and Supabase's managed services.*
+*AI Instruction: Propose a basic deployment and launch plan, assuming a common hosting solution for the chosen frontend (e.g., Vercel for Next.js) and managed services for the chosen backend (e.g., Supabase).*
 
 ### 7.1. Deployment Strategy
 *AI Proposal:* Phased deployment: Staging/Preview environment (Vercel Previews) for review, followed by Production deployment.
@@ -521,7 +522,7 @@ graph TD
 ### 7.2. Deployment Prerequisites
 *AI Proposal:*
 *   Vercel account connected to Git repository.
-*   Supabase project created and environment variables configured in Vercel.
+*   Backend project (e.g., Supabase) created and environment variables configured in the frontend hosting provider (e.g., Vercel).
 *   Domain name configured (if applicable).
 `[User to Adjust/Confirm AI's Proposed Deployment Prerequisites]`
 
@@ -544,7 +545,7 @@ graph TD
 ### 8.1. Maintenance Plan (AI to Propose Basics)
 *AI Proposal:*
 *   Regular dependency updates (AI can assist in identifying and testing updates).
-*   Monitoring of Vercel and Supabase dashboards for performance/errors.
+*   Monitoring of chosen hosting (e.g., Vercel) and backend (e.g., Supabase) dashboards for performance/errors.
 *   User feedback collection mechanism (to be defined by user).
 `[User to Adjust/Confirm AI's Proposed Maintenance Basics]`
 
@@ -560,7 +561,7 @@ graph TD
 *Comment: This section provides overarching directives for the AI Coding Agent. Adherence to these instructions is critical for the success of the Agentic Coding System.*
 
 ### 9.1. Feature Decomposition and Specification Process (Mandatory Pre-Coding Step for AI)
-*AI Agent Directive: For every high-level feature provided by the user in Section 3.1, before commencing any code implementation, you MUST perform the following decomposition and specification process. The objective is to ensure your exhaustive and unambiguous understanding of each task, aligning with our 'Argentic Coding' standards. Generate this detailed specification internally or in a working document that can be reviewed by humans. **This includes proposing specific libraries, Supabase services, or MCP servers where appropriate.** Your proposals for tooling (MCPs, libraries, specific Supabase services) are crucial and require human validation. This decomposition process is critical for your reasoning. Break down complex problems into smaller, manageable sub-problems. For each sub-problem, consider the relevant sections of this PRD (NFRs, Design System, MCP Logic, etc.) before proposing a solution.*
+*AI Agent Directive: For every high-level feature provided by the user in Section 3.1, before commencing any code implementation, you MUST perform the following decomposition and specification process. The objective is to ensure your exhaustive and unambiguous understanding of each task, aligning with our 'Argentic Coding' standards. Generate this detailed specification internally or in a working document that can be reviewed by humans. **This includes proposing specific libraries, backend services (e.g., Supabase services if chosen), or MCP servers where appropriate.** Your proposals for tooling (MCPs, libraries, specific backend services) are crucial and require human validation. This decomposition process is critical for your reasoning. Break down complex problems into smaller, manageable sub-problems. For each sub-problem, consider the relevant sections of this PRD (NFRs, Design System, MCP Logic, etc.) before proposing a solution.*
 
 **Detailed Specification Structure to be Generated by AI Agent (for each User-Provided Feature):**
 
@@ -578,16 +579,16 @@ graph TD
         *   *AI Resources:* [`tailwind.config.js`](tailwind.config.js:1), Storybook, Agentic Design Principles (with YC objective), user's aesthetic input.
     6.  **`data_and_logic_plan_by_ai` (Data and Logic Plan):**
         *   `input_data_identified`: List inputs, types, validation rules (client/server), error messages.
-    *   `backend_interaction_strategy`: Detail interaction with Supabase (DB, Auth, Edge Functions for custom logic). Specify tables, RLS considerations, function signatures, request/response payloads.
-    *   `frontend_state_management_approach`: Propose client-side state management.
-    *   *AI Resources:* Supabase schema (you will propose this if not user-defined), API docs, state conventions.
+    *   `backend_interaction_strategy`: Detail interaction with the chosen backend (e.g., Supabase: DB, Auth, Edge Functions for custom logic). Specify tables, security considerations (like RLS if applicable), function signatures, request/response payloads.
+    *   `frontend_state_management_approach`: Propose client-side state management suitable for the chosen frontend framework.
+    *   *AI Resources:* Chosen database schema (you will propose this if not user-defined), API docs, state conventions.
 7.  **`error_handling_strategy_by_ai` (Error Handling Strategy):**
     *   *AI Instruction:* Identify failure points (network, DB, APIs). Describe error catching, logging, user communication (aligned with Design System).
 8.  **`security_checks_required_by_ai` (Security Checks):**
     *   *AI Instruction:* List security measures (input sanitization, RLS, XSS/CSRF protection for custom endpoints, etc.).
-    *   *AI Resources:* OWASP Top 10, Supabase security best practices.
+    *   *AI Resources:* OWASP Top 10, security best practices for the chosen backend (e.g., Supabase).
 9.  **`dependencies_identified_by_ai` (Dependencies, including MCPs & Services):**
-    *   *AI Instruction:* List project modules, external services, **MCP Servers** (e.g., `stripe` MCP, `taskmaster-ai` MCP, `context7` MCP, `supabase` MCP, `github` MCP), specific **Supabase services** (Auth, Storage, Functions, Realtime, Vector DB), or third-party libraries/APIs. **Provide justification for each proposed tool/service and how it integrates. When proposing an MCP server, specify its known capabilities, the primary function it will serve, and if it's a standard known MCP or one that would require setup/connection instructions from the user (if new/unknown, explicitly ask user for API docs/connection details). Confirm that its implementation will follow the 'Standard MCP Integration Logic' (Section 9.9).**
+    *   *AI Instruction:* List project modules, external services, **MCP Servers** (e.g., `stripe` MCP, `taskmaster-ai` MCP, `context7` MCP, `supabase` MCP, `github` MCP), specific **backend services** (e.g., Supabase Auth, Storage, Functions, Realtime, Vector DB if Supabase is chosen), or third-party libraries/APIs. **Provide justification for each proposed tool/service and how it integrates. When proposing an MCP server, specify its known capabilities, the primary function it will serve, and if it's a standard known MCP or one that would require setup/connection instructions from the user (if new/unknown, explicitly ask user for API docs/connection details). Confirm that its implementation will follow the 'Standard MCP Integration Logic' (Section 9.9).**
 10. **`questions_for_clarification_by_ai` (Questions for Human Clarification):**
     *   *AI Instruction:* If ambiguities remain, list specific questions for the human team. **Do not code ambiguous parts without clarification.**
 
@@ -623,7 +624,7 @@ graph TD
 
 #### 9.7.1. Protocol for Proposing and Learning New Tools/MCPs
 *AI Agent Directive: If you identify the need for a new tool, library, or MCP not currently listed or known to the project (see Section 5.6.1):*
-    1.  *Describe the specific need and explain why existing project tools, connected MCPs, or Supabase features are insufficient.*
+    1.  *Describe the specific need and explain why existing project tools, connected MCPs, or chosen backend features (e.g., Supabase) are insufficient.*
     2.  *If you can identify a potential solution (e.g., a specific library, an existing third-party API, a known public MCP), provide a link to its official documentation and a brief summary of its relevance.*
     3.  *Explicitly ask the human user to validate the proposed tool/service.*
     4.  *If approved, request necessary configuration details from the user for the new tool/MCP, such as: API Endpoint, Authentication Method (and where to securely access credentials), Key request/response structures, Rate limits or quotas, Link to official detailed documentation.*
@@ -632,8 +633,8 @@ graph TD
 *AI Instruction (General for 9.7):*
     *   **MCP Servers:** Utilize known, available MCPs (listed in 5.6.1) for specialized tasks. For new MCP needs, follow protocol 9.7.1.
     *   **Third-Party APIs & Libraries:** For functionalities not covered by the core stack or Supabase. Follow protocol 9.7.1 for new additions.
-    *   **Supabase Ecosystem:** Fully leverage Supabase features (Auth, DB, Storage, Edge Functions, Realtime, Vector DB) as the primary choice before proposing external tools.
-*Document all proposals with rationale in your feature specifications (Section 9.1.9) for human review and approval. Prioritize robust, secure, well-maintained, and (where possible) cost-effective solutions compatible with Next.js/Supabase.*
+    *   **Chosen Backend Ecosystem:** If a BaaS like Supabase is chosen, fully leverage its features (Auth, DB, Storage, Edge Functions, Realtime, Vector DB) as a primary choice before proposing external tools.
+*Document all proposals with rationale in your feature specifications (Section 9.1.9) for human review and approval. Prioritize robust, secure, well-maintained, and (where possible) cost-effective solutions compatible with the chosen technology stack (e.g., Next.js/Supabase or alternatives).*
 `[This section empowers the AI but mandates human oversight for new tooling, especially non-standard MCPs/APIs]`
 
 ### 9.8. Workflow with Assisted Coding Tools (e.g., Cursor, Cline)
@@ -645,20 +646,20 @@ graph TD
     5.  *Clearly indicate when a generated piece of code is a 'draft for exploration/vibe check' versus a 'production-ready proposal based on full PRD specs and requiring all standard quality checks'. This distinction is crucial for managing expectations and workflow."*
 
 ### 9.9. Standard MCP Integration Logic (Using Supabase as a Hub)
-*AI Agent Directive: When implementing features requiring interaction with any Model Context Protocol (MCP) Server (for payments, AI/LLM calls, GitHub operations, messaging, etc.), you MUST follow the integration logic detailed below. This logic pattern is a general guideline. For each specific MCP, you may need to adapt parts of this logic (e.g., specific error handling, request/response transformation) based on its official documentation and the information provided by the human for its setup. Always prioritize the MCP's official documentation for implementation details, while adhering to our security and logging principles. The objective is to use our Supabase instance as a central hub for configuration, interaction logging, and potentially storing MCP results, ensuring secure and traceable interaction with these external services.*
+*AI Agent Directive: When implementing features requiring interaction with any Model Context Protocol (MCP) Server (for payments, AI/LLM calls, GitHub operations, messaging, etc.), you MUST follow the integration logic detailed below. This logic pattern is a general guideline. For each specific MCP, you may need to adapt parts of this logic (e.g., specific error handling, request/response transformation) based on its official documentation and the information provided by the human for its setup. Always prioritize the MCP's official documentation for implementation details, while adhering to our security and logging principles. The objective is to use our chosen backend (e.g., Supabase instance) as a central hub for configuration, interaction logging, and potentially storing MCP results, ensuring secure and traceable interaction with these external services.*
 
 **9.9.1 Retrieve MCP Configuration from Supabase (if applicable):**
-*   *AI Scenario:* Dynamic API keys, user/tenant-specific endpoints, or behavioral parameters for MCPs might be stored in Supabase tables (e.g., `mcp_configurations`, `user_service_credentials`).
+*   *AI Scenario:* Dynamic API keys, user/tenant-specific endpoints, or behavioral parameters for MCPs might be stored in tables within the chosen backend (e.g., Supabase tables like `mcp_configurations`, `user_service_credentials`).
 *   *AI Action:*
-    1.  Before calling an MCP, check if specific configurations are required and if they should be read from Supabase.
-    2.  Implement code to query Supabase (using `supabase-js` client with appropriate RLS) to retrieve these configurations.
+    1.  Before calling an MCP, check if specific configurations are required and if they should be read from the chosen backend.
+    2.  Implement code to query the chosen backend (e.g., using `supabase-js` client with appropriate RLS if Supabase is used) to retrieve these configurations.
     3.  Handle cases where configuration is not found or is invalid (e.g., log error, notify user/admin, fallback to default if safe).
 *   *AI Example (Pseudo-code to guide implementation):*
     ```typescript
     // Within a Next.js API Route or Supabase Edge Function
-    async function getMcpConfig(serviceName: string) {
-      const { data: mcpConfig, error } = await supabase
-        .from('mcp_configurations')
+    async function getMcpConfig(serviceName: string) { // Example assumes Supabase
+      const { data: mcpConfig, error } = await chosenBackendClient // e.g., supabase
+        .from('mcp_configurations') // or equivalent table in chosen DB
         .select('api_key, endpoint_url, other_params')
         .eq('service_name', serviceName)
         .single();
@@ -672,26 +673,26 @@ graph TD
     ```
 
 **9.9.2 Prepare Input Data for MCP:**
-*   *AI Scenario:* The MCP expects specific input data, which may come from user requests, the Supabase database, or application logic.
+*   *AI Scenario:* The MCP expects specific input data, which may come from user requests, the chosen database, or application logic.
 *   *AI Action:*
     1.  Gather and format the required input data for the MCP.
     2.  Validate this data rigorously before sending it to the MCP.
-    3.  If necessary, retrieve additional contextual data from Supabase to enrich the MCP request.
+    3.  If necessary, retrieve additional contextual data from the chosen backend (e.g., Supabase) to enrich the MCP request.
 
 **9.9.3 Secure MCP Call:**
 *   *AI Scenario:* Interaction with the MCP typically occurs via an HTTP call to its endpoint.
 *   *AI Action:*
     1.  Implement the HTTP call (using `fetch` or a robust library like `axios`) to the MCP endpoint.
-    2.  Inject necessary authentication headers (e.g., `Authorization: Bearer <MCP_API_KEY>`). **Sensitive API keys MUST be stored securely as server-side environment variables (e.g., in Vercel/Supabase settings) and NEVER exposed client-side.**
+    2.  Inject necessary authentication headers (e.g., `Authorization: Bearer <MCP_API_KEY>`). **Sensitive API keys MUST be stored securely as server-side environment variables (e.g., in Vercel settings or the chosen backend's environment settings like Supabase) and NEVER exposed client-side.**
     3.  Implement proper timeout handling and retry mechanisms for transient network errors if appropriate for the MCP's nature.
-    4.  All MCP calls must originate from server-side environments (Next.js API Routes, Supabase Edge Functions).
+    4.  All MCP calls must originate from server-side environments (e.g., Next.js API Routes if used, or chosen backend functions like Supabase Edge Functions).
 
 **9.9.4 Log MCP Interaction in Supabase (Audit Trail):**
 *   *AI Scenario:* For traceability, debugging, and analytics, all MCP calls must be logged.
 *   *AI Action:*
-    1.  Before and/or after the MCP call, insert/update a record in a dedicated Supabase table (e.g., `mcp_interaction_logs`).
+    1.  Before and/or after the MCP call, insert/update a record in a dedicated table in the chosen backend (e.g., a Supabase table like `mcp_interaction_logs`).
     2.  Log information such as: `timestamp`, `user_id` (if applicable), `mcp_name`, `request_payload_summary` (anonymize/truncate sensitive data), `response_status_code`, `response_summary_or_error_message`, `correlation_id` (generate a unique ID for each interaction flow).
-*   *AI Example (Pseudo-code for Supabase table structure and logging):*
+*   *AI Example (Pseudo-code for backend table structure and logging, assuming Supabase):*
     ```sql
     -- mcp_interaction_logs table example
     CREATE TABLE mcp_interaction_logs (
@@ -709,18 +710,18 @@ graph TD
     ```typescript
     // Logging example
     const correlationId = crypto.randomUUID(); // or a similar UUID generation
-    await supabase.from('mcp_interaction_logs').insert({
+    await chosenBackendClient.from('mcp_interaction_logs').insert({ // Example assumes Supabase
         mcp_name: 'example_mcp',
-        user_id: userId,
+        user_id: userId, // if applicable
         correlation_id: correlationId,
         status: 'initiated',
         request_details: { /* non-sensitive summary */ }
     });
     // ... MCP call ...
     // On response:
-    await supabase.from('mcp_interaction_logs')
+    await chosenBackendClient.from('mcp_interaction_logs') // Example assumes Supabase
         .update({
-            status: mcpResponse.ok ? 'success' : 'failed_mcp',
+            status: mcpResponse.ok ? 'success' : 'failed_mcp', // or more granular status
             response_details: { statusCode: mcpResponse.status, /* non-sensitive summary */ },
             error_message: mcpResponse.ok ? null : await mcpResponse.text()
         })
@@ -736,10 +737,10 @@ graph TD
     3.  Extract relevant data from the successful response. Log errors comprehensively.
 
 **9.9.6 Update Supabase Database with MCP Results (if applicable):**
-*   *AI Scenario:* MCP results may require creating, updating, or deleting data in Supabase.
+*   *AI Scenario:* MCP results may require creating, updating, or deleting data in the chosen backend (e.g., Supabase).
 *   *AI Action:*
-    1.  Implement logic to persist relevant MCP results into the appropriate Supabase tables.
-    2.  This could involve updating an order status, storing a transaction ID, saving AI-generated content, etc. Ensure data integrity and apply RLS.
+    1.  Implement logic to persist relevant MCP results into the appropriate tables in the chosen backend.
+    2.  This could involve updating an order status, storing a transaction ID, saving AI-generated content, etc. Ensure data integrity and apply relevant security measures (like RLS if applicable).
 
 **9.9.7 Provide Feedback to User / Application Flow:**
 *   *AI Scenario:* The outcome of the MCP interaction needs to be communicated or influence the application flow.
@@ -750,16 +751,16 @@ graph TD
 **9.9.8 Key Considerations for AI Agent:**
 *   **Security First:** Reiterate that MCP API keys and sensitive data are server-side only.
 *   **Idempotency:** Where possible and supported by the MCP, implement idempotent calls for critical operations.
-*   **Granular Error Handling:** Differentiate errors (MCP vs. Supabase vs. internal logic) and provide clear feedback/logs.
-*   **Modularity:** Encapsulate interaction logic for each MCP into reusable server-side functions/modules (e.g., in `/lib` or dedicated API routes/Edge Functions).
-*   **Configuration Management:** For MCPs requiring user-specific setup (API keys, etc.), ensure the system allows users to provide these securely, and your code retrieves them from the designated secure storage (environment variables or a secure Supabase table with RLS).
+*   **Granular Error Handling:** Differentiate errors (MCP vs. chosen backend vs. internal logic) and provide clear feedback/logs.
+*   **Modularity:** Encapsulate interaction logic for each MCP into reusable server-side functions/modules (e.g., in `/lib` or dedicated API routes/serverless functions within the chosen stack).
+*   **Configuration Management:** For MCPs requiring user-specific setup (API keys, etc.), ensure the system allows users to provide these securely, and your code retrieves them from the designated secure storage (environment variables or a secure table in the chosen backend with appropriate security like RLS).
 
 ---
 
 ## 10. Risks and Dependencies (AI to Identify, User to Validate)
 
 ### 10.1. Risk Identification
-*AI Instruction: Based on the project scope and chosen technologies, identify potential technical risks (e.g., complexity of a feature, integration challenges with a proposed MCP/API, performance bottlenecks with Supabase queries if not designed carefully). The AI's ability to perform deep market/competitive risk analysis is limited; focus on technical and implementation risks.*
+*AI Instruction: Based on the project scope and chosen technologies, identify potential technical risks (e.g., complexity of a feature, integration challenges with a proposed MCP/API, performance bottlenecks with chosen database queries if not designed carefully). The AI's ability to perform deep market/competitive risk analysis is limited; focus on technical and implementation risks.*
 `[AI to Propose Risks for User Validation]`
 
 ### 10.2. Risk Mitigation Plan
@@ -767,7 +768,7 @@ graph TD
 `[AI to Propose Mitigation Plans for User Validation]`
 
 ### 10.3. Dependencies
-*AI Instruction: List key external dependencies (known MCP servers, proposed third-party APIs, specific Supabase features critical to the project) and any assumptions made about their availability or functionality. Highlight where user action might be needed for setup or API keys.*
+*AI Instruction: List key external dependencies (known MCP servers, proposed third-party APIs, specific features of the chosen backend (e.g., Supabase) critical to the project) and any assumptions made about their availability or functionality. Highlight where user action might be needed for setup or API keys.*
 `[AI to List Key Dependencies for User Validation]`
 
 ---
@@ -777,8 +778,8 @@ graph TD
 *   **Agentic Coding System:** Our holistic methodology for developing high-quality software, emphasizing design finesse, technical excellence, and intelligent AI agent collaboration.
 *   **Design System `[AI to Propose Project Name] Design System`:** The single source of truth for all UI components, design tokens, and styling guidelines for this project.
 *   **MCP (Model Context Protocol) Server:** An external tool or service, often an API, that the AI Agent can interact with to perform specialized tasks (e.g., payment processing, documentation lookup, code analysis, GitHub operations). The AI Agent uses predefined MCPs where available or can be instructed by the user on how to connect to new ones if they follow a compatible API structure or if an MCP server wrapper can be created for them. When proposing an MCP, the AI will specify its known capabilities, the primary function it will serve, and if it's a standard known MCP or one requiring user setup/connection details.
-*   **Supabase:** The default BaaS (Backend-as-a-Service) platform for this project, providing database, auth, storage, edge functions, etc.
-*   **Next.js:** The default React framework for the frontend.
+*   **Supabase (if chosen):** A Backend-as-a-Service (BaaS) platform providing database, auth, storage, edge functions, etc. (This is a suggested default).
+*   **Next.js (if chosen):** A React framework for the frontend. (This is a suggested default).
 *   **Tailwind CSS:** The utility-first CSS framework for styling.
 *   **Shadcn/ui:** A collection of UI components used as a customizable base, to be heavily adapted to the project's Design System.
 `[AI to add terms as they arise]`
