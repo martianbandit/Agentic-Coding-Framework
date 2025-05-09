@@ -1,22 +1,24 @@
-# Argentic AI-Assisted Development Workflow Template
+# Agentic AI-Assisted Development Workflow Template
 
 ## How to Use
 
 1. Fork this repository to create a new project. 
-2. Install all MCP @ 01_AI-RUN/Template/MCP-Server.json
-3. Just run in cursor / cline / windsurf with this prompt : 
+2. **Configure MCP Servers & API Keys:** The file [`01_AI-RUN/Template/MCP-Server.json`](01_AI-RUN/Template/MCP-Server.json) lists the MCP servers used by this workflow.
+    *   **IMPORTANT:** This file contains **placeholders** for API keys (e.g., `YOUR_OPENAI_API_KEY_HERE`). You **MUST** replace these placeholders with your actual valid API keys for the respective services.
+    *   **SECURITY:** It is strongly recommended to **NOT** commit your actual API keys directly into `MCP-Server.json` if you plan to push this repository to a public or shared environment. Instead, copy [`01_AI-RUN/Template/MCP-Server.json`](01_AI-RUN/Template/MCP-Server.json) to a local configuration file (e.g., `mcp_config.json` at the project root or in a `.config/` directory), populate it with your keys, and ensure this local file is listed in your `.gitignore`. Your AI agent (Cursor, Cline, Windsurf) should then be configured to read its MCP settings from this local, uncommitted file. Refer to your specific AI agent's documentation for how to configure MCP server paths.
+3. **Initiate the Workflow:** Run the following prompt in your AI agent (Cursor, Cline, Windsurf):
 
---->  Read the full codebase and let's get started with '01_AI-RUN/00_Getting_Started.md
+---> Read the full codebase and let's get started with `01_AI-RUN/00_Getting_Started.md`
 
 ## Purpose
 
 This repository serves as a template and framework for initiating software projects using a structured, AI-assisted workflow. It provides a sequence of prompts (`01_AI-RUN/`) designed to guide an AI coding agent (like Cline, Cursor, Windsurf, or similar) from an initial user idea through market research, concept definition, PRD generation, technical documentation/specification updates, task breakdown, and finally into the implementation phase.
 
-The core goal is to leverage AI capabilities for efficient documentation generation and planning while maintaining high standards and human oversight, embodying a concept we term "Argentic Coding Logic."
+The core goal is to leverage AI capabilities for efficient documentation generation and planning while maintaining high standards and human oversight, embodying a concept we term "Agentic Coding Logic."
 
 **This repository is intended to be forked for each new project.** The AI agent will then work directly within the forked repository.
 
-## Core Concept: Argentic Coding Logic
+## Core Concept: Agentic Coding Logic
 
 This workflow implements a practical interpretation of "Argentic Coding Logic," inspired by principles of thoughtful design, iterative development, and the need for robust guidance when working with powerful AI agents. It emphasizes:
 
@@ -27,9 +29,9 @@ This workflow implements a practical interpretation of "Argentic Coding Logic," 
 5.  **Quality Focus & Best Practices:** Explicitly instructing the AI to adhere to coding standards, security principles, and maintainability goals, primarily guided by the central document: [`02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`](02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md).
 6.  **Mitigating AI Weaknesses:** Using clear constraints, requesting clarification for ambiguities, and emphasizing human oversight to reduce the risk of hallucinations or logical errors.
 7.  **Leveraging AI Strengths:** Automating documentation generation, research assistance (via MCPs), task decomposition, and boilerplate code generation.
-## Why This Workflow? The Argentic AI Coding Advantage
+## Why This Workflow? The Agentic AI Coding Advantage
 
-This template isn't just a collection of prompts; it's a manifestation of **Argentic AI Coding Logic** – a powerful, structured methodology designed to transform any idea, from complex software projects and video games to innovative digital concepts, into reality with unprecedented efficiency and quality.
+This template isn't just a collection of prompts; it's a manifestation of **Agentic AI Coding Logic** – a powerful, structured methodology designed to transform any idea, from complex software projects and video games to innovative digital concepts, into reality with unprecedented efficiency and quality.
 
 **What makes it extraordinary?**
 
@@ -50,12 +52,12 @@ The "magic" lies in the synergy between:
 3.  **Integration with MCPs (Model Context Protocol):** Allowing the AI to leverage external tools and real-time data for research, coding, and more.
 4.  **Emphasis on "Updatable" Core Documents:** Key documents like architecture or coding conventions are treated as living templates within your project fork, evolved by the AI with project-specific details.
 
-By using this Argentic AI Coding workflow, you're not just automating tasks; you're orchestrating a sophisticated, AI-powered development process designed for excellence and speed, turning ambitious concepts into tangible successes.
+By using this Agentic AI Coding workflow, you're not just automating tasks; you're orchestrating a sophisticated, AI-powered development process designed for excellence and speed, turning ambitious concepts into tangible successes.
 
 ---
 ## Workflow Overview
 
-The workflow consists of 7 logical phases, orchestrated by [`01_AI-RUN/00_AutoPilot.md`](01_AI-RUN/00_AutoPilot.md:1) for automated execution or runnable step-by-step using the sequential prompts:
+The workflow consists of 7 logical phases, orchestrated by [`01_AI-RUN/01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) for automated execution or runnable step-by-step using the sequential prompts:
 
 1.  **Idea (`01_Idea.md`):** Capturing the initial concept. (Output: `idea_document.md`)
 2.  **Market Research (`02_Market_Research.md`):** Analyzing market viability. (Output: `market_research.md`)
@@ -71,15 +73,15 @@ Refer to [`01_AI-RUN/00_Getting_Started.md`](01_AI-RUN/00_Getting_Started.md:1) 
 
 1.  **Fork this Repository:** Create a new repository for your project by forking this template.
 2.  **Customize Best Practices (Crucial):** Edit [`02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`](02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md) to reflect *your* specific coding standards, architectural preferences, and AI interaction guidelines. This document is central to guiding the AI effectively.
-3.  **Configure MCPs & API Keys:** If using MCPs that require API keys (e.g., Stripe, OpenAI via Taskmaster, GitHub), configure them either via environment variables recognized by your AI agent/MCP setup or by updating placeholder values in configuration files like [`01_AI-RUN/Template/MCP-Server.json`](01_AI-RUN/Template/MCP-Server.json) (ensure this file is appropriately secured or gitignored if containing secrets).
+3.  **Configure MCPs & API Keys (Reiteration):** As mentioned in "How to Use" (point 2), ensure all necessary API keys in your MCP configuration (derived from [`01_AI-RUN/Template/MCP-Server.json`](01_AI-RUN/Template/MCP-Server.json)) are correctly set up and secured.
 4.  **Initiate Workflow:**
-    *   **Automated (Recommended):** Open [`01_AI-RUN/00_AutoPilot.md`](01_AI-RUN/00_AutoPilot.md:1) in your AI coding agent (e.g., Cline, Cursor). Share the prompt with the agent and provide your initial project idea when requested.
+    *   **Automated (Recommended):** Open [`01_AI-RUN/01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) in your AI coding agent (e.g., Cline, Cursor). Share the prompt with the agent and provide your initial project idea when requested.
     *   **Manual:** Execute prompts `01` through `07` sequentially, providing the necessary inputs at each stage.
-5.  **Validate:** Review and validate the AI's proposals and generated outputs at the designated intervention points outlined in [`01_AI-RUN/00_AutoPilot.md`](01_AI-RUN/00_AutoPilot.md:1).
+5.  **Validate:** Review and validate the AI's proposals and generated outputs at the designated intervention points outlined in [`01_AI-RUN/01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1).
 
 ## Directory Structure
 
-*   **`01_AI-RUN/`**: Contains the sequential prompts (`01` to `07`), the main orchestrator (`00_AutoPilot.md`), the getting started guide, and templates.
+*   **`01_AI-RUN/`**: Contains the sequential prompts (`01` to `07`), the main orchestrator ([`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1)), the getting started guide, and templates.
     *   **`Template/`**: Holds base templates like the PRD structure.
 *   **`02_AI-DOCS/`**: Contains core documentation files that are **updated** by the AI for each project based on their initial template structure.
     *   **`Architecture/`**: System architecture documentation.
@@ -96,6 +98,7 @@ Refer to [`01_AI-RUN/00_Getting_Started.md`](01_AI-RUN/00_Getting_Started.md:1) 
 *   **`tasks/`**: Contains the generated `tasks.json` file from the Task Manager phase.
 *   **(Project Root)**: Intermediate documents (`idea_document.md`, `market_research.md`, `core_concept.md`, `project_prd.md`) are created here.
 *   **`README.md`**: This file.
+*   **`Inspiration.md`**: A bonus file containing various ideas and inspirational content for the user.
 
 ## Technology Assumptions
 
@@ -108,18 +111,18 @@ It also heavily relies on the availability and configuration of various **Model 
 ## Customization
 
 Feel free to adapt the prompts in [`01_AI-RUN/`](01_AI-RUN) and especially the guidelines in [`02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`](02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md) to better suit your specific needs, preferred tools, and coding standards.
-## Roadmap: From 0 to 1 with Full Argentic AI Coding Assistance
+## Roadmap: From 0 to 1 with Full Agentic AI Coding Assistance
 
-This workflow is designed for comprehensive AI assistance, orchestrated by the [`01_AI-RUN/00_AutoPilot.md`](01_AI-RUN/00_AutoPilot.md:1) file, with human intervention points for validation and strategic direction. Here’s a conceptual step-by-step journey:
+This workflow is designed for comprehensive AI assistance, orchestrated by the [`01_AI-RUN/01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) file, with human intervention points for validation and strategic direction. Here’s a conceptual step-by-step journey:
 
 **Phase 0: Initialization & User Idea**
 
 1.  **User:** Forks the template repository for a new project.
-2.  **User:** Opens [`01_AI-RUN/00_AutoPilot.md`](01_AI-RUN/00_AutoPilot.md:1) in their AI agent (e.g., Cline).
-3.  **User:** Shares the `00_AutoPilot.md` content with the AI agent.
+2.  **User:** Opens [`01_AI-RUN/01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) in their AI agent (e.g., Cline).
+3.  **User:** Shares the `01_AutoPilot.md` content with the AI agent.
 4.  **AI Agent (as `ProjectArchitect`):** Understands "Core Operational Rules." Prompts the user for a brief project idea (1-3 sentences).
 5.  **User:** Provides the initial idea.
-6.  **AI Agent:** Asks 5-7 targeted questions (from `00_AutoPilot.md`) to clarify the idea (target users, main problem, key MVP features, business model, tech/design preferences).
+6.  **AI Agent:** Asks 5-7 targeted questions (from `01_AutoPilot.md`) to clarify the idea (target users, main problem, key MVP features, business model, tech/design preferences).
 7.  **User:** Answers clarification questions.
 
 **Phase 1: Initial Idea Expansion (Logic from [`01_AI-RUN/01_Idea.md`](01_AI-RUN/01_Idea.md:1))**
@@ -163,7 +166,7 @@ This workflow is designed for comprehensive AI assistance, orchestrated by the [
 32. **AI Agent (as `TechDocNavigator`):** Internally uses the `05_Specs_Docs.md` logical prompt, taking `project_prd.md` as input.
 33. **AI Agent:** **Updates** existing files in `02_AI-DOCS/` and `03_SPECS/` using their structure as templates, integrating information from the PRD and technical research (via MCPs if needed). Also references [`02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`](02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md).
 34. **AI Agent:** Creates or updates `03_SPECS/documentation_index.md`.
-35. **AI Agent:** Presents a summary of the tech stack and key integrations. (`00_AutoPilot.md` instructs to proceed automatically).
+35. **AI Agent:** Presents a summary of the tech stack and key integrations. ([`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) instructs to proceed automatically).
 
 **Phase 6: Task Management (Logic from [`01_AI-RUN/06_Task_Manager.md`](01_AI-RUN/06_Task_Manager.md:1))**
 
@@ -195,4 +198,4 @@ This workflow is designed for comprehensive AI assistance, orchestrated by the [
 55. **User:** Decides on next steps/iterations.
 56. **If New Iteration:** The cycle can restart at Phase 0 or Phase 1, using learnings and feedback to refine `idea_document.md` or directly `core_concept.md`. Existing documents (`project_prd.md`, [`tasks/tasks.json`](tasks/tasks.json:1), etc.) are updated.
 
-This roadmap outlines the ideal flow. The AI agent is designed to be proactive, but the "Core Operational Rules" in `00_AutoPilot.md` require it to seek clarification for ambiguities and report errors, ensuring the user remains the ultimate supervisor.
+This roadmap outlines the ideal flow. The AI agent is designed to be proactive, but the "Core Operational Rules" in [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) require it to seek clarification for ambiguities and report errors, ensuring the user remains the ultimate supervisor.

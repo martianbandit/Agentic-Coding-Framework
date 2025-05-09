@@ -24,13 +24,13 @@
 - [Measurable outcome 2]
 - [Measurable outcome 3]
  
-## Principes de Design et UX/UI pour cette Fonctionnalité
+## Design and UX/UI Principles for this Feature
  
-- **Objectif Principal :** Le design et l'expérience utilisateur de cette fonctionnalité doivent activement contribuer à l'objectif global d'une application de qualité "Silicon Valley / Y Combinator". Cela signifie une attention méticuleuse aux détails, à la modernité, à l'intuitivité et à l'esthétique.
-- **Référence :** Se référer aux principes généraux de design et UX/UI définis dans le document de Conventions de Codage ([`02_AI-DOCS/Conventions/coding_conventions_template.md`](02_AI-DOCS/Conventions/coding_conventions_template.md:1)).
-- **Spécificités pour cette fonctionnalité :**
-    - `[Décrire ici comment l'objectif de design "YC standard" s'applique spécifiquement à cette fonctionnalité. Quels aspects du design sont particulièrement critiques ? Y a-t-il un "vibe" spécifique à atteindre ?]`
-    - `[L'IA doit proposer des solutions UI/UX qui incarnent ces principes.]`
+- **Main Objective:** The design and user experience of this feature must actively contribute to the overall goal of a "Silicon Valley / Y Combinator" quality application. This means meticulous attention to detail, modernity, intuitiveness, and aesthetics.
+- **Reference:** Refer to the general design and UX/UI principles defined in the Coding Conventions document ([`02_AI-DOCS/Conventions/coding_conventions_template.md`](02_AI-DOCS/Conventions/coding_conventions_template.md:1)).
+- **Specifics for this feature:**
+    - `[Describe here how the "YC standard" design objective specifically applies to this feature. What design aspects are particularly critical? Is there a specific "vibe" to achieve?]`
+    - `[The AI should propose UI/UX solutions that embody these principles.]`
  
 ## Functional Requirements
  
@@ -121,7 +121,7 @@
 [Description of the screen/component]
  
 **Wireframe/Mockup (Objectif YC Standard):**
-[Lien vers wireframe/mockup ou description détaillée. L'IA doit proposer des designs (ou des variations si demandé et justifié) qui visent l'excellence esthétique et fonctionnelle. Les propositions doivent être modernes, épurées et hautement intuitives, en s'inspirant des meilleures pratiques des startups de la Silicon Valley. La justification des choix de design par rapport à cet objectif est attendue.]
+[Link to wireframe/mockup or detailed description. The AI should propose designs (or variations if requested and justified) that aim for aesthetic and functional excellence. Proposals should be modern, clean, and highly intuitive, drawing inspiration from Silicon Valley startup best practices. Justification for design choices in relation to this objective is expected.]
 
 #### Modified Screens/Components
 
@@ -192,12 +192,12 @@ Feature: [Feature Name]
 - [Performance consideration 1]
 - [Performance consideration 2]
 
-## Accessibility Requirements (Partie intégrante d'une UX de qualité)
+## Accessibility Requirements (Integral Part of Quality UX)
  
-- [Accessibility requirement 1 - ex: Navigation clavier complète et intuitive]
-- [Accessibility requirement 2 - ex: Contrastes élevés et lisibilité optimale]
-- [Accessibility requirement 3 - ex: ARIA-labels clairs et pertinents pour les lecteurs d'écran]
-- *L'accessibilité ne doit pas être une réflexion après coup, mais intégrée dès la conception pour garantir une expérience utilisateur inclusive et de haute qualité pour tous.*
+- [Accessibility requirement 1 - e.g., Full and intuitive keyboard navigation]
+- [Accessibility requirement 2 - e.g., High contrasts and optimal readability]
+- [Accessibility requirement 3 - e.g., Clear and relevant ARIA-labels for screen readers]
+- *Accessibility should not be an afterthought but integrated from the design phase to ensure an inclusive and high-quality user experience for all.*
  
 ## Internationalization/Localization
 

@@ -1,4 +1,4 @@
-# Product Requirements Document (PRD) - Streamlined Argentic AI Workflow
+# Product Requirements Document (PRD) - Streamlined Agentic AI Workflow
 
 **Project Name:** `[User to Insert Project Name Here, or AI to Propose]`
 **Version:** `[AI to update e.g., 1.0, 1.1 after user validation cycle]`
@@ -27,7 +27,7 @@ This PRD template is designed for a streamlined workflow where the primary user 
     1.6. [Project Scope (AI to Propose based on Features, User to Validate)](#16-project-scope-ai-to-propose-based-on-features-user-to-validate)
     1.7. [Out of Scope (AI to Propose, User to Validate)](#17-out-of-scope-ai-to-propose-user-to-validate)
     1.8. [Guiding Principles for the AI Agent](#18-guiding-principles-for-the-ai-agent)
-    1.9. [Argentic Coding System Overview](#19-argentic-coding-system-overview)
+    1.9. [Agentic Coding System Overview](#19-agentic-coding-system-overview)
     1.10. [Default Technology Stack & AI Initiative in Tooling](#110-default-technology-stack--ai-initiative-in-tooling)
         1.10.1. [Access to Project Context for AI Agent](#1101-access-to-project-context-for-ai-agent)
     1.11. [AI-Human Interaction and Validation Protocol](#111-ai-human-interaction-and-validation-protocol)
@@ -57,17 +57,21 @@ This PRD template is designed for a streamlined workflow where the primary user 
     4.9. [Documentation (Product & Technical)](#49-documentation-product--technical)
     4.10. [NFR Verification Criteria for AI Agent](#410-nfr-verification-criteria-for-ai-agent)
 5.  [Design and Architecture (AI to Propose, User to Validate)](#5-design-and-architecture-ai-to-propose-user-to-validate)
-    5.1. [Design Philosophy and Principles (Argentic Design - User to Provide Preferences)](#51-design-philosophy-and-principles-argentic-design---user-to-provide-preferences)
+    5.1. [Design Philosophy and Principles (Agentic Design - User to Provide Preferences)](#51-design-philosophy-and-principles-agentic-design---user-to-provide-preferences)
     5.2. [Design System & UI Implementation Strategy (AI to Propose based on User Preferences & Defaults)](#52-design-system--ui-implementation-strategy-ai-to-propose-based-on-user-preferences--defaults)
+        5.2.1. [Core UI Components List (AI to Propose Initial List)](#521-core-ui-components-list-ai-to-propose-initial-list)
+        5.2.2. [Interaction Design Principles (AI to Propose Key Principles)](#522-interaction-design-principles-ai-to-propose-key-principles)
+        5.2.3. [Accessibility (A11Y) Specific Targets (AI to Propose)](#523-accessibility-a11y-specific-targets-ai-to-propose)
     5.3. [Proposed System Architecture (AI to Generate)](#53-proposed-system-architecture-ai-to-generate)
     5.4. [Technology Stack (User Override / Confirmation of Defaults)](#54-technology-stack-user-override--confirmation-of-defaults)
     5.5. [Data Requirements (AI to Propose Model based on Features)](#55-data-requirements-ai-to-propose-model-based-on-features)
     5.6. [Third-Party Integrations & MCP Servers (AI to Propose Solutions based on Needs)](#56-third-party-integrations--mcp-servers-ai-to-propose-solutions-based-on-needs)
         5.6.1. [Known and Desired MCP Catalog](#561-known-and-desired-mcp-catalog)
     5.7. [Directory Structure and Naming Conventions (AI to Adhere to Defaults)](#57-directory-structure-and-naming-conventions-ai-to-adhere-to-defaults)
-    5.8. [Argentic Project Boilerplate (Conceptual - AI to Assume)](#58-argentic-project-boilerplate-conceptual---ai-to-assume)
+    5.8. [Agentic Project Boilerplate (Conceptual - AI to Assume)](#58-agentic-project-boilerplate-conceptual---ai-to-assume)
 6.  [Test and Validation Plan (AI to Propose, User to Validate)](#6-test-and-validation-plan-ai-to-propose-user-to-validate)
     6.1. [Test Strategy (Including AI Generation)](#61-test-strategy-including-ai-generation)
+        6.1.1. [Definition of Done (DoD) for UI Tasks (AI to Propose)](#611-definition-of-done-dod-for-ui-tasks-ai-to-propose)
     6.2. [Acceptance Criteria (Gherkin/BDD Format - AI to Generate)](#62-acceptance-criteria-gherkinbdd-format---ai-to-generate)
     6.3. [Detailed Test Scenarios for AI Agent (AI to Generate)](#63-detailed-test-scenarios-for-ai-agent-ai-to-generate)
     6.4. [User Acceptance Testing (UAT) (User to Define Process)](#64-user-acceptance-testing-uat-user-to-define-process)
@@ -109,7 +113,7 @@ This PRD template is designed for a streamlined workflow where the primary user 
 ## 1. Introduction and Objectives
 
 ### 1.1. Document Purpose
-*Comment: This document serves as the primary input for the AI Coding Agent, which will elaborate on technical specifications based on the user's high-level input. It outlines the project idea, desired features, and establishes the framework for the AI to propose detailed solutions within the "Argentic Coding System".*
+*Comment: This document serves as the primary input for the AI Coding Agent, which will elaborate on technical specifications based on the user's high-level input. It outlines the project idea, desired features, and establishes the framework for the AI to propose detailed solutions within the "Agentic Coding System".*
 `[AI to summarize after initial user input]`
 
 ### 1.2. Project Idea & Core Problem (User Input)
@@ -143,8 +147,8 @@ This PRD template is designed for a streamlined workflow where the primary user 
 
 ### 1.8. Guiding Principles for the AI Agent
 *Comment: These are foundational principles for the AI's operation.*
-*   **Excellence en Design et UX/UI :** L'objectif est de produire des interfaces et des expériences utilisateur d'une qualité exceptionnelle, dignes des standards les plus élevés (type "Silicon Valley / Y Combinator"). Cela prime sur la simple fonctionnalité.
-*   Strict adherence to the Argentic Design System (Section 5.1 & 5.2), qui doit refléter cette ambition.
+*   **Excellence in Design and UX/UI:** The goal is to produce interfaces and user experiences of exceptional quality, worthy of the highest standards (like "Silicon Valley / Y Combinator"). This takes precedence over mere functionality.
+*   Strict adherence to the Agentic Design System (Section 5.1 & 5.2), which must reflect this ambition.
 *   Prioritize code clarity, maintainability, and testability.
 *   Implement security best practices by default.
 *   Optimize for performance as per NFRs (Section 4.1).
@@ -156,7 +160,7 @@ This PRD template is designed for a streamlined workflow where the primary user 
 *   **Contextual Awareness:** Strive to understand the broader project context by referring to all relevant sections of this PRD, existing codebase (if available and accessible as per Section 1.10.1), and project documentation before making decisions or generating code.
 `[User can add specific overriding principles if any]`
 
-### 1.9. Argentic Coding System Overview
+### 1.9. Agentic Coding System Overview
 *Comment: This system emphasizes technical excellence, design finesse, close Design <> Dev collaboration (even with AI), exhaustive documentation, and rapid iteration.*
 *   **Core Tenets:**
     *   **Technical Excellence:** Clean, well-tested, performant, and maintainable code.
@@ -317,10 +321,10 @@ The AI Coding Agent is empowered and expected to:
 
 ### 4.6. Usability and Accessibility (UX/UI & A11Y)
 *AI Proposal:*
-*   **Objectif UX/UI Supérieur :** L'application doit offrir une expérience utilisateur exceptionnellement intuitive, fluide et esthétiquement raffinée, visant les standards des meilleures applications "Silicon Valley / Y Combinator".
-*   Adherence to Argentic Design Principles (Section 5.1) qui doivent incarner cet objectif.
-*   WCAG 2.1 AA compliance as a minimum target, avec une attention particulière à une expérience utilisateur accessible et agréable pour tous.
-*   Semantic HTML, keyboard navigability, sufficient color contrast, et attention aux détails d'interaction.
+*   **Superior UX/UI Objective:** The application must offer an exceptionally intuitive, fluid, and aesthetically refined user experience, aiming for the standards of top "Silicon Valley / Y Combinator" applications.
+*   Adherence to Agentic Design Principles (Section 5.1) which must embody this objective.
+*   WCAG 2.1 AA compliance as a minimum target, with particular attention to an accessible and enjoyable user experience for all.
+*   Semantic HTML, keyboard navigability, sufficient color contrast, and attention to interaction details.
 `[User to Adjust/Confirm AI's Proposed Usability/Accessibility NFRs]`
 
 ### 4.7. Compatibility (Browsers, Devices, OS)
@@ -350,12 +354,12 @@ The AI Coding Agent is empowered and expected to:
 
 ## 5. Design and Architecture (AI to Propose, User to Validate)
  
-### 5.1. Design Philosophy and Principles (Argentic Design - User to Provide Preferences)
-*User Instruction: L'objectif est un design et une UX/UI de **qualité exceptionnelle, digne des standards "Silicon Valley / Y Combinator"**. Veuillez décrire vos préférences esthétiques générales (ex: "look moderne et épuré", "ludique et coloré", "professionnel et sobre"). Si vous avez des exemples de sites/applications dont le design vous inspire (particulièrement ceux qui incarnent cette excellence), partagez-les. Les **'vibe keywords'** (ex: 'énergique et audacieux', 'calme et concentré', 'futuriste et high-tech') sont également très utiles. En l'absence de préférences, l'IA proposera un style minimaliste, moderne, avec une typographie soignée, des espacements généreux et une palette de couleurs intentionnelle, visant cette haute qualité.*
-`[User to provide general aesthetic preferences, examples (idéalement YC-style), or 'vibe keywords']`
+### 5.1. Design Philosophy and Principles (Agentic Design - User to Provide Preferences)
+*User Instruction: The goal is an **exceptionally high-quality design and UX/UI, worthy of "Silicon Valley / Y Combinator" standards**. Please describe your general aesthetic preferences (e.g., "modern and clean look," "playful and colorful," "professional and sober"). If you have examples of sites/applications whose design you admire (especially those embodying this excellence), please share them. **'Vibe keywords'** (e.g., 'energetic and bold,' 'calm and focused,' 'futuristic and high-tech') are also very helpful. In the absence of preferences, the AI will propose a minimalist, modern style with careful typography, generous spacing, and an intentional color palette, aiming for this high quality.*
+`[User to provide general aesthetic preferences, examples (ideally YC-style), or 'vibe keywords']`
  
-*AI Instruction: Basé sur l'input utilisateur (et l'objectif YC-standard), ou en initialisant avec le style par défaut décrit, établissez les Principes Clés de Design pour CE projet. Ces principes doivent explicitement viser l'excellence en UX/UI et guider toutes vos propositions.*
-`[AI to Propose Specific Key Design Principles for User Validation, en insistant sur l'objectif "Y Combinator standard"]`
+*AI Instruction: Based on user input (and the YC-standard goal), or by initializing with the default style described, establish the Key Design Principles for THIS project. These principles must explicitly aim for UX/UI excellence and guide all your proposals.*
+`[AI to Propose Specific Key Design Principles for User Validation, emphasizing the "Y Combinator standard" goal]`
 
 ### 5.2. Design System & UI Implementation Strategy (AI to Propose based on User Preferences & Defaults)
 *AI Instruction: Based on user's aesthetic preferences (Section 5.1) and the default stack (Tailwind CSS, Shadcn/ui inspiration), propose the initial `[AI to Propose Project Name] Design System` tokens (primary/secondary colors, typography scale, core spacing units) for `tailwind.config.js`. Detail how Shadcn/ui components will be customized to fit this system. All visual design proposals are subject to human review.*
@@ -367,6 +371,18 @@ The AI Coding Agent is empowered and expected to:
 *   **Shadcn/ui Customization Strategy:** *AI Instruction: When customizing Shadcn/ui components, your goal is to ensure they align seamlessly with the `[Project Name] Design System`'s tokens and interaction patterns. This means you will: 1. Override default styles using Tailwind utility classes mapped to our Design System tokens. 2. Adjust component structure or add/remove elements for our specific UX needs. 3. Ensure all interactive states (hover, focus, active, disabled) match our Design System’s specifications. 4. The final component must feel unique to our brand, not like a generic Shadcn/ui component. Document these customizations in Storybook.*
 *   **Storybook Plan:** `[AI to confirm Storybook will be used for all custom components]`
 `[AI to Propose Design System and UI Strategy for User Validation]`
+
+#### 5.2.1. Core UI Components List (AI to Propose Initial List)
+*AI Instruction: Based on the features (Section 3.1) and user's design preferences (Section 5.1), propose an initial list of core, reusable UI components (e.g., PrimaryButton, SecondaryButton, Card, ModalShell, InputField, DataTable, NavigationBar). For each, briefly describe its purpose and key variants. This list will serve as a starting point for the `design_conventions.md` and Storybook development.*
+`[AI to Propose Initial List of Core UI Components for User Validation]`
+
+#### 5.2.2. Interaction Design Principles (AI to Propose Key Principles)
+*AI Instruction: Propose 3-5 key principles for micro-interactions and animations that align with the "Silicon Valley / YC standard" of excellence and the user's desired 'vibe' (Section 5.1). Examples: "Feedback for all actions must be immediate and clear, using subtle visual cues.", "Transitions between states or views should be smooth, typically lasting 200-300ms, using ease-in-out timing.", "Animations should serve a purpose (guide attention, provide context) and not be purely decorative."*
+`[AI to Propose Key Interaction Design Principles for User Validation]`
+
+#### 5.2.3. Accessibility (A11Y) Specific Targets (AI to Propose)
+*AI Instruction: Beyond the general WCAG 2.1 AA target (Section 4.6), are there specific accessibility aspects to emphasize for this project? (e.g., "Ensure all complex data visualizations are fully keyboard navigable and screen-reader friendly.", "Provide high-contrast themes as an option."). If no specific targets are identified by the user, reiterate the commitment to WCAG 2.1 AA and semantic HTML.*
+`[AI to Propose Specific A11Y Targets or Reiterate General Commitment for User Validation]`
 
 ### 5.3. Proposed System Architecture (AI to Generate)
 *AI Instruction: Generate a high-level system architecture diagram using **Mermaid syntax** showing Next.js frontend, Supabase (Auth, DB, Storage, Edge Functions), and any key proposed MCPs/Third-Party APIs. Briefly describe component responsibilities.*
@@ -435,7 +451,7 @@ graph TD
 `[This section is a directive to the AI; detailed proposals will be in AI's feature specs]`
 
 ### 5.7. Directory Structure and Naming Conventions (AI to Adhere to Defaults)
-*AI Instruction: You will adhere to the default Argentic Project Boilerplate structure (Section 5.8), which uses Atomic Design principles for Next.js App Router. Key conventions include `PascalCase.tsx` for components/pages, `kebab-case.ts` for utils, and `camelCase` for functions/variables. Clarify any deviations if necessary for specific project needs in your technical proposals.*
+*AI Instruction: You will adhere to the default Agentic Project Boilerplate structure (Section 5.8), which uses Atomic Design principles for Next.js App Router. Key conventions include `PascalCase.tsx` for components/pages, `kebab-case.ts` for utils, and `camelCase` for functions/variables. Clarify any deviations if necessary for specific project needs in your technical proposals.*
     *   **Default Structure Overview (Next.js App Router & Atomic Design):**
         ```
         /app/(routes)
@@ -444,8 +460,8 @@ graph TD
         ```
 `[This section confirms AI's adherence to predefined standards]`
 
-### 5.8. Argentic Project Boilerplate (Conceptual - AI to Assume)
-*AI Instruction: You will operate as if starting from or evolving an "Argentic Project Boilerplate." This pre-configured Next.js template includes: TypeScript (strict), Tailwind CSS (with base design tokens to be defined by you based on user input/defaults), Atomic Design structure, ESLint/Prettier/Husky, Storybook, basic testing setup, and CI/CD placeholders. Your initial project setup tasks should include structuring the project files and base configurations as if this boilerplate were being instantiated. If a Git repository with an actual boilerplate is provided by the user, you should use that as your starting point. Otherwise, create the foundational structure (directories, key config files like `tailwind.config.js`, basic `package.json` with Next.js/Supabase/Tailwind) according to the conceptual boilerplate described.*
+### 5.8. Agentic Project Boilerplate (Conceptual - AI to Assume)
+*AI Instruction: You will operate as if starting from or evolving an "Agentic Project Boilerplate." This pre-configured Next.js template includes: TypeScript (strict), Tailwind CSS (with base design tokens to be defined by you based on user input/defaults), Atomic Design structure, ESLint/Prettier/Husky, Storybook, basic testing setup, and CI/CD placeholders. Your initial project setup tasks should include structuring the project files and base configurations as if this boilerplate were being instantiated. If a Git repository with an actual boilerplate is provided by the user, you should use that as your starting point. Otherwise, create the foundational structure (directories, key config files like `tailwind.config.js`, basic `package.json` with Next.js/Supabase/Tailwind) according to the conceptual boilerplate described.*
 `[This section sets AI's operational context]`
 
 ---
@@ -455,6 +471,27 @@ graph TD
 ### 6.1. Test Strategy (Including AI Generation)
 *AI Instruction: Propose a comprehensive test strategy. Specify types of tests you will generate (Unit, Integration, E2E skeletons), frameworks (Jest, React Testing Library, Playwright), and target code coverage (e.g., 80% unit test coverage for your generated code).*
 `[AI to Propose Test Strategy for User Validation]`
+
+##### 6.1.1. Definition of Done (DoD) for UI Tasks (AI to Propose)
+*AI Instruction: Propose a clear "Definition of Done" for tasks involving UI development. This DoD should ensure that functional code also meets the high-quality design and UX standards of the project. Refer to `design_conventions.md` (once populated) and `AI_Design_Agent_Optimization.md`.*
+*AI Proposal for UI Task DoD:*
+*   *Functionality implemented as per acceptance criteria (Section 6.2).*
+*   *Code adheres to `coding_conventions.md`.*
+*   **Visuals & Interactions:**
+    *   *UI matches mockups/prototypes (if available) and strictly adheres to `design_conventions.md` (colors, typography, spacing, iconography, component styles).*
+    *   *All interactive states (hover, focus, active, disabled, loading) are correctly implemented and visually distinct as per `design_conventions.md`.*
+    *   *Micro-interactions and animations (if applicable) are smooth, purposeful, and align with `design_conventions.md` (Section 5.2.2).*
+*   **Responsiveness:** Component/page is verified and functions correctly across all target breakpoints defined in `design_conventions.md` (or Section 4.7).
+*   **Accessibility (A11Y):**
+    *   *Passes automated A11Y checks (e.g., Axe DevTools).*
+    *   *Full keyboard navigability confirmed for all interactive elements.*
+    *   *Semantic HTML is used appropriately.*
+    *   *Sufficient color contrast verified.*
+    *   *ARIA attributes used correctly where necessary.*
+*   **Cross-Browser Compatibility:** Verified on latest two versions of Chrome, Firefox, Safari, Edge (as per Section 4.7).
+*   **Documentation:** Component is documented in Storybook (if applicable) with props and usage examples.
+*   **Testing:** Relevant unit/integration tests for UI logic are passing.
+`[User to Adjust/Confirm AI's Proposed DoD for UI Tasks]`
 
 ### 6.2. Acceptance Criteria (Gherkin/BDD Format - AI to Generate)
 *AI Instruction: For each User Story you generate (Section 3.2), you will also generate corresponding acceptance criteria in Gherkin format ("GIVEN... WHEN... THEN...") in your detailed feature specifications (Section 9.1.4). These will form the basis for automated tests.*
@@ -520,7 +557,7 @@ graph TD
 ---
 
 ## 9. AI Agent Specific Instructions
-*Comment: This section provides overarching directives for the AI Coding Agent. Adherence to these instructions is critical for the success of the Argentic Coding System.*
+*Comment: This section provides overarching directives for the AI Coding Agent. Adherence to these instructions is critical for the success of the Agentic Coding System.*
 
 ### 9.1. Feature Decomposition and Specification Process (Mandatory Pre-Coding Step for AI)
 *AI Agent Directive: For every high-level feature provided by the user in Section 3.1, before commencing any code implementation, you MUST perform the following decomposition and specification process. The objective is to ensure your exhaustive and unambiguous understanding of each task, aligning with our 'Argentic Coding' standards. Generate this detailed specification internally or in a working document that can be reviewed by humans. **This includes proposing specific libraries, Supabase services, or MCP servers where appropriate.** Your proposals for tooling (MCPs, libraries, specific Supabase services) are crucial and require human validation. This decomposition process is critical for your reasoning. Break down complex problems into smaller, manageable sub-problems. For each sub-problem, consider the relevant sections of this PRD (NFRs, Design System, MCP Logic, etc.) before proposing a solution.*
@@ -536,9 +573,9 @@ graph TD
 4.  **`acceptance_criteria_generated_by_ai` (AI-Generated Acceptance Criteria):**
     *   *AI Instruction:* Derive exhaustive acceptance criteria in Gherkin format. Cover nominal, error, and boundary cases.
     *   *AI Resources:* Project business rules, NFRs.
-    5.  **`ui_elements_and_styling_plan_by_ai` (UI Elements and Styling Plan - Objectif: Excellence YC Standard):**
-        *   *AI Instruction:* Identifiez les éléments UI. Proposez `element_type` et `component_base` (Storybook/Shadcn). Identifiez les `tailwind_tokens_to_use` de [`tailwind.config.js`](tailwind.config.js:1). Décrivez la mise en page, la responsivité, les interactions. **Vos propositions doivent impérativement viser l'objectif de design "Silicon Valley / Y Combinator" : modernité, élégance, fluidité, et une expérience utilisateur impeccable. Si l'utilisateur n'a pas fourni de préférences esthétiques, proposez un style qui incarne cet idéal (minimaliste, typographie soignée, etc.). Si la complexité le justifie ET que l'humain le demande explicitement (Section 1.11), soyez prêt à proposer 2-3 variations de design initiales pour les éléments UI clés d'une fonctionnalité afin de faciliter l'exploration rapide. Étiquetez clairement ces propositions comme 'variations de design exploratoires'.**
-        *   *AI Resources:* [`tailwind.config.js`](tailwind.config.js:1), Storybook, Principes de Design Argentic (avec l'objectif YC), input esthétique de l'utilisateur.
+    5.  **`ui_elements_and_styling_plan_by_ai` (UI Elements and Styling Plan - Objective: YC Standard Excellence):**
+        *   *AI Instruction:* Identify UI elements. Propose `element_type` and `component_base` (Storybook/Shadcn). Identify `tailwind_tokens_to_use` from [`tailwind.config.js`](tailwind.config.js:1). Describe layout, responsiveness, interactions. **Your proposals must imperatively aim for the "Silicon Valley / Y Combinator" design objective: modernity, elegance, fluidity, and an impeccable user experience. If the user has not provided aesthetic preferences, propose a style that embodies this ideal (minimalist, refined typography, etc.). If complexity justifies it AND the human explicitly requests it (Section 1.11), be prepared to propose 2-3 initial design variations for key UI elements of a feature to facilitate rapid exploration. Clearly label these proposals as 'exploratory design variations'.**
+        *   *AI Resources:* [`tailwind.config.js`](tailwind.config.js:1), Storybook, Agentic Design Principles (with YC objective), user's aesthetic input.
     6.  **`data_and_logic_plan_by_ai` (Data and Logic Plan):**
         *   `input_data_identified`: List inputs, types, validation rules (client/server), error messages.
     *   `backend_interaction_strategy`: Detail interaction with Supabase (DB, Auth, Edge Functions for custom logic). Specify tables, RLS considerations, function signatures, request/response payloads.
@@ -555,7 +592,7 @@ graph TD
     *   *AI Instruction:* If ambiguities remain, list specific questions for the human team. **Do not code ambiguous parts without clarification.**
 
 **General Directives for AI Agent During Implementation:**
-*   Strict Adherence to Argentic Coding System.
+*   Strict Adherence to Agentic Coding System.
 *   Modular and Testable Code.
 *   Relevant Comments.
 *   Robust Error Handling.
@@ -603,7 +640,7 @@ graph TD
 *AI Agent Directive: "When interacting with human developers via tools like Cursor or Cline, or any similar conversational coding assistant interface:*
     1.  *Be prepared to receive instructions and generate code in a conversational, iterative manner. Expect prompts to be less formal than full PRD specifications at times.*
     2.  *Utilize your comprehensive understanding of this PRD (including user-provided 'vibes', design principles, and technical constraints) to provide context-aware suggestions, code snippets, and complete components.*
-    3.  *When asked to 'try something,' 'explore an idea,' or generate alternatives, leverage the 'Embrace Iterative Exploration' Guiding Principle (Section 1.8) and the Argentic Coding System to inform your proposals. Prioritize speed of generation for these exploratory tasks.*
+    3.  *When asked to 'try something,' 'explore an idea,' or generate alternatives, leverage the 'Embrace Iterative Exploration' Guiding Principle (Section 1.8) and the Agentic Coding System to inform your proposals. Prioritize speed of generation for these exploratory tasks.*
     4.  *Facilitate rapid prototyping by generating functional (even if not initially fully polished or tested to production standards) code blocks quickly when in an exploratory context.*
     5.  *Clearly indicate when a generated piece of code is a 'draft for exploration/vibe check' versus a 'production-ready proposal based on full PRD specs and requiring all standard quality checks'. This distinction is crucial for managing expectations and workflow."*
 
@@ -737,7 +774,7 @@ graph TD
 
 ## 11. Glossary (AI to Maintain)
 *AI Instruction: Maintain a glossary of technical terms, acronyms, project-specific jargon, and names of key MCPs or services used, to ensure common understanding.*
-*   **Argentic Coding System:** Our holistic methodology for developing high-quality software, emphasizing design finesse, technical excellence, and intelligent AI agent collaboration.
+*   **Agentic Coding System:** Our holistic methodology for developing high-quality software, emphasizing design finesse, technical excellence, and intelligent AI agent collaboration.
 *   **Design System `[AI to Propose Project Name] Design System`:** The single source of truth for all UI components, design tokens, and styling guidelines for this project.
 *   **MCP (Model Context Protocol) Server:** An external tool or service, often an API, that the AI Agent can interact with to perform specialized tasks (e.g., payment processing, documentation lookup, code analysis, GitHub operations). The AI Agent uses predefined MCPs where available or can be instructed by the user on how to connect to new ones if they follow a compatible API structure or if an MCP server wrapper can be created for them. When proposing an MCP, the AI will specify its known capabilities, the primary function it will serve, and if it's a standard known MCP or one requiring user setup/connection details.
 *   **Supabase:** The default BaaS (Backend-as-a-Service) platform for this project, providing database, auth, storage, edge functions, etc.
@@ -753,4 +790,4 @@ graph TD
 `[User or AI to add appendices as needed]`
 
 ---
-*End of PRD Template for Streamlined Argentic AI Workflow*
+*End of PRD Template for Streamlined Agentic AI Workflow*

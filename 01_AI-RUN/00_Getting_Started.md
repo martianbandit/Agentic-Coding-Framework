@@ -23,7 +23,7 @@ flowchart TD
 
 ## File Naming Conventions
 
-The workflow uses consistent file naming for inputs and outputs. Note that prompt files mentioned here refer to their logical sequence (e.g., `01_Idea.md` is the first conceptual prompt for defining the idea, `05_Specs_Docs.md` handles technical documentation). You will need to ensure your actual prompt filenames in `01_AI-RUN/` are aligned or that `00_AutoPilot.md` correctly references your specific filenames.
+The workflow uses consistent file naming for inputs and outputs. Note that prompt files mentioned here refer to their logical sequence (e.g., `01_Idea.md` is the first conceptual prompt for defining the idea, `05_Specs_Docs.md` handles technical documentation). You will need to ensure your actual prompt filenames in `01_AI-RUN/` are aligned or that [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) correctly references your specific filenames.
 
 | Phase | Logical Prompt File | Primary Output / Location | Nature of Output |
 |-------|-----------------------|---------------------------|------------------|
@@ -37,7 +37,7 @@ The workflow uses consistent file naming for inputs and outputs. Note that promp
  
 ## AI Agent Initial Onboarding (Important!)
  
-**AI Agent Directive:** Before starting the workflow (e.g., when processing `00_AutoPilot.md` or the first manual step), you MUST perform the following initial analysis:
+**AI Agent Directive:** Before starting the workflow (e.g., when processing [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) or the first manual step), you MUST perform the following initial analysis:
 1.  **Analyze File Structure:** Carefully examine the list of files provided in the initial `environment_details`. Understand the purpose of the main directories:
     *   `01_AI-RUN/`: Contains the prompt files guiding the workflow stages.
     *   `02_AI-DOCS/`: Contains project documentation templates (architecture, conventions, etc.) and core AI guidance (`Documentation/`). **Crucially, during the 'Specs & Docs' phase, project-specific documents (e.g., `architecture.md`, `coding_conventions.md`) will be CREATED in these subdirectories based on the templates.**
@@ -54,7 +54,7 @@ The workflow uses consistent file naming for inputs and outputs. Note that promp
 
 1. Review this Getting Started guide
 2. Create a project directory if you haven't already
-3. Ensure all prompt files (logically `01_Idea.md` through `07_Start_Building.md`) are present in your `01_AI-RUN/` directory, correctly named and sequenced for the `00_AutoPilot.md` or manual execution.
+3. Ensure all prompt files (logically `01_Idea.md` through `07_Start_Building.md`) are present in your `01_AI-RUN/` directory, correctly named and sequenced for the [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) or manual execution.
 
 ### Step 2: Complete Each Phase in Sequence
 
@@ -77,7 +77,7 @@ Each prompt file includes a "Next Steps" section at the end that explains:
 
 ### Option 1: Fully Automated Workflow (Recommended)
 
-1. **Start with AutoPilot**: Open `00_AutoPilot.md` and share it with your AI agent. Ensure `00_AutoPilot.md` correctly references your actual prompt filenames.
+1. **Start with AutoPilot**: Open [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) and share it with your AI agent. Ensure [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) correctly references your actual prompt filenames.
 2. **Provide your initial idea**: Give a brief description of your project idea (1-3 sentences)
 3. **Answer clarifying questions**: The AI will ask 5-7 targeted questions to gather essential information
 4. **Minimal intervention**: The AI will guide itself through all phases, only pausing for essential validation
@@ -161,6 +161,6 @@ If at any point the AI agent seems confused or lacks context:
 
 You are now ready to start the AI-assisted development workflow!
 
-**Recommended Option**: Open the `00_AutoPilot.md` file and share it with your AI agent for a fully automated experience with minimal intervention. Ensure `00_AutoPilot.md` is configured to use the correct prompt filenames from your `01_AI-RUN/` directory.
+**Recommended Option**: Open the [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) file and share it with your AI agent for a fully automated experience with minimal intervention. Ensure [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) is configured to use the correct prompt filenames from your `01_AI-RUN/` directory.
 
 Alternatively, you can follow the step-by-step process by starting with opening the prompt file corresponding to `01_Idea.md` and sharing it with your AI agent.

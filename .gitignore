@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+
+# Session State
+project_session_state.json
+
+# Local MCP Configuration (if user creates one for API keys)
+mcp_config.json
+.config/mcp_config.json
+
+# Node modules
+node_modules/
+
+# Log files
+*.log
+logs/

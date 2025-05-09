@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the coding conventions and style guidelines for the project. Following these conventions ensures consistency, readability, and maintainability across the codebase.
+This document outlines the coding conventions and style guidelines for the project. Following these conventions ensures consistency, readability, and maintainability across the codebase. It should be used in conjunction with the [**Design Conventions and Style Guide**](design_conventions_template.md:1) which details the UX/UI principles and visual standards.
 
 ## General Principles
 
@@ -215,60 +215,61 @@ describe('calculateTotalPrice', () => {
 - Include proper ARIA attributes
 - Ensure keyboard navigation works
 - Maintain sufficient color contrast
+- Refer to the [**Design Conventions and Style Guide**](design_conventions_template.md:1) for detailed UX/UI principles.
 
-## Principes de Design et d'Expérience Utilisateur (UX/UI)
+## Design and User Experience (UX/UI) Principles
 
-L'objectif est de créer des interfaces utilisateur (UI) et des expériences utilisateur (UX) qui rivalisent avec les meilleures startups (ex: standard Y Combinator), en mettant l'accent sur la modernité, l'élégance, l'intuitivité et une esthétique "pixel-perfect".
+The goal is to create user interfaces (UI) and user experiences (UX) that rival the best startups (e.g., Y Combinator standard), focusing on modernity, elegance, intuitiveness, and a "pixel-perfect" aesthetic.
 
-### Philosophie de Design
-- **Modernité et Élégance :** Viser des designs épurés, contemporains et visuellement attrayants.
-- **Simplicité Intuitive :** Les interfaces doivent être faciles à comprendre et à utiliser, même pour un nouvel utilisateur.
-- **Cohérence :** Maintenir une cohérence visuelle et fonctionnelle à travers toute l'application.
-- **Feedback Utilisateur :** Fournir des retours clairs et immédiats aux actions de l'utilisateur.
-- **Performance Perçue :** Optimiser pour que l'application semble rapide et réactive.
+### Design Philosophy
+- **Modernity and Elegance:** Aim for clean, contemporary, and visually appealing designs.
+- **Intuitive Simplicity:** Interfaces should be easy to understand and use, even for new users.
+- **Consistency:** Maintain visual and functional consistency throughout the application.
+- **User Feedback:** Provide clear and immediate feedback to user actions.
+- **Perceived Performance:** Optimize so the application feels fast and responsive.
 
-### Système de Design (Design System)
-- **Utilisation de Tailwind CSS :**
-    - Suivre une configuration Tailwind CSS centralisée ([`tailwind.config.js`](tailwind.config.js:1) à créer/modifier si besoin) pour définir la palette de couleurs, la typographie, les points de rupture, etc.
-    - Privilégier la composition des classes utilitaires de Tailwind pour créer des composants réutilisables.
-    - Éviter les styles CSS personnalisés excessifs ; s'appuyer autant que possible sur les capacités de Tailwind.
-- **Bibliothèque de Composants UI (Optionnel mais recommandé) :**
-    - Envisager l'utilisation d'une bibliothèque de composants headless (ex: Headless UI, Radix UI) ou d'une bibliothèque de composants stylée (ex: Shadcn/UI, Material UI, Ant Design) pour accélérer le développement et assurer la cohérence.
-    - Si une bibliothèque est choisie, définir des conventions pour sa customisation et son extension.
-- **Palette de Couleurs :** Définir et utiliser de manière cohérente :
-    - Couleurs primaires et secondaires.
-    - Couleurs neutres (gris, blancs, noirs).
-    - Couleurs d'accentuation.
-    - Couleurs sémantiques pour les états (succès, erreur, avertissement, information).
-- **Typographie :**
-    - Définir une hiérarchie typographique claire (polices, tailles, graisses, hauteurs de ligne) pour les titres, sous-titres, corps de texte, labels, etc.
-    - Assurer une lisibilité optimale sur tous les appareils.
-- **Espacement et Grille (Layout) :**
-    - Adopter un système d'espacement cohérent (ex: basé sur une échelle de 4px ou 8px).
-    - Utiliser des grilles (CSS Grid, Flexbox) pour structurer les mises en page et assurer l'alignement.
-- **Iconographie :**
-    - Choisir un style d'icônes cohérent (ex: Heroicons, Feather Icons).
-    - Utiliser des SVGs pour la netteté et la scalabilité.
-- **Micro-interactions et Animations :**
-    - Utiliser des animations et transitions subtiles pour améliorer l'UX (ex: feedback sur un clic, transitions d'état douces).
-    - Éviter les animations excessives ou distrayantes. Celles-ci doivent avoir un but.
-- **Responsive Design :**
-    - Adopter une approche "Mobile-first" ou "Desktop-first" de manière cohérente.
-    - Tester sur une variété de tailles d'écran et d'appareils.
-- **Gestion des États :**
-    - Concevoir des états clairs pour les éléments interactifs (hover, focus, active, disabled).
-    - Prévoir des états pour le chargement de données, les listes vides, et les erreurs.
+### Design System
+- **Use of Tailwind CSS:**
+    - Follow a centralized Tailwind CSS configuration ([`tailwind.config.js`](tailwind.config.js:1) to be created/modified if needed) to define the color palette, typography, breakpoints, etc.
+    - Favor composing Tailwind utility classes to create reusable components.
+    - Avoid excessive custom CSS styles; rely as much as possible on Tailwind's capabilities.
+- **UI Component Library (Optional but recommended):**
+    - Consider using a headless component library (e.g., Headless UI, Radix UI) or a styled component library (e.g., Shadcn/UI, Material UI, Ant Design) to speed up development and ensure consistency.
+    - If a library is chosen, define conventions for its customization and extension.
+- **Color Palette:** Define and consistently use:
+    - Primary and secondary colors.
+    - Neutral colors (grays, whites, blacks).
+    - Accent colors.
+    - Semantic colors for states (success, error, warning, information).
+- **Typography:**
+    - Define a clear typographic hierarchy (fonts, sizes, weights, line heights) for titles, subtitles, body text, labels, etc.
+    - Ensure optimal readability on all devices.
+- **Spacing and Grid (Layout):**
+    - Adopt a consistent spacing system (e.g., based on a 4px or 8px scale).
+    - Use grids (CSS Grid, Flexbox) to structure layouts and ensure alignment.
+- **Iconography:**
+    - Choose a consistent icon style (e.g., Heroicons, Feather Icons).
+    - Use SVGs for sharpness and scalability.
+- **Micro-interactions and Animations:**
+    - Use subtle animations and transitions to improve UX (e.g., click feedback, smooth state transitions).
+    - Avoid excessive or distracting animations. They should serve a purpose.
+- **Responsive Design:**
+    - Consistently adopt a "Mobile-first" or "Desktop-first" approach.
+    - Test on a variety of screen sizes and devices.
+- **State Management:**
+    - Design clear states for interactive elements (hover, focus, active, disabled).
+    - Plan for states for data loading, empty lists, and errors.
 
-### Accessibilité (Approfondissement)
-En plus des points de la section "Accessibilité" :
-- **Navigation au clavier complète :** Tous les éléments interactifs doivent être accessibles et utilisables via le clavier.
-- **Contraste élevé par défaut :** Viser des contrastes supérieurs aux minima WCAG AA lorsque possible, pour un confort visuel accru.
-- **Textes alternatifs pour les images :** Descriptifs et pertinents.
-- **Structure sémantique rigoureuse :** Utiliser les balises HTML appropriées pour leur sens.
+### Accessibility (In-depth)
+In addition to the points in the "Accessibility" section:
+- **Full keyboard navigation:** All interactive elements must be accessible and usable via the keyboard.
+- **High contrast by default:** Aim for contrasts higher than WCAG AA minimums where possible, for increased visual comfort.
+- **Alternative texts for images:** Descriptive and relevant.
+- **Rigorous semantic structure:** Use appropriate HTML tags for their meaning.
 
-### Outils et Processus
-- **Maquettes (si disponibles) :** Si des maquettes Figma (ou autre) sont fournies, s'efforcer de les respecter fidèlement.
-- **Itération :** Le design est un processus itératif. Être ouvert aux retours et aux améliorations continues.
+### Tools and Processes
+- **Mockups (if available):** If Figma mockups (or other) are provided, strive to adhere to them faithfully.
+- **Iteration:** Design is an iterative process. Be open to feedback and continuous improvement.
 
 ## Security Best Practices
  
@@ -287,16 +288,17 @@ En plus des points de la section "Accessibilité" :
 ## Code Review Checklist
 
 - Does the code follow the conventions in this document?
+- **Has the [Design Conventions and Style Guide](design_conventions_template.md:1) been completed and is it being followed?**
 - Is the code well-tested?
 - Are there any security concerns?
 - Is the code efficient and performant?
-- **Le design et l'UX/UI sont-ils conformes aux principes définis (modernité, intuitivité, cohérence, esthétique) ?**
-- **L'implémentation Tailwind CSS est-elle propre et cohérente ?**
-- **Les composants sont-ils responsives et s'affichent-ils correctement sur différentes tailles d'écran ?**
-- **Les interactions et animations sont-elles fluides et apportent-elles une valeur ajoutée ?**
-- Is the code accessible? (Vérifier les points spécifiques de la section UX/UI et Accessibilité)
+- **Are the design and UX/UI compliant with the principles defined in both convention documents (modernity, intuitiveness, consistency, aesthetics)?**
+- **Is the Tailwind CSS implementation clean and consistent (see [Design Conventions](design_conventions_template.md:1))?**
+- **Are the components responsive and do they display correctly on different screen sizes (see [Design Conventions](design_conventions_template.md:1))?**
+- **Are interactions and animations smooth and do they add value (see [Design Conventions](design_conventions_template.md:1))?**
+- Is the code accessible? (Vérifier les points spécifiques des sections UX/UI et Accessibilité des deux documents de conventions)
 - Is the documentation sufficient?
  
 ---
  
-*This document should be reviewed and updated regularly as the project evolves.*
+*This document, along with the [**Design Conventions and Style Guide**](design_conventions_template.md:1), should be reviewed and updated regularly as the project evolves.*

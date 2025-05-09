@@ -1,5 +1,5 @@
 # Project Idea Pre-Writing Template
-*For initializing the PRD "Streamlined Argentic AI Workflow" with the Argentic Agent*
+*For initializing the PRD "Streamlined Agentic AI Workflow" with the Agentic Agent*
 
 **Creation Date:** [Date]  
 **Idea Author:** [Your Name/ID]
@@ -90,7 +90,7 @@
 
 ### 3. Technology Stack (If you have strong preferences or constraints)
 
-The Argentic PRD defaults to: Next.js, Supabase, Tailwind CSS.
+The Agentic PRD defaults to: Next.js, Supabase, Tailwind CSS.
 
 ```
 [Do you have reasons to deviate from this standard? Specific technologies you absolutely want to use or avoid? Particular libraries in mind for certain functionalities? If not, leave blank, and the AI will follow the defaults.]

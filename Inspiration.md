@@ -1,6 +1,6 @@
-# Project Ideas for Argentic AI Workflow
+# Project Ideas for Agentic AI Workflow
 
-This file contains a list of project ideas that can be used as starting points for the Argentic AI-Assisted Development Workflow. Simply copy the core idea description and provide it to the `00_AutoPilot.md` prompt.
+This file contains a list of project ideas that can be used as starting points for the Agentic AI-Assisted Development Workflow. Simply copy the core idea description and provide it to the `00_AutoPilot.md` prompt.
 
 ---
 
@@ -1815,3 +1815,4 @@ This file contains a list of project ideas that can be used as starting points f
 *   **Potential Stack/Tech:** Default + Wikipedia API, AI (LLM for summarization, analysis, quiz generation).
 
 ---
+
