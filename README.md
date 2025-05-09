@@ -1,4 +1,4 @@
-# Agentic AI-Assisted Development Workflow Template
+# Agentic AI-Assisted Development Workflow
 
 ## How to Use
 
