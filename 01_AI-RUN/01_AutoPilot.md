@@ -131,13 +131,15 @@ With the technical specifications updated:
 
 1. Announce that you are breaking down the project into tasks, following the workflow in [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1).
 2. Use the workflow defined in [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1) internally.
-3. Create a hierarchical task structure in [`tasks/tasks.json`](tasks/tasks.json:1), adhering to [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1). Ensure the `details` field for each task appropriately links to or embeds the specific requirements from the PRD and the created specification documents (e.g., specific feature specs from `../03_SPECS/features/`, design guidelines from `../02_AI-DOCS/Conventions/design_conventions.md`).
+3. Create a hierarchical task structure in [`tasks/tasks.json`](tasks/tasks.json:1), adhering to [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1). Ensure the `details` field for each task appropriately links to or embeds the specific requirements from the PRD and the created specification documents.
    - (Roo Orchestrator will handle epic creation directly in [`tasks/tasks.json`](tasks/tasks.json:1))
    - (Roo Orchestrator will handle task breakdown directly in [`tasks/tasks.json`](tasks/tasks.json:1))
    - (Roo Orchestrator will handle sub-task breakdown directly in [`tasks/tasks.json`](tasks/tasks.json:1))
 4. Present the high-level epics and priority tasks.
 5. Ask if the user wants to modify task priorities before implementation.
-   - **Action:** After potential modifications and user confirmation to proceed, update `lastCompletedStep` to "taskPrioritiesConfirmed" and `currentWorkflowPhase` to "readmeGeneration" in `project_session_state.json`.
+   - **Action (State Update 6.1):** After potential modifications and user confirmation to proceed, update `project_session_state.json`:
+       - Set `lastCompletedStep` to "taskPrioritiesConfirmed" and `currentWorkflowPhase` to "readmeGeneration".
+       - Initialize the `taskStatuses` field in `project_session_state.json` by iterating through all tasks and subtasks in `tasks/tasks.json` and setting their initial status to "todo".
 
 ### Phase 6.5: README Generation
 
@@ -191,7 +193,7 @@ With the task breakdown approved:
        iii.Implement the code for frontend, backend, database, and UI elements, strictly adhering to all retrieved specifications and conventions.
        iv. Write unit and integration tests as per the task's `testStrategy` and conventions.
        v.  Commit changes frequently with clear messages.
-       vi. Update task status via Roo Orchestrator.
+       vi. **Update task status in `project_session_state.json`:** After completing the task (including tests), set the task's status to "Done" in the `taskStatuses` dictionary within `project_session_state.json`.
 3. Provide regular updates on progress (e.g., after completing significant features or epics).
 4. Present completed features for validation.
 
