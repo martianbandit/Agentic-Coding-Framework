@@ -7,6 +7,8 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-informational)
 ![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange)
 
+↳ Just start with `let's get started with '01_AI-RUN/00_Getting_Started.md'`
+
 ---
 
 ## 🌟 Overview: What is Agentic Coding Framework?
