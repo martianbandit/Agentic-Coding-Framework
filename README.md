@@ -1,6 +1,6 @@
 # 🚀 Agentic Coding Framework: Automate Your Vision into Reality 🤖
 
-**Tagline:** *Transforming software development with spec-driven, AI-powered agentic workflows.*
+**Tagline:** *Transforming software / app / saas / game development with spec-driven, AI-powered agentic workflows.*
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
