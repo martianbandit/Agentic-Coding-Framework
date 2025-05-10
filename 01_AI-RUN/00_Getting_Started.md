@@ -43,15 +43,19 @@ The workflow uses consistent file naming for inputs and outputs. Note that promp
     *   `02_AI-DOCS/`: Contains project documentation templates (architecture, conventions, etc.) and core AI guidance (`Documentation/`). **Crucially, during the 'Specs & Docs' phase, project-specific documents (e.g., `architecture.md`, `coding_conventions.md`) will be CREATED in these subdirectories based on the templates.**
     *   `03_SPECS/`: Contains specification templates (features, bugs). **Similarly, project-specific specification files (e.g., `features/feature_spec_FEAT-XXX.md`) will be CREATED here during the 'Specs & Docs' phase.**
     *   `tasks/`: Will contain the generated task breakdown (`tasks.json`).
-2.  **Identify Key Reference Documents:** Recognize that the primary sources of truth for the project, once generated or established, will be:
+2.  **In-Depth Codebase Understanding (Pre-computation & Analysis):**
+    *   Beyond just the file structure, you MUST strive to understand the *content and interconnections* of all relevant files within the project workspace.
+    *   This means proactively reading key files (e.g., `logic.md`, `project_session_state.json`, existing `.md` files in `01_AI-RUN/`, templates in `02_AI-DOCS/` and `03_SPECS/`, and any core application code if present) to build a mental model of the project's current state, its logic, and how different components are intended to interact.
+    *   This deep analysis is foundational for accurately executing the subsequent workflow phases.
+3.  **Identify Key Reference Documents:** Recognize that the primary sources of truth for the project, once generated or established, will be:
     *   `project_prd.md` (Generated in Phase 4).
     *   Project-specific technical documents **created** in `02_AI-DOCS/` (e.g., `02_AI-DOCS/Architecture/architecture.md`, `02_AI-DOCS/Conventions/coding_conventions.md`, `02_AI-DOCS/Conventions/design_conventions.md`).
     *   Project-specific specification documents **created** in `03_SPECS/` (e.g., `03_SPECS/features/feature_spec_FEAT-XXX.md`).
     *   Task management guidelines: [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1) and [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1).
     *   AI Agent Optimization Guides: [`../02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`](../02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md:1), [`../02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md`](../02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md:1).
     *   Overall AI Task Management Vision: [`../02_AI-DOCS/Documentation/AI_Task_Management_Optimization.md`](../02_AI-DOCS/Documentation/AI_Task_Management_Optimization.md:1).
-3.  **Prioritize Generated Documents & Adhere to Specs:** When performing subsequent tasks (especially Task Management and Building), you MUST prioritize referencing these **generated, project-specific documents** over the original templates. The templates serve only as a starting structure.
-4.  **Spec-Driven Execution:** For any development task (frontend, backend, database, design, etc.), you MUST actively locate, read, and strictly adhere to the relevant detailed specification documents (feature specs, design mockups/guidelines, API contracts, coding conventions, etc.) found within `02_AI-DOCS/` and `03_SPECS/`, or linked within the task `details` in [`tasks/tasks.json`](tasks/tasks.json:1).
+4.  **Prioritize Generated Documents & Adhere to Specs:** When performing subsequent tasks (especially Task Management and Building), you MUST prioritize referencing these **generated, project-specific documents** over the original templates. The templates serve only as a starting structure.
+5.  **Spec-Driven Execution:** For any development task (frontend, backend, database, design, etc.), you MUST actively locate, read, and strictly adhere to the relevant detailed specification documents (feature specs, design mockups/guidelines, API contracts, coding conventions, etc.) found within `02_AI-DOCS/` and `03_SPECS/`, or linked within the task `details` in [`tasks/tasks.json`](tasks/tasks.json:1).
  
 ## How to Use This Workflow
 
