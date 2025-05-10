@@ -52,6 +52,8 @@ Agentic Coding Framework operates on the principle of "Agentic Coding Logic," a 
 5.  **Technical Documentation & Specs:** Existing documentation templates within the project (in `02_AI-DOCS/` and `03_SPECS/`) are updated by the AI with project-specific details derived from the PRD. This includes architecture, coding conventions, feature specs, etc. The AI is guided by [`02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`](./02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md).
 6.  **Task Management:** The PRD and specs are broken down into a detailed task list ([`tasks/tasks.json`](./tasks/tasks.json)) by an AI orchestrator, following the workflow defined in [`02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](./02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md).
 7.  **Implementation:** AI coding agents take the structured tasks and specifications to build the project.
+8.  **Testing:** The implemented features are thoroughly tested against specifications (using logic from `01_AI-RUN/08_Testing.md`).
+9.  **Deployment:** The validated application is deployed to the production environment (using logic from `01_AI-RUN/09_Deployment.md`).
 
 For a deeper dive into the underlying logic and phase-by-phase execution, please refer to [`logic.md`](./logic.md) and the detailed roadmap below.
 
@@ -192,11 +194,28 @@ This workflow is designed for comprehensive AI assistance, orchestrated by the [
 51. **AI Agent:** Marks tasks as complete by informing Roo Orchestrator.
 52. **Repeat (steps 45-51):** The task implementation cycle continues until all MVP tasks are completed.
 
-**Phase "1" (End of 0->1 Cycle): Deployment & Iteration**
+**Phase 8: Testing (Logic from [`01_AI-RUN/08_Testing.md`](./01_AI-RUN/08_Testing.md))**
 
-53. **AI Agent:** Once all MVP tasks are implemented and validated, assists with the deployment process (based on [`02_AI-DOCS/Deployment/deployment_guide_template.md`](./02_AI-DOCS/Deployment/deployment_guide_template.md) and PRD instructions).
-54. **User & AI Agent:** Collect user feedback on the deployed product.
-55. **User:** Decides on next steps/iterations.
-56. **If New Iteration:** The cycle can restart at Phase 0 or Phase 1, using learnings and feedback to refine `idea_document.md` or directly `core_concept.md`. Existing documents (`project_prd.md`, [`tasks/tasks.json`](./tasks/tasks.json), etc.) are updated.
+53. **AI Agent:** Announces it's initiating the testing phase.
+54. **AI Agent (as `QualityGuardian`):** Internally uses the `08_Testing.md` logical prompt. Systematically tests each implemented feature based on the PRD, technical specifications, and defined test cases. This includes unit, integration, and end-to-end tests.
+55. **AI Agent:** Verifies features operate as expected, system calls are correct, and UI adheres to design conventions.
+56. **AI Agent:** Sets up a preview environment.
+57. **User & AI Agent:** Review the preview, conduct final user acceptance testing (UAT).
+58. **AI Agent:** Addresses any issues identified during testing and UAT, iterating with the user until satisfaction.
+59. **AI Agent:** Confirms all features are stable and ready for deployment.
+
+**Phase 9: Deployment (Logic from [`01_AI-RUN/09_Deployment.md`](./01_AI-RUN/09_Deployment.md))**
+
+60. **AI Agent:** Announces it's initiating the deployment phase.
+61. **AI Agent (as `DeployMaster`):** Internally uses the `09_Deployment.md` logical prompt.
+62. **AI Agent:** Follows the deployment plan in `project_prd.md` and the detailed steps in the project-specific `../02_AI-DOCS/Deployment/deployment_guide.md`.
+63. **AI Agent:** Executes deployment to the production environment, monitors the process, and performs post-deployment verification (smoke tests).
+64. **AI Agent:** Confirms successful deployment and stability in production.
+
+**Phase 10: Iteration (End of 0->1 Cycle)**
+
+65. **User & AI Agent:** Collect user feedback on the deployed product.
+66. **User:** Decides on next steps/iterations.
+67. **If New Iteration:** The cycle can restart at Phase 0 or Phase 1, using learnings and feedback to refine `idea_document.md` or directly `core_concept.md`. Existing documents (`project_prd.md`, [`tasks/tasks.json`](./tasks/tasks.json), etc.) are updated.
 
 This roadmap outlines the ideal flow. The AI agent is designed to be proactive, but the "Core Operational Rules" in [`01_AI-RUN/01_AutoPilot.md`](./01_AI-RUN/01_AutoPilot.md) require it to seek clarification for ambiguities and report errors, ensuring the user remains the ultimate supervisor.

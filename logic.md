@@ -28,7 +28,9 @@ flowchart TD
     F[Phase 6: Task Manager (06_Task_Manager.md)] --> G
     G[Phase 6.5: README Generation (in 01_AutoPilot.md)] --> H
     H[Phase 7: Implementation (07_Start_Building.md)] --> I
-    I[Deployment & Iteration]
+    I[Phase 8: Testing (08_Testing.md)] --> J
+    J[Phase 9: Deployment (09_Deployment.md)] --> K
+    K[Phase 10: Iteration]
 
     A0 -- Reads --> project_session_state.json
     A0 -- Updates --> project_session_state.json
@@ -41,6 +43,8 @@ flowchart TD
     F -- Creates --> tasks/tasks.json
     G -- Creates/Updates --> README.md
     H -- Implements code --> Project source code
+    I -- Validates --> Preview Environment
+    J -- Deploys --> Deployed Application
 ```
 
 ## Detailed Workflow Phases
@@ -257,16 +261,63 @@ flowchart TD
             *   Updates task status by informing Roo Orchestrator.
     4.  **Continuous Progression:** The AI requests the next task from Roo Orchestrator and reports its progress. [`project_session_state.json`](project_session_state.json:1) is updated with `lastCompletedStep` reflecting the ID of the last completed task.
 *   **Output:** Functional project source code, tests, associated documentation.
-*   **Transition:** Once all tasks in `tasks/tasks.json` are completed (verified by checking statuses with Roo Orchestrator), `lastCompletedStep` is updated to "implementationCompleted" in [`project_session_state.json`](project_session_state.json:1), and `currentWorkflowPhase` moves to "deploymentAndIteration". The `07_Start_Building.md` prompt includes instructions to initiate a new development cycle based on user feedback.
+*   **Transition:** Once all tasks in `tasks/tasks.json` are completed (verified by checking statuses with Roo Orchestrator), `lastCompletedStep` is updated to "implementationCompleted" in [`project_session_state.json`](project_session_state.json:1), and `currentWorkflowPhase` moves to "testing".
 *   **Why:** Transform plans and specifications into a functional product, following a structured approach and maintaining high code and documentation quality.
 
-### Phase 8: Deployment & Iteration (Conceptual)
+### Phase 8: Testing
 
-*   **Logic:** Although not materialized by a dedicated prompt in `01_AI-RUN/` for the first iteration, this phase is the logical continuation of implementation. `currentWorkflowPhase` is "deploymentAndIteration".
+*   **Logic Prompt File:** [`01_AI-RUN/08_Testing.md`](01_AI-RUN/08_Testing.md:1)
+*   **AI Role:** "QualityGuardian", QA Engineer.
+*   **Inputs:**
+    *   Implemented source code and features.
+    *   `project_prd.md` (for acceptance criteria).
+    *   Technical specifications and test cases defined in `03_SPECS/` or within task details in `tasks/tasks.json`.
 *   **Process:**
-    1.  **Deployment:** The AI can assist with deployment by following instructions in `02_AI-DOCS/Deployment/deployment_guide.md` (created in phase 5). This may involve using MCPs for cloud providers or executing CLI commands. `lastCompletedStep` can be updated to "deploymentCompleted".
-    2.  **Feedback Collection:** The user collects feedback on implemented features.
-    3.  **New Cycle:** For a new iteration, the user can instruct the AI to restart the workflow (potentially returning to Phase 1: Idea, or directly to Phase 6 for new features if the core concept remains). The AI would use the existing [`project_session_state.json`](project_session_state.json:1) to understand the current project, and new prompts would guide it. The `07_Start_Building.md` prompt (lines 244-259) provides an example prompt to initiate this new iteration with `@ConceptForge`.
+    1.  **Test Execution:**
+        *   The AI systematically executes all defined tests (unit, integration, E2E).
+        *   It verifies that each feature behaves as specified in the PRD and technical documents.
+        *   It checks for correct API calls, data handling, and UI interactions.
+    2.  **Preview Setup:**
+        *   The AI sets up a preview environment (e.g., a staging deployment) or provides clear, step-by-step instructions for the user to access a preview of the application. This might involve using MCPs for deployment or local server commands.
+    3.  **User Acceptance Testing (UAT) Support:**
+        *   The AI presents the preview to the user for final validation.
+        *   It assists the user in UAT, potentially guiding them through test scenarios.
+    4.  **Issue Resolution:**
+        *   If issues are found, the AI logs them (potentially creating bugfix tasks in `tasks/tasks.json` via Roo Orchestrator).
+        *   It then attempts to fix the identified issues, re-tests, and updates the preview. This loop continues until the user is satisfied.
+    5.  **State Update:** [`project_session_state.json`](project_session_state.json:1) is updated. `lastCompletedStep` could be "testingCompleted" or "previewValidated".
+*   **Output:**
+    *   A thoroughly tested application.
+    *   A preview environment or accessible preview.
+    *   Test reports or summaries (optional).
+*   **Transition:** Once all features are tested and the preview is validated by the user, `lastCompletedStep` is updated to "testingAndPreviewValidated" (or "finalValidationCompleted") in [`project_session_state.json`](project_session_state.json:1), and `currentWorkflowPhase` moves to "deployment".
+*   **Why:** Ensure all implemented features are working correctly and meet user expectations before official deployment, minimizing post-deployment issues.
+
+### Phase 9: Deployment
+
+*   **Logic Prompt File:** [`01_AI-RUN/09_Deployment.md`](01_AI-RUN/09_Deployment.md:1)
+*   **AI Role:** "DeployMaster", DevOps Engineer.
+*   **Inputs:**
+    *   Fully tested and validated application.
+    *   `project_prd.md` (Section 7: Deployment Plan).
+    *   Project-specific `02_AI-DOCS/Deployment/deployment_guide.md` (created in Phase 5).
+*   **Process:**
+    1.  **Pre-Deployment Checklist:** AI verifies all prerequisites (environment config, final build, backups).
+    2.  **Execute Deployment:** AI follows `deployment_guide.md` to deploy to production, using MCPs or CLI commands as needed.
+    3.  **Post-Deployment Verification:** AI performs smoke tests and health checks in the production environment.
+    4.  **State Update:** [`project_session_state.json`](project_session_state.json:1) is updated. `lastCompletedStep` to "productionDeploymentCompleted".
+*   **Output:**
+    *   Application successfully deployed to production.
+    *   Confirmation of stability and functionality.
+*   **Transition:** After successful deployment, `currentWorkflowPhase` moves to "iteration".
+*   **Why:** To release the validated and tested product to users and make it publicly available.
+
+### Phase 10: Iteration (Conceptual)
+
+*   **Logic:** This phase follows successful deployment. `currentWorkflowPhase` is "iteration".
+*   **Process:**
+    1.  **Monitoring & Feedback Collection:** The AI can assist in setting up monitoring (if not already done) and the user collects feedback on the deployed product.
+    2.  **New Cycle Planning:** For a new iteration, the user can instruct the AI to restart the workflow (potentially returning to Phase 1: Idea, or directly to Phase 3: Core Concept or Phase 6: Task Manager for new features if the core concept remains). The AI would use the existing [`project_session_state.json`](project_session_state.json:1) to understand the current project, and new prompts would guide it.
 *   **Why:** Enable continuous product improvement based on real usage and feedback, and adapt the project to changing needs.
 
 This manual should provide a detailed understanding of the logic of your "Agentic Coding Framework".

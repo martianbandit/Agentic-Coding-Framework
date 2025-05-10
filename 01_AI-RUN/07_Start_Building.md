@@ -41,10 +41,59 @@ You have access to the following critical resources:
 
 ### Phase 1: Project Setup & Foundation
 
-1. **Environment Initialization**
-   - Set up the development environment according to the technology stack specified in PRD Section 5.4
-   - Initialize the project with the appropriate framework and dependencies
-   - Configure version control and establish the repository structure
+0. **Landing Page Creation (Y Combinator Style)**
+   - Before core application setup, design and implement a modern, clean landing page. This is a **critical first impression**.
+   - **Inspiration & Style:**
+       - Study successful Y Combinator alumni landing pages for patterns (e.g., Stripe, Airbnb early versions, Dropbox).
+       - **Core Principles:** Minimalist design, extreme clarity in messaging, strong focus on the value proposition, and a single, prominent primary call-to-action (CTA).
+   - **Key Messaging Elements (to be derived from `core_concept.md` and `project_prd.md`):**
+       - **Compelling Headline:** Clearly state the main benefit or solution in a few impactful words. What is the #1 thing you do/offer?
+       - **Elaborating Sub-headline:** Briefly expand on the headline, adding context or a key secondary benefit.
+       - **Problem Statement (Implicit or Explicit):** Concisely articulate the pain point your product solves.
+       - **Solution Statement (Implicit or Explicit):** Clearly state how your product alleviates that pain.
+   - **Essential Structural Components & Flow:**
+       - **Hero Section:**
+           - Strong headline and sub-headline.
+           - Prominent primary Call to Action (CTA) button (e.g., "Get Started Free", "Request a Demo", "Sign Up").
+           - Optionally, a single, high-quality visual, short demo video, or product screenshot that immediately conveys value. Keep it light.
+       - **Problem/Solution (Optional Explicit Section):** If not covered in Hero, a brief section (2-3 sentences each) detailing the problem and your unique solution.
+       - **Features/Benefits (Focus on Benefits):**
+           - Highlight 2-3 core benefits for the user, not just a list of features.
+           - Use concise, benefit-driven language. How does each feature improve the user's life or work?
+           - Icons or simple visuals can enhance this section.
+       - **Social Proof (If available, otherwise plan for it):**
+           - Short testimonials, logos of early users/partners (can be placeholders initially: "As featured in...", "Trusted by...").
+       - **Clear Call to Action (CTA):**
+           - Repeat the primary CTA or have a distinct secondary CTA if appropriate. Ensure it's obvious what the user should do next.
+       - **Minimalist Footer:** Copyright, essential links (e.g., Privacy Policy, Terms of Service - can be placeholders initially).
+   - **Design & UX Principles:**
+       - **Clarity & Simplicity:** No jargon. Use straightforward language. Every element should serve a purpose.
+       - **Visual Hierarchy:** Guide the user's eye to the most important information (Headline, CTA).
+       - **Mobile-First & Responsive:** Ensure the page looks and functions perfectly on all devices. Test thoroughly.
+       - **Fast Loading Speed:** Optimize images, minimize heavy scripts, leverage browser caching. Aim for excellent PageSpeed Insights scores.
+       - **Trust & Professionalism:** Even with a minimalist design, the page must look polished and trustworthy.
+   - **Technical Considerations:**
+       - **SEO Basics:** Implement proper title tags, meta descriptions, and header tags (H1 for headline).
+       - **Clean, Semantic HTML:** Structure the content logically.
+       - **Analytics:** Plan for or integrate basic analytics (e.g., Google Analytics, Plausible) to track visits and CTA clicks.
+   - **Technologies:** (As per PRD, likely Next.js/React, Tailwind CSS). Ensure chosen technologies support fast loading and responsiveness.
+   - **Prioritization:** This task should be prioritized. A compelling landing page is crucial for early validation and user acquisition. It should be completed before extensive backend or complex feature development.
+   - **Documentation:** Refer to `../02_AI-DOCS/Conventions/design_conventions.md` for any project-specific styling guidelines that should be layered on top of the YC-inspired minimalism.
+
+1. **Environment Initialization & Project Scaffolding**
+   - **Identify Core Technology:** Determine the primary framework/language for the core application from PRD Section 5.4 (e.g., Next.js, React, Angular, Vue, Django, Ruby on Rails, Node.js/Express).
+   - **Official CLI Scaffolding:** Use the **official and recommended CLI command** to initialize the project structure. This is critical for a correct setup. Examples:
+       - For Next.js: `npx create-next-app@latest <project-name> [options]` (refer to PRD for options like TypeScript, ESLint, Tailwind CSS integration).
+       - For React: `npx create-react-app <project-name> [--template typescript]`
+       - For Angular: `ng new <project-name> [options]`
+       - For Vue: `npm init vue@latest` or `yarn create vue` (interactive)
+       - For Django: `django-admin startproject <projectname>`
+       - For Ruby on Rails: `rails new <projectname> [options]`
+       - For a basic Node.js/Express backend: `npm init -y`, then install express and setup basic structure.
+   - This scaffolding should typically happen after the initial landing page is conceptually designed or even built if it's a simple static page. If the landing page is integral to the main application (e.g., a Next.js app serving both), this scaffolding step creates its foundation.
+   - **Dependency Installation:** Ensure all core dependencies specified in the PRD are installed.
+   - **Version Control:** Configure version control (e.g., `git init`, create `.gitignore` appropriate for the technology stack).
+   - **Repository Structure:** Establish the initial repository and directory structure as outlined in `../02_AI-DOCS/Architecture/architecture.md` and coding conventions.
 
 2. **Architecture Implementation**
    - Implement the core architectural components defined in PRD Section 5.3
@@ -82,6 +131,41 @@ You have access to the following critical resources:
    - Provide clear summaries of completed work
    - Highlight any challenges encountered and how they were resolved
    - Update on overall project progress relative to the roadmap
+
+### Phase 4: Testing & Preview Visibility
+
+Once all development tasks in [`../tasks/tasks.json`](../tasks/tasks.json:1) are marked as complete by Roo Orchestrator:
+
+1. **Initiate Testing Phase**
+   - Announce the commencement of the testing and preview phase.
+   - Adopt the role of "QualityGuardian" (or a similar QA-focused persona).
+
+2. **Systematic Testing**
+   - Execute all defined tests (unit, integration, end-to-end) as specified in the PRD (Section 6) and individual task `testStrategy` fields.
+   - Verify that all implemented features meet their acceptance criteria and functional requirements from `project_prd.md` and `../03_SPECS/features/`.
+   - Ensure all API calls are correct, data is handled as expected, and UI elements behave as per `../02_AI-DOCS/Conventions/design_conventions.md`.
+
+3. **Preview Environment Setup**
+   - Set up a preview environment for the application (e.g., using a staging deployment, local server).
+   - Provide clear, step-by-step instructions for the user to access this preview.
+
+4. **User Acceptance Testing (UAT) Support**
+   - Present the preview to the user for final validation.
+   - Guide the user through UAT scenarios if necessary.
+   - Document any issues or feedback identified by the user.
+
+5. **Issue Resolution & Iteration**
+   - If issues are found during testing or UAT:
+       - Log these issues (potentially as new bugfix tasks in [`../tasks/tasks.json`](../tasks/tasks.json:1) via Roo Orchestrator).
+       - Prioritize and implement fixes for these issues.
+       - Re-run relevant tests.
+       - Update the preview environment.
+       - Re-engage the user for validation of fixes.
+   - This cycle continues until all critical issues are resolved and the user is satisfied with the preview.
+
+6. **Final Confirmation**
+   - Once testing is complete and the user has validated the preview, confirm that the application is stable and ready for deployment.
+   - Update `project_session_state.json`: set `lastCompletedStep` to "testingAndPreviewValidated" and `currentWorkflowPhase` to "deployment".
 
 ## Implementation Guidelines
 
@@ -236,11 +320,11 @@ By following this implementation approach, you will:
 
 ### Project Completion
 
-Once all tasks have been implemented:
+Once all tasks have been implemented, **tested, and the preview has been validated by the user**:
 
-1. Verify that all acceptance criteria have been met
-2. Conduct a final review of the codebase
-3. Prepare for deployment according to the deployment plan in the PRD
+1. Verify that all acceptance criteria have been met and all tests are passing.
+2. Conduct a final review of the codebase and ensure all documentation is up-to-date.
+3. Prepare for deployment according to the deployment plan in the PRD and `../02_AI-DOCS/Deployment/deployment_guide.md`.
 
 ### Iteration and Feedback
 

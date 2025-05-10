@@ -4,7 +4,7 @@
 
 Welcome to the AI-Assisted Development Workflow! This document will guide you through the complete process of taking your project from initial idea to implementation using a structured, AI-driven approach.
 
-The workflow consists of seven sequential phases, each with its own prompt file that instructs the AI agent on how to assist you. By following this process, you'll create a comprehensive set of documents that build upon each other, culminating in a detailed implementation plan.
+The workflow consists of ten sequential phases, each with its own prompt file that instructs the AI agent on how to assist you. By following this process, you'll create a comprehensive set of documents that build upon each other, culminating in a detailed implementation plan, a tested product, and a successful deployment.
 
 ## Complete Workflow Overview
 
@@ -18,7 +18,9 @@ flowchart TD
     E[Task Manager Initialization] -->|AI instructs Roo Orchestrator with PRD features| F
     F[Task Refinement] -->|Roo Orchestrator (with Roo Code) decomposes complex features into sub-tasks| G
     G[Builder] -->|AI executes tasks, codes via MCPs, Human reviews/validates code & features| H
-    H[Deployment & Iteration] -->|AI assists deployment, collects feedback, Human decides next cycle| A
+    H[Testing (08_Testing.md)] -->|AI tests features, sets up preview, Human validates| I
+    I[Deployment (09_Deployment.md)] -->|AI executes deployment plan, Human verifies| J
+    J[Iteration] -->|Collects feedback, Human decides next cycle| A
 ```
 
 ## File Naming Conventions
@@ -34,6 +36,8 @@ The workflow uses consistent file naming for inputs and outputs. Note that promp
 | Specs & Docs | 05_Specs_Docs.md | `02_AI-DOCS/` & `03_SPECS/` | **Creation** of project-specific files from templates (templates remain untouched) & Reference/Annotation of Best Practices |
 | Task Manager | (See [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1)) | [`tasks/tasks.json`](tasks/tasks.json:1) (Structure: [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1)) | Creation |
 | Start Building | 07_Start_Building.md | Implementation code | N/A (code) |
+| Testing | 08_Testing.md | Tested features, Preview Environment | Validation |
+| Deployment | 09_Deployment.md | Deployed Application | Execution |
  
 ## AI Agent Initial Onboarding (Important!)
  
@@ -63,7 +67,7 @@ The workflow uses consistent file naming for inputs and outputs. Note that promp
 
 1. Review this Getting Started guide
 2. Create a project directory if you haven't already
-3. Ensure all prompt files (logically `01_Idea.md` through `07_Start_Building.md`) are present in your `01_AI-RUN/` directory, correctly named and sequenced for the [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) or manual execution.
+3. Ensure all prompt files (logically `01_Idea.md` through `09_Deployment.md`) are present in your `01_AI-RUN/` directory, correctly named and sequenced for the [`01_AutoPilot.md`](01_AI-RUN/01_AutoPilot.md:1) or manual execution.
 
 ### Step 2: Complete Each Phase in Sequence
 
@@ -97,7 +101,7 @@ Each prompt file includes a "Next Steps" section at the end that explains:
 2. **Fill in the template**: Provide your initial project concept
 3. **Save the output**: Store as `idea_document.md` in your project directory
 4. **Continue to Market Research**: Open the prompt file corresponding to `02_Market_Research.md` and proceed
-5. **Follow through each phase**: Complete all seven phases in sequence
+5. **Follow through each phase**: Complete all ten phases in sequence
 
 ## Troubleshooting
 
@@ -145,10 +149,20 @@ If at any point the AI agent seems confused or lacks context:
 - **AI Role**: Executing tasks, coding, utilizing MCPs
 - **Output**: Functional code implementation
 
-### 8. Deployment & Iteration
-- **Human Role**: Making decisions about the next development cycle
-- **AI Role**: Assisting with deployment, collecting feedback
-- **Output**: Deployed features and iteration plan
+### 8. Testing (using `08_Testing.md` logic)
+- **Human Role**: Final validation of features and preview environment.
+- **AI Role**: Executing tests, setting up preview, addressing issues.
+- **Output**: Fully tested application, accessible preview, (optional) test reports.
+
+### 9. Deployment (using `09_Deployment.md` logic)
+- **Human Role**: Final review of deployed application, go/no-go for public release if applicable.
+- **AI Role**: Executing deployment plan, performing post-deployment checks.
+- **Output**: Successfully deployed application to the target environment.
+
+### 10. Iteration
+- **Human Role**: Making decisions about the next development cycle based on feedback and strategic goals.
+- **AI Role**: Assisting with feedback collection analysis, planning for the next iteration.
+- **Output**: Plan for the next development cycle or new feature set.
 
 ## Key Benefits
 

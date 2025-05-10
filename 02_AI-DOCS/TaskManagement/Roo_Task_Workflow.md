@@ -283,7 +283,7 @@ In the Implementation phase, the AI will:
 4. Write code, tests, and documentation
 5. Validate implementations against acceptance criteria
 
-This implementation phase will transform the detailed plans and specifications into a working product, following the roadmap established by the task decomposition.
+This implementation phase will transform the detailed plans and specifications into a working product, following the roadmap established by the task decomposition. After implementation is complete, the project will move into the "Testing & Preview Visibility" phase to ensure quality before any deployment discussions.
 
 
 **Output Storage:**
