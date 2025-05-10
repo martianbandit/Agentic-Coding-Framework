@@ -145,7 +145,7 @@ You have access to:
    - **Review and Internalize:** The AI agent must thoroughly review the content of `02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`. **This file is NOT a template and should NOT be copied or directly modified for project-specific content.**
    - **Contextual Referencing:** When generating **new** project-specific technical documents (e.g., `architecture.md`, `coding_conventions.md`, `design_conventions.md`) or later when generating code, the AI agent must actively reference and adhere to the relevant principles outlined in `AI_Coding_Agent_Optimization.md`. This is especially crucial when populating `design_conventions.md`.
    - **Project-Specific Application:** If the current project (`project_prd.md`) requires specific interpretations or highlights particular applications of these best practices, these details should be documented within the **newly created project-specific documents** (e.g., in `02_AI-DOCS/Architecture/architecture.md` or `02_AI-DOCS/Conventions/design_conventions.md`), potentially with cross-references pointing back to the relevant sections of `AI_Coding_Agent_Optimization.md`.
-   - **Indexation:** Ensure `02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md` and `02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md` are correctly listed and linked in the `03_SPECS/documentation_index.md` as foundational reference documents.
+   - **Indexation:** Ensure `../02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`, `../02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md`, and `../02_AI-DOCS/Documentation/AI_Task_Management_Optimization.md` are correctly listed and linked in the `../03_SPECS/documentation_index.md` as foundational reference documents.
    ---
 
 
@@ -292,18 +292,18 @@ Once this technical documentation update process is complete:
 
 To proceed with breaking down the project into implementable tasks:
 
-1. The AI agent will automatically proceed to the prompt file in `01_AI-RUN/` that corresponds to the `06_Task_Manager.md` logical step. (Ensure `00_AutoPilot.md` or your manual process calls the correct actual filename).
-2. The AI agent will reference your completed `project_prd.md` and the updated technical specifications in `03_SPECS/` and `02_AI-DOCS/`.
-3. All tasks will be organized and saved in `tasks/tasks.json`.
+1. The AI agent will automatically proceed to follow the workflow outlined in [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1).
+2. The AI agent will reference your completed `project_prd.md` and the **created** project-specific technical specifications in `../03_SPECS/` and `../02_AI-DOCS/`.
+3. All tasks will be organized and saved in [`../tasks/tasks.json`](../tasks/tasks.json:1), adhering to the structure defined in [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1).
 
 ```
-@taskmaster-ai
+@Roo Orchestrator
 
 I will now break down the project into a hierarchical task system based on:
 - The complete PRD at: `project_prd.md`
 - The technical specifications in the `03_SPECS/` directory
 
-I will create a comprehensive task management setup with features broken down into precise, implementable units of work in the `tasks/` directory.
+I will create a comprehensive task management setup with features broken down into precise, implementable units of work in the `../tasks/` directory, following the process in [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1) and storing results in [`../tasks/tasks.json`](../tasks/tasks.json:1) as per [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1).
 ```
 
 ## Automated Execution
@@ -342,7 +342,7 @@ This prompt is designed to run completely automatically as part of the AI-assist
 
 4. **Provide Progress Updates** - The AI will report on documentation progress without requiring user confirmation to continue
 
-5. **Proceed to Next Phase** - Once documentation is complete, the AI will automatically transition to the task management phase
+5. **Proceed to Next Phase** - Once documentation is complete, the AI will automatically transition to the task management phase (guided by [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1))
 
 ### What to Expect Next
 

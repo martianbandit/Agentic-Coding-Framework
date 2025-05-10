@@ -137,24 +137,6 @@ Server for advanced web scraping and exploration with Firecrawl:
 - **Deep Research**: firecrawl_deep_research
 - **LLMs.txt File Generation**: firecrawl_generate_llmstxt
 
-## Taskmaster-AI
-*Installation: `npx -y --package=task-master-ai task-master-ai`*
-
-An AI-assisted task management system:
-
-- **Project Initialization**: initialize_project
-- **AI Model Management**: models
-- **PRD Task Generation**: parse_prd
-- **Task and Subtask Management**:
-  - Creation: add_task, add_subtask
-  - Retrieval: get_tasks, get_task
-  - Updates: update, update_task, update_subtask
-  - Deletion: remove_task, remove_subtask
-  - Status changes: set_task_status
-- **Dependency Management**: add_dependency, remove_dependency, validate_dependencies, fix_dependencies
-- **Complexity Analysis**: analyze_project_complexity, complexity_report
-- **Task Expansion**: expand_task, expand_all
-
 ## Supabase
 *Installation: `npx -y @supabase/mcp-server-supabase@latest --access-token YOUR_ACCESS_TOKEN`*
 

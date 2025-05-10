@@ -1,8 +1,8 @@
-# Technical Manual: AI Builder Flow
+# Technical Manual: Agentic Coding Framework
 
 ## Introduction
 
-This document describes the internal logic and step-by-step operation of the "AI Builder Flow" workflow. It aims to provide a clear understanding of each phase of the process, the actions undertaken by the AI agent, the documents generated, and the expected interactions with the user.
+This document describes the internal logic and step-by-step operation of the "Agentic Coding Framework" workflow. It aims to provide a clear understanding of each phase of the process, the actions undertaken by the AI agent, the documents generated, and the expected interactions with the user.
 
 This workflow is designed to guide a software development project from the initial idea to implementation, relying on a series of structured prompts and rigorous state management.
 
@@ -13,6 +13,7 @@ This workflow is designed to guide a software development project from the initi
 3.  **Prompt Sequence:** The workflow relies on a series of prompts (`.md` files in `01_AI-RUN/`) that define the AI's role and the tasks to be accomplished for each phase.
 4.  **Document Generation:** Each phase produces specific documents (e.g., `idea_document.md`, `project_prd.md`, `tasks/tasks.json`) which serve as input for subsequent phases.
 5.  **Template Management:** For technical documentation (`02_AI-DOCS/`) and specifications (`03_SPECS/`), the system **creates new project-specific files** based on the provided templates. The original templates remain intact.
+6.  **Spec-Driven Vision:** The entire process is guided by the principle of spec-driven development, with AI agents consistently referring to and being guided by documentation. The overarching vision for AI collaboration and task management is detailed in [`02_AI-DOCS/Documentation/AI_Task_Management_Optimization.md`](02_AI-DOCS/Documentation/AI_Task_Management_Optimization.md:1).
 
 ## General Workflow Diagram
 
@@ -163,7 +164,7 @@ flowchart TD
     2.  **PRD Analysis:** Extracts all technologies, frameworks, APIs, etc., from `project_prd.md`.
     3.  **Information Gathering:** Uses MCPs (like `context7`, `github`, `firecrawl`) to retrieve official documentation, code examples, etc., for each identified technical element.
     4.  **Creation of Project-Specific Documents:**
-        *   The AI **creates new files** in the subdirectories of `02_AI-DOCS/` (e.g., `02_AI-DOCS/Architecture/architecture.md`) and `03_SPECS/` (e.g., `03_SPECS/features/feature_spec_FEAT-001.md`). For feature specifications, filenames should follow the pattern `03_SPECS/features/feature_spec_[FEATURE_ID].md`, where `[FEATURE_ID]` is derived from the PRD or task management system.
+        *   The AI **creates new files** in the subdirectories of `02_AI-DOCS/` (e.g., `02_AI-DOCS/Architecture/architecture.md`) and `03_SPECS/` (e.g., `03_SPECS/features/feature_spec_FEAT-001.md`). For feature specifications, filenames should follow the pattern `03_SPECS/features/feature_spec_[FEATURE_ID].md`, where `[FEATURE_ID]` is derived from the PRD or the task structure managed by Roo Orchestrator (see [`02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1)).
         *   To do this, it **copies** the appropriate template (e.g., `architecture_template.md`) to the new file name. The `write_to_file` tool will handle directory creation if needed.
         *   It reads the structure of the newly copied file and **populates** it with relevant information extracted from the PRD and collected documentation.
         *   The original templates (`*_template.md`) **are not modified**.
@@ -179,25 +180,26 @@ flowchart TD
 
 ### Phase 6: Task Manager
 
-*   **Logic Prompt File:** [`01_AI-RUN/06_Task_Manager.md`](01_AI-RUN/06_Task_Manager.md:1)
-*   **AI Role:** Interface with the `taskmaster-ai` MCP.
+*   **Logic Prompt File:** (The old [`01_AI-RUN/06_Task_Manager.md`](01_AI-RUN/06_Task_Manager.md:1) now redirects to the primary workflow document: [`02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1))
+*   **AI Role:** Interface with Roo Orchestrator for task management.
 *   **Inputs:**
     *   `project_prd.md`.
     *   Project-specific technical documents created in `02_AI-DOCS/` and `03_SPECS/`.
     *   Design principles from `02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md`.
 *   **Process:**
     1.  The AI announces the project breakdown into tasks.
-    2.  It prepares a prompt for `@taskmaster-ai` by extracting project contextual information (name, objective) and the list of features (Section 3.1 of the PRD) in JSON format.
-    3.  **Interaction with `taskmaster-ai` (MCP):**
-        *   Requests project tracking initialization (e.g., using `taskmaster-ai initialize_project`).
-        *   Requests epic creation from the feature list (e.g., using `taskmaster-ai add_task` for each feature, marking them as epics if possible, or by parsing the PRD with `taskmaster-ai parse_prd` if the PRD is structured appropriately).
-        *   For each epic, requests a detailed breakdown into tasks (max 4h per task), emphasizing the inclusion of technical details and design requirements (referencing `design_conventions.md` and `AI_Design_Agent_Optimization.md`) (e.g., using `taskmaster-ai expand_task` or `add_subtask`).
-        *   Requests a complexity analysis for each task and epic (e.g., using `taskmaster-ai analyze_project_complexity`).
-        *   Requests the generation of an implementation roadmap (this might be a synthesis of `taskmaster-ai get_tasks` output, ordered by priority and dependencies).
-    4.  The AI may initiate additional refinement requests to `taskmaster-ai` if some tasks still seem too large or ambiguous.
+    2.  It prepares a prompt for Roo Orchestrator by extracting project contextual information (name, objective) and the list of features (Section 3.1 of the PRD) in JSON format, as outlined in [`02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1).
+    3.  **Interaction with Roo Orchestrator:**
+        *   Instructs Roo Orchestrator to initialize project tracking.
+        *   Instructs Roo Orchestrator to create epics from the feature list.
+        *   For each epic, instructs Roo Orchestrator to perform a detailed breakdown into tasks (max 4h per task), emphasizing the inclusion of technical details and design requirements (referencing [`02_AI-DOCS/Conventions/design_conventions.md`](02_AI-DOCS/Conventions/design_conventions.md:1) and [`02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md`](02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md:1)). Roo Orchestrator may engage Roo Code mode for these technical specifics.
+        *   Ensures that the `details` field of each task (as defined in [`02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1)) contains direct links or embedded references to specific feature specifications (e.g., `03_SPECS/features/feature_spec_FEAT-XXX.md`), relevant design mockups/guidelines (from [`02_AI-DOCS/Conventions/design_conventions.md`](02_AI-DOCS/Conventions/design_conventions.md:1)), and any other necessary technical documentation.
+        *   Instructs Roo Orchestrator to perform a complexity analysis for each task and epic.
+        *   Instructs Roo Orchestrator to generate an implementation roadmap (this might involve Roo Orchestrator synthesizing task information).
+    4.  The AI may initiate additional refinement requests to Roo Orchestrator if some tasks still seem too large or ambiguous.
     5.  [`project_session_state.json`](project_session_state.json:1) is updated with `pendingAction` set to `generate_tasks_file` before `tasks/tasks.json` is finalized.
 *   **Output:**
-    *   `tasks/tasks.json` file created/updated with the complete task hierarchy (epics, tasks, sub-tasks), their descriptions, acceptance criteria, dependencies, etc.
+    *   [`tasks/tasks.json`](tasks/tasks.json:1) file created/updated with the complete task hierarchy (including `meta` block, epics, tasks, sub-tasks), their `id`, `title`, `description`, `status`, `dependencies`, `priority`, `details` (with design specifications), `testStrategy`, etc., as defined in [`02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1).
     *   The AI presents high-level epics and priority tasks.
     *   Asks the user if they want to modify priorities before implementation.
 *   **Transition:** After user confirmation of priorities, `lastCompletedStep` is updated to "taskPrioritiesConfirmed" in [`project_session_state.json`](project_session_state.json:1) (and `pendingAction` cleared), and `currentWorkflowPhase` transitions to "readmeGeneration".
@@ -243,19 +245,19 @@ flowchart TD
         *   Implement core architectural components as per `architecture.md` and high-priority architectural tasks from `tasks/tasks.json`.
         *   Configure the database schema based on `project_prd.md` and `architecture.md`.
     3.  **Systematic Task Implementation:**
-        *   The AI interacts with `@taskmaster-ai` (MCP) to get the next task to implement (e.g., using `taskmaster-ai next_task`).
+        *   The AI interacts with Roo Orchestrator to get the next task to implement (as per the workflow in [`02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1)).
         *   For each task:
-            *   Analyzes detailed specifications and acceptance criteria for the task (obtained from `@taskmaster-ai get_task [task_id]` and spec documents).
-            *   Writes code, scrupulously respecting coding and design conventions (references to `coding_conventions.md`, `design_conventions.md`, `AI_Design_Agent_Optimization.md`).
+            *   Analyzes detailed specifications and acceptance criteria for the task (obtained by querying Roo Orchestrator for task details, which include direct links or embedded content from relevant documents like `feature_spec_[ID].md`, design mockups, and convention documents found in the task's `details` field as per [`02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1)).
+            *   Writes code, scrupulously respecting coding and design conventions (references to [`02_AI-DOCS/Conventions/coding_conventions.md`](02_AI-DOCS/Conventions/coding_conventions.md:1), [`02_AI-DOCS/Conventions/design_conventions.md`](02_AI-DOCS/Conventions/design_conventions.md:1), [`02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md`](02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md:1)).
             *   Uses appropriate MCPs (e.g., `@21st-dev/magic` for UI components, GitHub MCP for commits).
             *   Writes tests (unit, integration) as specified in the task or conventions.
             *   Documents the code as per conventions.
             *   Verifies against acceptance criteria.
             *   Commits changes (potentially using GitHub MCP).
-            *   Updates task status via `@taskmaster-ai set_task_status [task_id] done`.
-    4.  **Continuous Progression:** The AI requests the next task from `@taskmaster-ai` and reports its progress. [`project_session_state.json`](project_session_state.json:1) is updated with `lastCompletedStep` reflecting the ID of the last completed task.
+            *   Updates task status by informing Roo Orchestrator.
+    4.  **Continuous Progression:** The AI requests the next task from Roo Orchestrator and reports its progress. [`project_session_state.json`](project_session_state.json:1) is updated with `lastCompletedStep` reflecting the ID of the last completed task.
 *   **Output:** Functional project source code, tests, associated documentation.
-*   **Transition:** Once all tasks in `tasks/tasks.json` are completed (verified by checking statuses via `@taskmaster-ai`), `lastCompletedStep` is updated to "implementationCompleted" in [`project_session_state.json`](project_session_state.json:1), and `currentWorkflowPhase` moves to "deploymentAndIteration". The `07_Start_Building.md` prompt includes instructions to initiate a new development cycle based on user feedback.
+*   **Transition:** Once all tasks in `tasks/tasks.json` are completed (verified by checking statuses with Roo Orchestrator), `lastCompletedStep` is updated to "implementationCompleted" in [`project_session_state.json`](project_session_state.json:1), and `currentWorkflowPhase` moves to "deploymentAndIteration". The `07_Start_Building.md` prompt includes instructions to initiate a new development cycle based on user feedback.
 *   **Why:** Transform plans and specifications into a functional product, following a structured approach and maintaining high code and documentation quality.
 
 ### Phase 8: Deployment & Iteration (Conceptual)
@@ -267,4 +269,4 @@ flowchart TD
     3.  **New Cycle:** For a new iteration, the user can instruct the AI to restart the workflow (potentially returning to Phase 1: Idea, or directly to Phase 6 for new features if the core concept remains). The AI would use the existing [`project_session_state.json`](project_session_state.json:1) to understand the current project, and new prompts would guide it. The `07_Start_Building.md` prompt (lines 244-259) provides an example prompt to initiate this new iteration with `@ConceptForge`.
 *   **Why:** Enable continuous product improvement based on real usage and feedback, and adapt the project to changing needs.
 
-This manual should provide a detailed understanding of the logic of your "AI Builder Flow".
+This manual should provide a detailed understanding of the logic of your "Agentic Coding Framework".

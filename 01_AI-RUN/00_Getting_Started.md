@@ -15,8 +15,8 @@ flowchart TD
     B[Market Research] -->|Human analysis, AI assists with rapid research via chat| C
     C[Concept Definition] -->|Human finalizes, AI proposes UVP, refines Personas| D
     D[PRD Generation] -->|AI generates and decomposes according to template, Human iteratively validates| E
-    E[Task Manager Initialization] -->|AI instructs MCP taskmaster-ai with PRD features| F
-    F[Task Refinement] -->|MCP taskmaster-ai decomposes complex features into sub-tasks| G
+    E[Task Manager Initialization] -->|AI instructs Roo Orchestrator with PRD features| F
+    F[Task Refinement] -->|Roo Orchestrator (with Roo Code) decomposes complex features into sub-tasks| G
     G[Builder] -->|AI executes tasks, codes via MCPs, Human reviews/validates code & features| H
     H[Deployment & Iteration] -->|AI assists deployment, collects feedback, Human decides next cycle| A
 ```
@@ -32,7 +32,7 @@ The workflow uses consistent file naming for inputs and outputs. Note that promp
 | Core Concept | 03_Core_Concept.md | core_concept.md | Creation |
 | PRD Generation | 04_PRD_Generation.md | project_prd.md | Creation |
 | Specs & Docs | 05_Specs_Docs.md | `02_AI-DOCS/` & `03_SPECS/` | **Creation** of project-specific files from templates (templates remain untouched) & Reference/Annotation of Best Practices |
-| Task Manager | 06_Task_Manager.md | `tasks/tasks.json` | Creation |
+| Task Manager | (See [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1)) | [`tasks/tasks.json`](tasks/tasks.json:1) (Structure: [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1)) | Creation |
 | Start Building | 07_Start_Building.md | Implementation code | N/A (code) |
  
 ## AI Agent Initial Onboarding (Important!)
@@ -43,10 +43,15 @@ The workflow uses consistent file naming for inputs and outputs. Note that promp
     *   `02_AI-DOCS/`: Contains project documentation templates (architecture, conventions, etc.) and core AI guidance (`Documentation/`). **Crucially, during the 'Specs & Docs' phase, project-specific documents (e.g., `architecture.md`, `coding_conventions.md`) will be CREATED in these subdirectories based on the templates.**
     *   `03_SPECS/`: Contains specification templates (features, bugs). **Similarly, project-specific specification files (e.g., `features/feature_spec_FEAT-XXX.md`) will be CREATED here during the 'Specs & Docs' phase.**
     *   `tasks/`: Will contain the generated task breakdown (`tasks.json`).
-2.  **Identify Key Reference Documents:** Recognize that the primary sources of truth for the project, once generated, will be:
-    *   `project_prd.md` (Generated in phase 4)
-    *   The **project-specific documents created** within `02_AI-DOCS/` and `03_SPECS/` (Generated in phase 5).
-3.  **Prioritize Generated Documents:** When performing subsequent tasks (especially Task Management and Building), you MUST prioritize referencing these **generated, project-specific documents** over the original templates. The templates serve only as a starting structure.
+2.  **Identify Key Reference Documents:** Recognize that the primary sources of truth for the project, once generated or established, will be:
+    *   `project_prd.md` (Generated in Phase 4).
+    *   Project-specific technical documents **created** in `02_AI-DOCS/` (e.g., `02_AI-DOCS/Architecture/architecture.md`, `02_AI-DOCS/Conventions/coding_conventions.md`, `02_AI-DOCS/Conventions/design_conventions.md`).
+    *   Project-specific specification documents **created** in `03_SPECS/` (e.g., `03_SPECS/features/feature_spec_FEAT-XXX.md`).
+    *   Task management guidelines: [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1) and [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1).
+    *   AI Agent Optimization Guides: [`../02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md`](../02_AI-DOCS/Documentation/AI_Coding_Agent_Optimization.md:1), [`../02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md`](../02_AI-DOCS/Documentation/AI_Design_Agent_Optimization.md:1).
+    *   Overall AI Task Management Vision: [`../02_AI-DOCS/Documentation/AI_Task_Management_Optimization.md`](../02_AI-DOCS/Documentation/AI_Task_Management_Optimization.md:1).
+3.  **Prioritize Generated Documents & Adhere to Specs:** When performing subsequent tasks (especially Task Management and Building), you MUST prioritize referencing these **generated, project-specific documents** over the original templates. The templates serve only as a starting structure.
+4.  **Spec-Driven Execution:** For any development task (frontend, backend, database, design, etc.), you MUST actively locate, read, and strictly adhere to the relevant detailed specification documents (feature specs, design mockups/guidelines, API contracts, coding conventions, etc.) found within `02_AI-DOCS/` and `03_SPECS/`, or linked within the task `details` in [`tasks/tasks.json`](tasks/tasks.json:1).
  
 ## How to Use This Workflow
 
@@ -126,10 +131,10 @@ If at any point the AI agent seems confused or lacks context:
 - **AI Role**: **Creating** project-specific files in `02_AI-DOCS/` and `03_SPECS/` by copying and populating templates based on the PRD and gathered technical information.
 - **Output**: **Created** project-specific technical documentation and specifications within `02_AI-DOCS/` and `03_SPECS/`.
  
-### 6. Task Manager Initialization (using `06_Task_Manager.md` logic)
-- **Human Role**: Review of task structure
-- **AI Role**: Instructing taskmaster-ai with PRD features
-- **Output**: Initial task hierarchy (`tasks/tasks.json`)
+### 6. Task Manager Initialization (Workflow: [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1))
+- **Human Role**: Review of task structure (as defined in [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1))
+- **AI Role**: Instructing Roo Orchestrator with PRD features, as per [`../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md`](../02_AI-DOCS/TaskManagement/Roo_Task_Workflow.md:1)
+- **Output**: Initial task hierarchy ([`tasks/tasks.json`](tasks/tasks.json:1) adhering to [`../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md`](../02_AI-DOCS/TaskManagement/Tasks_JSON_Structure.md:1))
 
 ### 7. Builder (using `07_Start_Building.md` logic)
 - **Human Role**: Reviewing and validating code and features
