@@ -93,6 +93,14 @@ You have access to the following critical resources:
    - This scaffolding should typically happen after the initial landing page is conceptually designed or even built if it's a simple static page. If the landing page is integral to the main application (e.g., a Next.js app serving both), this scaffolding step creates its foundation.
    - **Dependency Installation:** Ensure all core dependencies specified in the PRD are installed.
    - **Version Control:** Configure version control (e.g., `git init`, create `.gitignore` appropriate for the technology stack).
+   - **Global Styling Setup:**
+       - Based on the chosen framework (e.g., Next.js, React) and styling solution (e.g., Tailwind CSS, CSS Modules, Styled Components), ensure a `global.css` file (or equivalent mechanism like a theme provider or base style imports) is properly set up.
+       - This file should be used for:
+           - CSS resets (e.g., `normalize.css` or a custom reset).
+           - Defining global CSS custom properties/variables (for colors, fonts, spacing if not fully managed by Tailwind).
+           - Base typography styles (e.g., default font family, size, line height for `body`, `h1-h6`, `p`).
+           - Any other global styles that need to be applied across the entire application.
+       - Ensure this global style sheet is correctly imported or configured to apply to all pages/components. For Next.js, this is typically done in `_app.tsx` or `_app.js`.
    - **Repository Structure:** Establish the initial repository and directory structure as outlined in `../02_AI-DOCS/Architecture/architecture.md` and coding conventions.
 
 2. **Architecture Implementation**
