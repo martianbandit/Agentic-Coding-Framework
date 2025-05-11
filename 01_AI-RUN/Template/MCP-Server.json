@@ -14,9 +14,9 @@
           "@supabase/mcp-server-supabase@latest",
           "--access-token",
           "YOUR_SUPABASE_ACCESS_TOKEN_HERE"
-        ] 
+        ]
       },
-      "github": { 
+      "github": {
         "command": "npx",
         "args": [
           "-y",
@@ -31,7 +31,7 @@
         "args": [
           "-y",
           "@modelcontextprotocol/server-puppeteer"
-        ],  
+        ],
         "env": {}
       },
       "stripe": {
@@ -127,6 +127,20 @@
           "@21st-dev/magic@latest",
           "API_KEY=\"YOUR_21ST_DEV_MAGIC_API_KEY_HERE\""
         ]
+      },
+      "taskmaster-ai": {
+        "command": "npx",
+        "args": ["-y", "--package=task-master-ai", "task-master-ai"],
+        "env": {
+            "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_API_KEY_HERE",
+            "PERPLEXITY_API_KEY": "YOUR_PERPLEXITY_API_KEY_HERE",
+            "OPENAI_API_KEY": "YOUR_OPENAI_KEY_HERE",
+            "GOOGLE_API_KEY": "YOUR_GOOGLE_KEY_HERE",
+            "MISTRAL_API_KEY": "YOUR_MISTRAL_KEY_HERE",
+            "OPENROUTER_API_KEY": "YOUR_OPENROUTER_KEY_HERE",
+            "XAI_API_KEY": "YOUR_XAI_KEY_HERE",
+            "AZURE_OPENAI_API_KEY": "YOUR_AZURE_KEY_HERE"
+        }
       }
     }
   }
