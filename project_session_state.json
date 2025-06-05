@@ -1,27 +1,58 @@
 {
   "version": "1.0.0",
-  "projectName": null,
-  "projectObjective": null,
+  "projectName": "AI-Driven Digital Micro-Product Factory (ADMPF)",
+  "projectType": "SaaS Platform",
+  "projectObjective": "Automatiser la création et la vente de micro-produits numériques pour les solopreneurs et créateurs e-commerce, de l'idéation à la mise en marché, grâce à l'IA.",
   "prdDocumentPath": "project_prd.md",
   "tasksDocumentPath": "tasks/tasks.json",
   "currentWorkflowPhase": "initialization",
-  "lastCompletedStep": null,
+  "lastCompletedStep": "project_initialized",
   "pendingAction": {
     "mcpServer": null,
     "toolName": null,
     "arguments": null,
     "expectedResponseType": null
   },
-  "userInputHistory": {},
+  "userInputHistory": {
+    "projectType": "SaaS Platform",
+    "targetAudience": "Solopreneurs et créateurs e-commerce",
+    "mainFeatures": [
+      "Génération de contenu IA",
+      "Création de visuels IA",
+      "Packaging et tarification automatiques",
+      "Vitrine de vente générée automatiquement"
+    ],
+    "techStack": ["Next.js", "Supabase", "OpenAI API", "Stripe"]
+  },
   "currentContext": {
-    "activeEpicId": null,
-    "activeTaskId": null,
-    "filesBeingWorkedOn": []
+    "activeEpicId": "epic_initial_setup",
+    "activeTaskId": "task_initialize_project",
+    "filesBeingWorkedOn": ["project_session_state.json"]
   },
   "errorState": {
     "hasError": false,
     "errorMessage": null,
     "errorTimestamp": null,
     "recoverySuggestion": null
+  },
+  "technicalStack": {
+    "frontend": "Next.js 14 avec TypeScript et Tailwind CSS",
+    "backend": "Supabase (PostgreSQL, Auth, Storage, Edge Functions)",
+    "aiServices": {
+      "textGeneration": "OpenAI GPT-4o",
+      "imageGeneration": "OpenAI DALL-E 3"
+    },
+    "payments": "Stripe Connect",
+    "hosting": "Vercel (Frontend), Supabase Cloud (Backend)"
+  },
+  "projectStatus": {
+    "phase": "Initial Setup",
+    "milestones": [
+      {"id": "m1", "name": "Project Initialization", "status": "in_progress"},
+      {"id": "m2", "name": "Authentication Setup", "status": "pending"},
+      {"id": "m3", "name": "Product Generation Flow", "status": "pending"},
+      {"id": "m4", "name": "Storefront Generation", "status": "pending"},
+      {"id": "m5", "name": "Payment Integration", "status": "pending"}
+    ]
   }
 }
