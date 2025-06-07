@@ -1,0 +1,84 @@
+{
+  "id": "epic-6",
+  "title": "Packaging & Pricing",
+  "description": "Implement functionality for AI-driven pricing recommendations and product packaging",
+  "status": "pending",
+  "priority": "medium",
+  "tasks": [
+    {
+      "id": "task-6.1",
+      "title": "Pricing Recommendation Engine",
+      "description": "Create AI system for suggesting optimal product pricing",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Develop pricing algorithm based on product attributes",
+        "Implement market-based pricing analysis",
+        "Create competitive pricing comparison",
+        "Add price point optimization suggestions"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-3.1"]
+    },
+    {
+      "id": "task-6.2",
+      "title": "Pricing Interface",
+      "description": "Develop UI for viewing and adjusting product pricing",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Design pricing configuration interface",
+        "Implement price adjustment controls",
+        "Create pricing tier suggestion system",
+        "Add pricing rationale display"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-6.1"]
+    },
+    {
+      "id": "task-6.3",
+      "title": "Product Packaging Recommendations",
+      "description": "Create system for suggesting product packaging options",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Implement basic/premium version suggestions",
+        "Create bundle recommendation algorithm",
+        "Add bonus content suggestions",
+        "Implement packaging preview functionality"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-4.6", "task-6.1"]
+    },
+    {
+      "id": "task-6.4",
+      "title": "Package Editor Interface",
+      "description": "Create interface for configuring and managing product packages",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Design package configuration UI",
+        "Implement drag-and-drop package builder",
+        "Create version comparison display",
+        "Add package preview functionality"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-6.3"]
+    },
+    {
+      "id": "task-6.5",
+      "title": "Upsell & Cross-sell Recommendation System",
+      "description": "Implement suggestions for complementary products and upsells",
+      "status": "pending",
+      "priority": "low",
+      "subtasks": [
+        "Develop cross-product recommendation algorithm",
+        "Create upsell opportunity identification",
+        "Implement bundle discount suggestions",
+        "Add cross-sell display components"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-6.1", "task-6.3"]
+    }
+  ]
+}

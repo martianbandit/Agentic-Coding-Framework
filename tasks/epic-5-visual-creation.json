@@ -1,0 +1,114 @@
+{
+  "id": "epic-5",
+  "title": "Visual Asset Creation",
+  "description": "Develop visual generation capabilities for product covers, mockups, and promotional materials",
+  "status": "pending",
+  "priority": "high",
+  "tasks": [
+    {
+      "id": "task-5.1",
+      "title": "Image Generation API Integration",
+      "description": "Set up DALL-E 3 API integration with appropriate error handling",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Create OpenAI DALL-E service wrapper",
+        "Implement secure API key management",
+        "Set up error handling and fallback mechanisms",
+        "Create prompt engineering templates for visuals"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-3.1"]
+    },
+    {
+      "id": "task-5.2",
+      "title": "Cover Image Generator",
+      "description": "Create system for generating professional product covers",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design cover generation UI with options",
+        "Implement theme-based prompt creation",
+        "Create cover template system with text placement",
+        "Add custom color scheme selection"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-5.1"]
+    },
+    {
+      "id": "task-5.3",
+      "title": "Product Mockup Generator",
+      "description": "Implement 3D mockup creation for digital products",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Create device mockup template system",
+        "Implement cover placement on mockup templates",
+        "Add scene and context options for mockups",
+        "Create lighting and style variations"
+      ],
+      "estimated_hours": 14,
+      "dependencies": ["task-5.1", "task-5.2"]
+    },
+    {
+      "id": "task-5.4",
+      "title": "Visual Customization Tools",
+      "description": "Create interface for customizing generated visual assets",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Implement basic image editing capabilities",
+        "Create text overlay and formatting tools",
+        "Add filter and effect options",
+        "Implement cropping and resizing tools"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-5.2", "task-5.3"]
+    },
+    {
+      "id": "task-5.5",
+      "title": "Promotional Asset Generator",
+      "description": "Create system for generating marketing visuals for products",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Design social media post template system",
+        "Create banner and ad creative generators",
+        "Implement email graphic creation tools",
+        "Add product feature highlight visuals"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-5.1", "task-5.2"]
+    },
+    {
+      "id": "task-5.6",
+      "title": "Visual Generation Preference System",
+      "description": "Create system to remember user's visual generation preferences",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Store last used generation settings (resolution, style)",
+        "Implement user default style preferences",
+        "Create favorite generations collection",
+        "Add capability to reuse successful image prompts"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-5.1", "task-5.2", "task-5.3"]
+    },
+    {
+      "id": "task-5.7",
+      "title": "Watermarking System",
+      "description": "Implement watermarking for free tier outputs",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Create configurable watermark system",
+        "Implement watermark placement algorithm",
+        "Add watermark removal for paid subscriptions",
+        "Create watermark preview functionality"
+      ],
+      "estimated_hours": 6,
+      "dependencies": ["task-5.2", "task-5.3", "task-5.5"]
+    }
+  ]
+}

@@ -3,10 +3,30 @@
   "projectName": "AI-Driven Digital Micro-Product Factory (ADMPF)",
   "projectType": "SaaS Platform",
   "projectObjective": "Automatiser la création et la vente de micro-produits numériques pour les solopreneurs et créateurs e-commerce, de l'idéation à la mise en marché, grâce à l'IA.",
-  "prdDocumentPath": "project_prd.md",
-  "tasksDocumentPath": "tasks/tasks.json",
-  "currentWorkflowPhase": "initialization",
-  "lastCompletedStep": "project_initialized",
+  "prdDocumentPaths": ["project_prd_part1.md", "project_prd_part2.md"],
+  "supportingDocumentPaths": {
+    "ideaDocument": "idea_document.md",
+    "marketResearch": "market_research.md",
+    "coreConcept": "core_concept.md"
+  },
+  "tasksDocumentPaths": {
+    "index": "tasks/tasks_index.json",
+    "epics": [
+      "tasks/epic-1-project-setup.json",
+      "tasks/epic-2-authentication.json",
+      "tasks/epic-3-idea-validation.json",
+      "tasks/epic-4-content-generation.json",
+      "tasks/epic-5-visual-creation.json",
+      "tasks/epic-6-packaging-pricing.json",
+      "tasks/epic-7-storefront.json",
+      "tasks/epic-8-payment-delivery.json",
+      "tasks/epic-9-analytics.json",
+      "tasks/epic-10-testing-qa.json",
+      "tasks/epic-11-deployment.json"
+    ]
+  },
+  "currentWorkflowPhase": "implementation",
+  "lastCompletedStep": "implementation_plan_created",
   "pendingAction": {
     "mcpServer": null,
     "toolName": null,
@@ -22,12 +42,26 @@
       "Packaging et tarification automatiques",
       "Vitrine de vente générée automatiquement"
     ],
-    "techStack": ["Next.js", "Supabase", "OpenAI API", "Stripe"]
+    "techStack": ["Next.js", "Supabase", "OpenAI API", "Stripe"],
+    "workflowChanges": {
+      "splitPRD": "User requested PRD be split into two parts for manageability",
+      "taskBreakdown": "Tasks broken down into separate JSON files per epic for manageability"
+    },
+    "aiModelPreferences": {
+      "textGeneration": "OpenAI GPT-4o",
+      "imageGeneration": "OpenAI DALL-E 3"
+    }
   },
   "currentContext": {
-    "activeEpicId": "epic_initial_setup",
-    "activeTaskId": "task_initialize_project",
-    "filesBeingWorkedOn": ["project_session_state.json"]
+    "activeEpicId": "epic_planning",
+    "activeTaskId": "task_create_implementation_plan",
+    "filesBeingWorkedOn": [
+      "implementation_plan.md",
+      "resource_allocation_plan.md",
+      "technical_implementation_plan.md",
+      "sprint_plan.md",
+      "project_session_state.json"
+    ]
   },
   "errorState": {
     "hasError": false,
@@ -46,13 +80,42 @@
     "hosting": "Vercel (Frontend), Supabase Cloud (Backend)"
   },
   "projectStatus": {
-    "phase": "Initial Setup",
+    "phase": "Planning",
     "milestones": [
-      {"id": "m1", "name": "Project Initialization", "status": "in_progress"},
-      {"id": "m2", "name": "Authentication Setup", "status": "pending"},
-      {"id": "m3", "name": "Product Generation Flow", "status": "pending"},
-      {"id": "m4", "name": "Storefront Generation", "status": "pending"},
-      {"id": "m5", "name": "Payment Integration", "status": "pending"}
+      {"id": "m1", "name": "Project Initialization", "status": "completed"},
+      {"id": "m2", "name": "Project Documentation", "status": "completed"},
+      {"id": "m3", "name": "Task Breakdown", "status": "completed"},
+      {"id": "m4", "name": "Implementation Planning", "status": "completed"},
+      {"id": "m5", "name": "Foundation Phase", "status": "pending"},
+      {"id": "m6", "name": "Core Functionality Phase", "status": "pending"},
+      {"id": "m7", "name": "Product Monetization Phase", "status": "pending"},
+      {"id": "m8", "name": "Polish and Launch Phase", "status": "pending"}
     ]
-  }
+  },
+  "developmentPhases": [
+    {
+      "name": "Foundation Phase",
+      "epics": ["epic-1", "epic-2"],
+      "estimated_hours": 76,
+      "description": "Setting up project infrastructure and user authentication"
+    },
+    {
+      "name": "Core Functionality Phase",
+      "epics": ["epic-3", "epic-4", "epic-5"],
+      "estimated_hours": 184,
+      "description": "Implementing idea validation, content and visual generation capabilities"
+    },
+    {
+      "name": "Product Monetization Phase",
+      "epics": ["epic-6", "epic-7", "epic-8"],
+      "estimated_hours": 196,
+      "description": "Creating packaging, pricing, storefront, and payment functionality"
+    },
+    {
+      "name": "Polish and Launch Phase",
+      "epics": ["epic-9", "epic-10", "epic-11"],
+      "estimated_hours": 250,
+      "description": "Implementing analytics, comprehensive testing, and deployment"
+    }
+  ]
 }

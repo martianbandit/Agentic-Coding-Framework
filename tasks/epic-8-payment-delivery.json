@@ -1,0 +1,99 @@
+{
+  "id": "epic-8",
+  "title": "Payment & Delivery System",
+  "description": "Implement payment processing and digital product delivery systems",
+  "status": "pending",
+  "priority": "high",
+  "tasks": [
+    {
+      "id": "task-8.1",
+      "title": "Stripe Integration",
+      "description": "Set up Stripe Connect Platform integration for payments",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Configure Stripe Connect account and settings",
+        "Implement secure API key management",
+        "Create webhook handlers for payment events",
+        "Set up platform fee configuration"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-1.5"]
+    },
+    {
+      "id": "task-8.2",
+      "title": "Checkout Flow",
+      "description": "Create seamless checkout experience for product purchases",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design mobile-friendly checkout UI",
+        "Implement minimal form fields with validation",
+        "Create order summary display",
+        "Add payment method selection"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-8.1", "task-7.4"]
+    },
+    {
+      "id": "task-8.3",
+      "title": "Digital Product Delivery",
+      "description": "Create secure delivery system for digital products",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Implement secure download link generation",
+        "Create expiring access controls",
+        "Set up email delivery notifications",
+        "Add access recovery functionality"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-8.2"]
+    },
+    {
+      "id": "task-8.4",
+      "title": "Order Management",
+      "description": "Build system for tracking and managing product orders",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Create order database models",
+        "Design order management interface",
+        "Implement order status tracking",
+        "Add customer information management"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-8.2", "task-8.3"]
+    },
+    {
+      "id": "task-8.5",
+      "title": "Payment Analytics",
+      "description": "Create financial reporting and payment analytics",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Design payment dashboard with revenue metrics",
+        "Implement transaction history and filtering",
+        "Create payout tracking and scheduling",
+        "Add financial report generation"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-8.1", "task-8.4"]
+    },
+    {
+      "id": "task-8.6",
+      "title": "Subscription Billing",
+      "description": "Implement recurring billing for platform subscriptions",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Set up Stripe Billing integration",
+        "Create subscription plan management",
+        "Implement upgrade/downgrade flows",
+        "Add billing history and receipt generation"
+      ],
+      "estimated_hours": 14,
+      "dependencies": ["task-8.1"]
+    }
+  ]
+}

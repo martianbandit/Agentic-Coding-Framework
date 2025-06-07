@@ -1,0 +1,114 @@
+{
+  "id": "epic-7",
+  "title": "Storefront & Sales Pages",
+  "description": "Create functionality for generating sales pages and storefronts for products",
+  "status": "pending",
+  "priority": "high",
+  "tasks": [
+    {
+      "id": "task-7.1",
+      "title": "Sales Copy Generation",
+      "description": "Implement AI-driven sales copy creation based on product content",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Create sales copy generation algorithms and prompts",
+        "Implement benefit extraction from product content",
+        "Add headline and subheading generation",
+        "Create feature-to-benefit transformation"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-3.1", "task-4.3"]
+    },
+    {
+      "id": "task-7.2",
+      "title": "Sales Page Builder",
+      "description": "Create interface for generating and customizing product sales pages",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design sales page templates and components",
+        "Implement section ordering and organization",
+        "Create testimonial and social proof sections",
+        "Add FAQ generation and management"
+      ],
+      "estimated_hours": 14,
+      "dependencies": ["task-7.1", "task-5.2", "task-5.3"]
+    },
+    {
+      "id": "task-7.3",
+      "title": "Storefront Creation System",
+      "description": "Build personalized storefront functionality for creator product collections",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design storefront templates and layouts",
+        "Implement creator profile/bio section",
+        "Create product organization and categorization",
+        "Add storefront theme customization"
+      ],
+      "estimated_hours": 16,
+      "dependencies": ["task-7.2"]
+    },
+    {
+      "id": "task-7.4",
+      "title": "Public Storefront Pages",
+      "description": "Create public-facing storefront with product browsing capabilities",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Implement public routes and SEO optimization",
+        "Create product listing and detail pages",
+        "Add search and filtering functionality",
+        "Implement responsive mobile design"
+      ],
+      "estimated_hours": 14,
+      "dependencies": ["task-7.3"]
+    },
+    {
+      "id": "task-7.5",
+      "title": "Customization Interface",
+      "description": "Create tools for customizing storefront appearance and behavior",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Implement color scheme and typography options",
+        "Create layout customization controls",
+        "Add custom elements and sections",
+        "Implement logo and branding options"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-7.3"]
+    },
+    {
+      "id": "task-7.6",
+      "title": "Landing Page Templates",
+      "description": "Create specialized landing page templates for different product types",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Design ebook and guide landing templates",
+        "Create templates for courses and tutorials",
+        "Implement templates for tools and resources",
+        "Add A/B testing capabilities for templates"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-7.2"]
+    },
+    {
+      "id": "task-7.7",
+      "title": "Page Preference System",
+      "description": "Create system to remember user's page preferences and customizations",
+      "status": "pending",
+      "priority": "low",
+      "subtasks": [
+        "Store default template preferences",
+        "Save custom color schemes and typography",
+        "Remember frequently used sections and elements",
+        "Create system for reusing successful page layouts"
+      ],
+      "estimated_hours": 6,
+      "dependencies": ["task-7.5"]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "epic-9",
+  "title": "Analytics & Insights",
+  "description": "Develop dashboards and analytics for tracking product performance and sales",
+  "status": "pending",
+  "priority": "medium",
+  "tasks": [
+    {
+      "id": "task-9.1",
+      "title": "Analytics Core Infrastructure",
+      "description": "Set up core analytics tracking and storage system",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Implement event tracking infrastructure",
+        "Create analytics data models",
+        "Set up data aggregation pipelines",
+        "Configure privacy-compliant tracking"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-1.5"]
+    },
+    {
+      "id": "task-9.2",
+      "title": "Sales Dashboard",
+      "description": "Create comprehensive dashboard for tracking product sales and revenue",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design sales dashboard UI with key metrics",
+        "Implement revenue charts and visualizations",
+        "Create time-based performance trends",
+        "Add filtering and date range selection"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-8.5", "task-9.1"]
+    },
+    {
+      "id": "task-9.3",
+      "title": "Store Performance Metrics",
+      "description": "Implement tracking for storefront and sales page performance",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Create page view and engagement tracking",
+        "Implement conversion rate analytics",
+        "Add visitor demographic information",
+        "Create traffic source analysis"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-7.4", "task-9.1"]
+    },
+    {
+      "id": "task-9.4",
+      "title": "Product Performance Insights",
+      "description": "Create insights and recommendations for product improvements",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Implement product engagement metrics",
+        "Create customer feedback collection",
+        "Add performance comparison across products",
+        "Generate optimization recommendations"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-9.2", "task-9.3"]
+    },
+    {
+      "id": "task-9.5",
+      "title": "Export & Reports",
+      "description": "Create report generation and data export functionality",
+      "status": "pending",
+      "priority": "low",
+      "subtasks": [
+        "Implement CSV and PDF report exports",
+        "Create scheduled report delivery",
+        "Add customizable report templates",
+        "Implement data visualization export"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-9.2", "task-9.3"]
+    },
+    {
+      "id": "task-9.6",
+      "title": "Analytics Preference System",
+      "description": "Create system to remember user's analytics preferences",
+      "status": "pending",
+      "priority": "low",
+      "subtasks": [
+        "Store default dashboard views and filters",
+        "Save frequently viewed metrics and reports",
+        "Remember date range preferences",
+        "Create custom dashboard layouts"
+      ],
+      "estimated_hours": 6,
+      "dependencies": ["task-9.2", "task-9.3"]
+    }
+  ]
+}

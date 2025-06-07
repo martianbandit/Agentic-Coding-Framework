@@ -1,0 +1,84 @@
+{
+  "id": "epic-3",
+  "title": "Idea Generation & Validation",
+  "description": "Develop the AI-driven idea validation and enhancement functionality",
+  "status": "pending",
+  "priority": "high",
+  "tasks": [
+    {
+      "id": "task-3.1",
+      "title": "AI Service Integration",
+      "description": "Set up OpenAI API integration with appropriate models and error handling",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Create OpenAI service wrapper with rate limiting",
+        "Implement secure API key management",
+        "Set up error handling and fallback mechanisms",
+        "Create prompt engineering framework and templates"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-1.5"]
+    },
+    {
+      "id": "task-3.2",
+      "title": "Idea Input Interface",
+      "description": "Create intuitive interface for users to enter product ideas",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design idea input form with guidance",
+        "Implement real-time input validation",
+        "Create category and tag suggestion system",
+        "Add example ideas and inspiration section"
+      ],
+      "estimated_hours": 6,
+      "dependencies": ["task-1.5", "task-3.1"]
+    },
+    {
+      "id": "task-3.3",
+      "title": "Market Validation Engine",
+      "description": "Implement AI-driven market analysis for product ideas",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design market validation algorithms and prompts",
+        "Implement demand assessment functionality",
+        "Create competition analysis capabilities",
+        "Develop opportunity scoring system"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-3.1", "task-3.2"]
+    },
+    {
+      "id": "task-3.4",
+      "title": "Idea Enhancement Suggestions",
+      "description": "Create system for AI to suggest improvements to user ideas",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Design idea enhancement UI components",
+        "Implement idea refinement algorithms",
+        "Create target audience suggestion system",
+        "Add differentiation recommendation capabilities"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-3.1", "task-3.3"]
+    },
+    {
+      "id": "task-3.5",
+      "title": "Niche Discovery Tool",
+      "description": "Implement functionality to suggest profitable niches based on user interests",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Create interest/expertise input interface",
+        "Implement niche recommendation algorithm",
+        "Add opportunity scoring for suggested niches",
+        "Create example product showcase per niche"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-3.1", "task-3.3"]
+    }
+  ]
+}

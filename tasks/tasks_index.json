@@ -1,0 +1,140 @@
+{
+  "project": "AI-Driven Digital Micro-Product Factory (ADMPF)",
+  "version": "1.0.0",
+  "updated": "2025-06-07",
+  "epics": [
+    {
+      "id": "epic-1",
+      "title": "Project Setup & Infrastructure",
+      "file": "epic-1-project-setup.json",
+      "status": "pending",
+      "priority": "high",
+      "task_count": 5,
+      "estimated_hours": 26
+    },
+    {
+      "id": "epic-2",
+      "title": "User Authentication & Account Management",
+      "file": "epic-2-authentication.json",
+      "status": "pending",
+      "priority": "high",
+      "task_count": 5,
+      "estimated_hours": 50
+    },
+    {
+      "id": "epic-3",
+      "title": "Idea Generation & Validation",
+      "file": "epic-3-idea-validation.json",
+      "status": "pending",
+      "priority": "high",
+      "task_count": 5,
+      "estimated_hours": 44
+    },
+    {
+      "id": "epic-4",
+      "title": "Content Generation",
+      "file": "epic-4-content-generation.json",
+      "status": "pending",
+      "priority": "high",
+      "task_count": 6,
+      "estimated_hours": 70
+    },
+    {
+      "id": "epic-5",
+      "title": "Visual Asset Creation",
+      "file": "epic-5-visual-creation.json",
+      "status": "pending",
+      "priority": "high",
+      "task_count": 7,
+      "estimated_hours": 70
+    },
+    {
+      "id": "epic-6",
+      "title": "Packaging & Pricing",
+      "file": "epic-6-packaging-pricing.json",
+      "status": "pending",
+      "priority": "medium",
+      "task_count": 5,
+      "estimated_hours": 48
+    },
+    {
+      "id": "epic-7",
+      "title": "Storefront & Sales Pages",
+      "file": "epic-7-storefront.json",
+      "status": "pending",
+      "priority": "high",
+      "task_count": 7,
+      "estimated_hours": 82
+    },
+    {
+      "id": "epic-8",
+      "title": "Payment & Delivery System",
+      "file": "epic-8-payment-delivery.json",
+      "status": "pending",
+      "priority": "high",
+      "task_count": 6,
+      "estimated_hours": 66
+    },
+    {
+      "id": "epic-9",
+      "title": "Analytics & Insights",
+      "file": "epic-9-analytics.json",
+      "status": "pending",
+      "priority": "medium",
+      "task_count": 6,
+      "estimated_hours": 58
+    },
+    {
+      "id": "epic-10",
+      "title": "Testing & Quality Assurance",
+      "file": "epic-10-testing-qa.json",
+      "status": "pending",
+      "priority": "high",
+      "task_count": 7,
+      "estimated_hours": 96
+    },
+    {
+      "id": "epic-11",
+      "title": "Deployment & Launch",
+      "file": "epic-11-deployment.json",
+      "status": "pending",
+      "priority": "medium",
+      "task_count": 8,
+      "estimated_hours": 96
+    }
+  ],
+  "summary": {
+    "total_epics": 11,
+    "total_tasks": 67,
+    "total_estimated_hours": 706,
+    "high_priority_epics": 8,
+    "medium_priority_epics": 3,
+    "low_priority_epics": 0
+  },
+  "development_phases": [
+    {
+      "name": "Foundation Phase",
+      "epics": ["epic-1", "epic-2"],
+      "estimated_hours": 76,
+      "description": "Setting up project infrastructure and user authentication"
+    },
+    {
+      "name": "Core Functionality Phase",
+      "epics": ["epic-3", "epic-4", "epic-5"],
+      "estimated_hours": 184,
+      "description": "Implementing idea validation, content and visual generation capabilities"
+    },
+    {
+      "name": "Product Monetization Phase",
+      "epics": ["epic-6", "epic-7", "epic-8"],
+      "estimated_hours": 196,
+      "description": "Creating packaging, pricing, storefront, and payment functionality"
+    },
+    {
+      "name": "Polish and Launch Phase",
+      "epics": ["epic-9", "epic-10", "epic-11"],
+      "estimated_hours": 250,
+      "description": "Implementing analytics, comprehensive testing, and deployment"
+    }
+  ]
+}

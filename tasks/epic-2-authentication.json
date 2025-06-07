@@ -1,0 +1,84 @@
+{
+  "id": "epic-2",
+  "title": "User Authentication & Account Management",
+  "description": "Implement user signup, login, profile management, and subscription handling",
+  "status": "pending",
+  "priority": "high",
+  "tasks": [
+    {
+      "id": "task-2.1",
+      "title": "Authentication Implementation",
+      "description": "Setup Supabase Auth with email, social login options, and JWT handling",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Configure Supabase Auth with email/password signup",
+        "Implement Google and Facebook OAuth providers",
+        "Create authentication hooks for React components",
+        "Set up protected routes and middleware"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-1.4"]
+    },
+    {
+      "id": "task-2.2",
+      "title": "User Profile Management",
+      "description": "Create user profile interface and management functionality",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Design and implement profile page UI",
+        "Create forms for updating personal information",
+        "Implement profile image upload and management",
+        "Add settings and preferences section"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-2.1"]
+    },
+    {
+      "id": "task-2.3",
+      "title": "Subscription Management",
+      "description": "Implement subscription tiers, payment integration, and account limits",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design subscription tier database model",
+        "Integrate Stripe subscription billing",
+        "Implement subscription upgrade/downgrade flows",
+        "Create limit enforcement based on subscription tier"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-2.1", "task-8.1"]
+    },
+    {
+      "id": "task-2.4",
+      "title": "User Onboarding Flow",
+      "description": "Create guided onboarding experience for new users",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Design multi-step onboarding UI components",
+        "Implement interactive tutorial for platform features",
+        "Create onboarding completion tracking",
+        "Add sample product demonstration"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-2.1", "task-2.2"]
+    },
+    {
+      "id": "task-2.5",
+      "title": "User Dashboard",
+      "description": "Implement main dashboard with product summary and quick actions",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design dashboard layout and components",
+        "Create product summary cards with status indicators",
+        "Add quick action buttons for common tasks",
+        "Implement basic analytics summary widgets"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-2.1", "task-2.2"]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "epic-4",
+  "title": "Content Generation",
+  "description": "Implement AI content creation capabilities for various digital product types",
+  "status": "pending",
+  "priority": "high",
+  "tasks": [
+    {
+      "id": "task-4.1",
+      "title": "Product Structure Generation",
+      "description": "Create AI-driven product structure and outline generator",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Implement product type template system",
+        "Create outline generation algorithms using GPT-4o",
+        "Design structure preview and organization UI",
+        "Add structure modification capabilities"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-3.1", "task-3.3"]
+    },
+    {
+      "id": "task-4.2",
+      "title": "Content Editor Interface",
+      "description": "Develop rich text editor with AI assistance for product content",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Implement WYSIWYG editor component",
+        "Add section-by-section editing capabilities",
+        "Create content formatting tools",
+        "Implement content version history"
+      ],
+      "estimated_hours": 14,
+      "dependencies": ["task-1.5"]
+    },
+    {
+      "id": "task-4.3",
+      "title": "AI Content Generation",
+      "description": "Implement comprehensive content generation from outlines",
+      "status": "pending",
+      "priority": "high",
+      "subtasks": [
+        "Design content generation algorithms and prompts",
+        "Create section-by-section generation process",
+        "Implement industry-specific terminology adaptation",
+        "Add tone and style consistency enforcement"
+      ],
+      "estimated_hours": 16,
+      "dependencies": ["task-3.1", "task-4.1", "task-4.2"]
+    },
+    {
+      "id": "task-4.4",
+      "title": "Content Improvement Tools",
+      "description": "Create AI-assisted tools for improving and refining content",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Implement readability analysis and suggestions",
+        "Create engagement optimization recommendations",
+        "Add content expansion/reduction tools",
+        "Implement SEO optimization suggestions"
+      ],
+      "estimated_hours": 12,
+      "dependencies": ["task-4.2", "task-4.3"]
+    },
+    {
+      "id": "task-4.5",
+      "title": "Parameter and Model Memory System",
+      "description": "Create system to store and remember user's generation preferences",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Implement storage for last used AI model selections",
+        "Create system to store user's preferred generation parameters",
+        "Store recent user inputs for autocompletion suggestions",
+        "Add capability to save successful generations for reuse"
+      ],
+      "estimated_hours": 8,
+      "dependencies": ["task-3.1", "task-4.3"]
+    },
+    {
+      "id": "task-4.6",
+      "title": "Multi-Product Type Support",
+      "description": "Extend content generation to various digital product formats",
+      "status": "pending",
+      "priority": "medium",
+      "subtasks": [
+        "Add support for ebooks and guides",
+        "Implement templates for checklists and worksheets",
+        "Create patterns for tutorial and course content",
+        "Add templates for reference materials"
+      ],
+      "estimated_hours": 10,
+      "dependencies": ["task-4.1", "task-4.3"]
+    }
+  ]
+}
